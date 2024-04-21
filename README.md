@@ -1,1 +1,1 @@
-# Legend-of-Logoro
+# Legend of Logoro
