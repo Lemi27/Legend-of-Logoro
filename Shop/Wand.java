@@ -7,7 +7,7 @@
 ********************************************************/
 package Shop;
 
-public class Shop
+public class Wand
 {
 
     
