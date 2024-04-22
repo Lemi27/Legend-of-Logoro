@@ -18,7 +18,7 @@ public class Utilities
         this.uI = new Scanner(System.in);
         }
     
-        public int inputInt(String prompt, int min, int max) {
+        public int inputInt(int min, int max) {
 
             int input;
             do{
@@ -37,7 +37,7 @@ public class Utilities
             return input;
         }
     
-        public String inputString(String prompt, String[] acceptedAnswers, String input) {
+        public String inputString(String[] acceptedAnswers) {
     
             String answer;
             boolean isValidInput;
@@ -58,7 +58,7 @@ public class Utilities
             return answer;
         }
     
-        public void slowPrint(String text, double interval){
+        public void slowPrint(double interval){
             
         }
     }
@@ -74,10 +74,4 @@ public class Utilities
      *   
     *****/
 
-}
-    class RolePlayingGame{
-        public static void main(String [] args) {
-    
-        }
-    
 }
