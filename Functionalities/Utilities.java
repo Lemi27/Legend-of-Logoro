@@ -1,11 +1,11 @@
-/********************************************************
-@author(s)          *insert here
-@date               *insert here
+/* /********************************************************
+@author(s)         Steven Wang
+@date               April 23, 2024
 @teacher            Andrew Carreiro
-@file               Utilities.java
-@description        Class with methods to manipulate arrays, 
-                    slow print, display inventories, etc.
-********************************************************/
+@file               Functions.java
+@description        Functionalities for the program including restricting input
+                    and controlling output.
+********************************************************/ 
 package Functionalities;
 
 import java.util.Scanner;
@@ -18,46 +18,76 @@ public class Utilities
         this.uI = new Scanner(System.in);
         }
     
-        public int inputInt(int min, int max) {
+           /*******************
+    inputInt(String prompt, int min, int max)
+    @param          min
+    @param          max
+    @param          prompt
+    @return         int
+    @description    Continously loop until user inputs a value that is lower then max and higher then min
+    *******************/
+        public int inputInt(String prompt, int min, int max) {
 
             int input;
-            do{
+            do
+            {
                 System.out.println(prompt);
-                while (!uI.hasNextInt()) {
+
+                // If the user does not input an int then you loop until they input an integer. 
+                while (!uI.hasNextInt()) 
+                { 
                     System.out.println("Please enter a valid integer. ");
-                    System.out.print(prompt);
                     uI.next();
                 }
                 input =uI.nextInt();
-                while (input< min || input > max) {
+
+                //Check if the input value is higher then max or lower than min. If so, loop until input is lower then max and higher then min
+                while (input< min || input > max) 
+                {
                     System.out.println("Please enter a valid integer");
                     System.out.print(prompt);
                 }
-            } while (input > min || input < max);
+            } while (input > min || input < max); // Continously loop until user inputs a value that is lower then max and higher then min
             return input;
-        }
+        } // end of inputInt() method
     
-        public String inputString(String[] acceptedAnswers) {
+          /*******************
+    inputString(String prompt, String[] acceptedAnswers)
+    @param          acceotedAnswers
+    @param          prompt
+    @return         String
+    @description   Continously loop until user inputs an answer that is an acceptable
+                    answer that comes from a list if possible accepted answers.
+    *******************/
+
+        public String inputString(String prompt, String[] acceptedAnswers) {
     
             String answer;
             boolean isValidInput;
-            do {
+            do 
+            {
                 System.out.println(prompt);
                 answer = uI.next();
                 isValidInput = false;
-                for (String acceptedAnswer : acceptedAnswers) {
-                    if (answer.equals(acceptedAnswer)){
+
+                // loop through each item of acceptedAnswers array checking the item at each index one at a time
+                for (String acceptedAnswer : acceptedAnswers) 
+                {
+                    if (answer.equals(acceptedAnswer))
+                    {
                         isValidInput = true;
                         break;
                     }
                 }
-                if (!isValidInput) {
+                //If isValidInput is false, then make user input again
+                if (!isValidInput) 
+                {
                     System.out.println("Invalid input. Please try again. ");
+
                 }
-            } while (!isValidInput);
+            } while (!isValidInput); // Continously loop until user inputs an answer that is acceptable.
             return answer;
-        }
-    
+        } //end of inputString() method
         public void slowPrint(double interval){
             
         }
