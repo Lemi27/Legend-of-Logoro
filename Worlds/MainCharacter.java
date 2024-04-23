@@ -5,7 +5,7 @@
 @file               MainCharacter.java
 @description        *insert class description here
 ********************************************************/
-import Shop.*;
+import Wand.Wand;
 
 public class MainCharacter
 {
@@ -100,6 +100,16 @@ public class MainCharacter
     public int getCurrency()
     {
         return this.currency;
+    }
+
+    public String getFirstName()
+    {
+        return this.firstName;
+    }
+
+    public String getLastName()
+    {
+        return this.lastName;
     }
 
     // setter methods

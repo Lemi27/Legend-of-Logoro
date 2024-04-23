@@ -6,11 +6,16 @@
 @description        Parent class for all side quests.
 ********************************************************/
 
-package Worlds.SideQuests;
+package SideQuests;
 
 public class SideQuests {
 
-    private boolean isComplete[][] = new boolean[5][2];
+    private boolean isComplete;
+
+    public SideQuests()
+    {
+        isComplete = false;
+    }
 
     public void begin() {
 
@@ -18,10 +23,9 @@ public class SideQuests {
 
     }
 
-    public void updateProgress (MainCharacter character) {
-
-
-
+    public boolean isComplete()
+    {
+        return this.isComplete;
     }
 
 }

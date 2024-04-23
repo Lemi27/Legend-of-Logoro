@@ -6,7 +6,7 @@
 @description        Second side quest in the fire world.
 ********************************************************/
 
-package Worlds.SideQuests;
+package SideQuests;
 
 public class FireQuest2 extends SideQuests {
     
