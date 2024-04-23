@@ -6,7 +6,7 @@
 @description        Second side quest in the land world.
 ********************************************************/
 
-package Worlds.SideQuests;
+package SideQuests;
 
 public class LandQuest2 extends SideQuests {
     
