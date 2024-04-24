@@ -8,7 +8,7 @@
 ********************************************************/
 package src.Worlds.Wand;
 
-class Cypress extends Wand{
+public class Cypress extends Wand{
     
     public Cypress()
     {

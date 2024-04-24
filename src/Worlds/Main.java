@@ -13,6 +13,9 @@ package src.Worlds;
 public class Main
 {
 
+    // public variables
+    public MainCharacter character;
+
     /*******************
     main(String[] args)
     @param          String[]

@@ -9,7 +9,7 @@
 
 package src.Worlds.Wand;
 
-class Pine extends Wand{
+public class Pine extends Wand{
     
     public Pine()
     {
