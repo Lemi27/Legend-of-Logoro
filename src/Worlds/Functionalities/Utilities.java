@@ -1,12 +1,12 @@
 /* /********************************************************
-@author(s)          Steven Wang
+@author(s)         Steven Wang
 @date               April 23, 2024
 @teacher            Andrew Carreiro
 @file               Functions.java
 @description        Functionalities for the program including restricting input
                     and controlling output.
 ********************************************************/ 
-package src.Worlds.Functionalities;
+package Functionalities;
 
 import java.util.Scanner;
 public class Utilities
@@ -14,14 +14,11 @@ public class Utilities
 
     private Scanner uI;
 
-    // constructor method
-    public Utilities() 
-    {
+    public Utilities() {
         this.uI = new Scanner(System.in);
+        }
     
-    }
-    
-    /*******************
+           /*******************
     inputInt(String prompt, int min, int max)
     @param          min
     @param          max
@@ -29,32 +26,32 @@ public class Utilities
     @return         int
     @description    Continously loop until user inputs a value that is lower then max and higher then min
     *******************/
-    public int inputInt(String prompt, int min, int max) {
+        public int inputInt(String prompt, int min, int max) {
 
-        int input;
-        do
-        {
-            System.out.println(prompt);
-
-            // If the user does not input an int then you loop until they input an integer. 
-            while (!uI.hasNextInt()) 
-            { 
-                System.out.println("Please enter a valid integer. ");
-                uI.next();
-            }
-            input =uI.nextInt();
-
-            //Check if the input value is higher then max or lower than min. If so, loop until input is lower then max and higher then min
-            while (input< min || input > max) 
+            int input;
+            do
             {
-                System.out.println("Please enter a valid integer");
-                System.out.print(prompt);
-            }
-        } while (input > min || input < max); // Continously loop until user inputs a value that is lower then max and higher then min
-        return input;
-    } // end of inputInt() method
+                System.out.println(prompt);
+
+                // If the user does not input an int then you loop until they input an integer. 
+                while (!uI.hasNextInt()) 
+                { 
+                    System.out.println("Please enter a valid integer. ");
+                    uI.next();
+                }
+                input =uI.nextInt();
+
+                //Check if the input value is higher then max or lower than min. If so, loop until input is lower then max and higher then min
+                while (input< min || input > max) 
+                {
+                    System.out.println("Please enter a valid integer");
+                    System.out.print(prompt);
+                }
+            } while (input > min || input < max); // Continously loop until user inputs a value that is lower then max and higher then min
+            return input;
+        } // end of inputInt() method
     
-    /*******************
+          /*******************
     inputString(String prompt, String[] acceptedAnswers)
     @param          acceotedAnswers
     @param          prompt
@@ -62,38 +59,77 @@ public class Utilities
     @description   Continously loop until user inputs an answer that is an acceptable
                     answer that comes from a list if possible accepted answers.
     *******************/
-    public String inputString(String prompt, String[] acceptedAnswers) {
 
-        String answer;
-        boolean isValidInput;
-        do 
-        {
-            System.out.println(prompt);
-            answer = uI.next();
-            isValidInput = false;
-
-            // loop through each item of acceptedAnswers array checking the item at each index one at a time
-            for (String acceptedAnswer : acceptedAnswers) 
+        public String inputString(String prompt, String[] acceptedAnswers) {
+    
+            String answer;
+            boolean isValidInput;
+            do 
             {
-                if (answer.equals(acceptedAnswer))
+                System.out.println(prompt);
+                answer = uI.next();
+                isValidInput = false;
+
+                // loop through each item of acceptedAnswers array checking the item at each index one at a time
+                for (String acceptedAnswer : acceptedAnswers) 
                 {
-                    isValidInput = true;
-                    break;
+                    if (answer.equals(acceptedAnswer))
+                    {
+                        isValidInput = true;
+                        break;
+                    }
                 }
-            }
-            //If isValidInput is false, then make user input again
-            if (!isValidInput) 
-            {
-                System.out.println("Invalid input. Please try again. ");
+                //If isValidInput is false, then make user input again
+                if (!isValidInput) 
+                {
+                    System.out.println("Invalid input. Please try again. ");
 
-            }
-        } while (!isValidInput); // Continously loop until user inputs an answer that is acceptable.
-        return answer;
-    } //end of inputString() method
-    public void slowPrint(double interval){
-        
+                }
+            } while (!isValidInput); // Continously loop until user inputs an answer that is acceptable.
+            return answer;
+        } //end of inputString() method
+
+      /*******************
+   visualHelathBar(int currentHp, int maxHp)
+    @param          currentHp
+    @return         maxHp
+    @description   Print out a visual representation of the main character's health.
+    *******************/
+  public void visualHelathBar(int currentHp, int maxHp) {
+      System.out.print("Health: ");
+
+      for (int i = 0; i < maxHealth; i++) {
+          if (i < currentHealth) {
+              System.out.print("#"); // Print filled portion of the health bar
+          } else {
+              System.out.print("-"); // Print empty portion of the health bar
+          }
+      }
+    
+} // end of visualHealthBar method
+
+        /*******************
+   slowPrint(int currentHp, int maxHp)
+    @param          text
+    @return        interval
+    @description   Print out text with a delay while printing.
+    *******************/
+  public static void slowPrint(String text, long interval) {
+      // Loop through each character in the text
+      for (int i = 0; i < text.length(); i++) {
+          // Print the current character
+          System.out.print(text.charAt(i));
+          try {
+              // Pause for the specified delay
+              Thread.sleep(interval);
+          } catch (InterruptedException e) {
+              // If interrupted while sleeping, print the stack trace
+              e.printStackTrace();
+          }
+      }
+  } // end of slowPrint method
+
     }
-}
 
     /*****
      * TODO:
@@ -105,5 +141,3 @@ public class Utilities
      *      + Dynamic array methods
      *   
     *****/
-
-
