@@ -1,7 +1,16 @@
+/********************************************************
+@author(s)          Lemi Miyu
+@date               24-April-2024
+@teacher            Andrew Carreiro
+@file               FireBoss.java
+@description        The class setting the attributes of the
+                    boss of the fire realm.
+********************************************************/
 package src.Worlds.Bosses;
 
 public class FireBoss extends Bosses {
 
+    // CONSTRUCTOR
     public FireBoss() {
 
         setBossName("Ignitia the Flame Fractionator");
