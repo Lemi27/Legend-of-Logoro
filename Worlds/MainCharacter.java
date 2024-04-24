@@ -3,7 +3,7 @@
 @date               22 April 2024
 @teacher            Andrew Carreiro
 @file               MainCharacter.java
-@description        *insert class description here
+@description        testing branch code change.
 ********************************************************/
 import Wand.Wand;
 
