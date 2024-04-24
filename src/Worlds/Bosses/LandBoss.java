@@ -4,6 +4,7 @@ public class LandBoss extends Bosses {
 
     public LandBoss() {
 
+        setBossName("Terraformer the Land Lacerator");
         setHp(8);
         setOffense(8);
         bossWand.setDefense(8);
