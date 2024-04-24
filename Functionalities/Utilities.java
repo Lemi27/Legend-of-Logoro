@@ -88,9 +88,26 @@ public class Utilities
             } while (!isValidInput); // Continously loop until user inputs an answer that is acceptable.
             return answer;
         } //end of inputString() method
-        public void slowPrint(double interval){
-            
-        }
+
+      /*******************
+   visualHelathBar(int currentHp, int maxHp)
+    @param          currentHp
+    @return         maxHp
+    @description   Print out a visual representation of the main character's health.
+    *******************/
+  public void visualHelathBar(int currentHp, int maxHp) {
+      System.out.print("Health: ");
+
+      for (int i = 0; i < maxHealth; i++) {
+          if (i < currentHealth) {
+              System.out.print("#"); // Print filled portion of the health bar
+          } else {
+              System.out.print("-"); // Print empty portion of the health bar
+          }
+      }
+    
+}
+
     }
 
     /*****
@@ -104,4 +121,4 @@ public class Utilities
      *   
     *****/
 
-}
+
