@@ -10,7 +10,7 @@
 
 package src.Worlds.Wand;
 
-class Spruce extends Wand {
+public class Spruce extends Wand {
     
     public Spruce()
     {

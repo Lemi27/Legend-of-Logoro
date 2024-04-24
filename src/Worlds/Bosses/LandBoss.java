@@ -7,6 +7,7 @@
                     boss of the land realm.
 ********************************************************/
 package src.Worlds.Bosses;
+import src.Worlds.Wand.*;
 
 public class LandBoss extends Bosses {
 
@@ -16,8 +17,8 @@ public class LandBoss extends Bosses {
         setBossName("Terraformer the Land Lacerator");
         setHp(8);
         setOffense(8);
-        bossWand.setDefense(8);
-        bossWand.setOffense(8);
+        setDefense(2.1);
+        bossWand = new Oak();
         setLevel(2);
         setMinAttack(9);
         setMinDefense(9);
