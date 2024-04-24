@@ -6,7 +6,7 @@
 @description        First side quest in the master world.
 ********************************************************/
 
-package src.Worlds.SideQuests;
+package worlds.sideQuests;
 
 public class MasterQuest1 extends SideQuests {
     

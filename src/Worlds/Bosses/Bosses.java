@@ -7,8 +7,8 @@
                     necessary attributes for bosses.
 ********************************************************/
 
-package src.Worlds.Bosses;
-import src.Worlds.Wand.*;
+package worlds.bosses;
+import worlds.wand.*;
 
 
 public class Bosses {

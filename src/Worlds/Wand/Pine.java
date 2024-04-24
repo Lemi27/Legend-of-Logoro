@@ -7,7 +7,7 @@
 @description        *insert class description here
 ********************************************************/
 
-package src.Worlds.Wand;
+package worlds.wand;
 
 class Pine extends Wand{
     
