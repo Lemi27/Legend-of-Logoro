@@ -24,6 +24,7 @@ public class Bosses {
     private int maxAttack;
     private int maxDefense;
 
+    // CONSTRUCTOR
     public Bosses(){
         
         bossName = "";

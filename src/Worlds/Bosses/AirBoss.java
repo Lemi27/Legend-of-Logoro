@@ -10,6 +10,7 @@ package src.Worlds.Bosses;
 
 public class AirBoss extends Bosses {
 
+    // CONSTRUCTOR
     public AirBoss() {
 
         setBossName("Aeritha the Summator");
