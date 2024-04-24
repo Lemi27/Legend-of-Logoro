@@ -3,7 +3,9 @@
 @date               22 April 2024
 @teacher            Andrew Carreiro
 @file               MainCharacter.java
-@description        testing branch code change....
+@description        The pourpse of this class is to repersent the character in the game, the charcter has a set number of lives,
+                    an invintory for wands (wands are purachsed with in-game currency) and a way to store progress between diffrent
+                    worlds.
 ********************************************************/
 import Wand.Wand;
 
