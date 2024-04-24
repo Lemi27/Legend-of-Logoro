@@ -9,7 +9,7 @@
 
 package src.Worlds.Wand;
 
-class Willow extends Wand{
+public class Willow extends Wand{
 
     public Willow() 
     {

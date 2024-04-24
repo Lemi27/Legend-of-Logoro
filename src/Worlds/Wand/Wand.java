@@ -33,7 +33,7 @@ public class Wand
     {
         return this.defense; 
     }
-    public double offense()
+    public double getOffense()
     {
         return this.offense; 
     }
