@@ -5,7 +5,9 @@
 @file               Shop.java
 @description        *insert class description here
 ********************************************************/
+
 package worlds.wand;
+
 
 public class Wand
 {

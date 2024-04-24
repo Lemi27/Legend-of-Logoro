@@ -1,3 +1,4 @@
+
 /********************************************************
 @author(s)          *insert here
 @date               *insert here
@@ -5,6 +6,7 @@
 @file               ExampleClass.java
 @description        *insert class description here
 ********************************************************/
+
 
 package worlds.wand;
 
