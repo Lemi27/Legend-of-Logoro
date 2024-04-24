@@ -5,9 +5,9 @@
 @file               MainCharacter.java
 @description        *insert class description here
 ********************************************************/
-package worlds;
+package src.Worlds;
 
-import worlds.wand.Wand;
+import src.Worlds.Wand.Wand;
 
 
 

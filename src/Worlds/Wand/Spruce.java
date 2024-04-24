@@ -8,7 +8,7 @@
 ********************************************************/
 
 
-package worlds.wand;
+package src.Worlds.Wand;
 
 class Spruce extends Wand {
     
