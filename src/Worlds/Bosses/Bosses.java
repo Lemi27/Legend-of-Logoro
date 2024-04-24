@@ -14,6 +14,7 @@ import src.Worlds.Wand.*;
 public class Bosses {
 
     // CLASS VARIABLES
+    private String bossName;
     private double hp;
     private double offense;
     Wand bossWand = new Wand();
@@ -25,6 +26,7 @@ public class Bosses {
 
     public Bosses(){
         
+        bossName = "";
         hp = 0;
         offense = 0;
         bossWand.setName("Boss Wand");
@@ -38,6 +40,12 @@ public class Bosses {
     }
 
     // GETTERS
+
+    public String getBossName() {
+
+        return this.bossName;
+
+    }
 
     public double getHp() {
 
@@ -82,6 +90,13 @@ public class Bosses {
     }
 
     // SETTERS
+
+    public void setBossName(String bossName) {
+
+        this.bossName = bossName;
+
+    }
+
     public void setHp(double hp) {
 
         this.hp = hp;
