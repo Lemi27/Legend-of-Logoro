@@ -7,6 +7,7 @@
                     necessary attributes for bosses.
 ********************************************************/
 package src.Worlds.Bosses;
+import src.Worlds.MainCharacter;
 import src.Worlds.Wand.*;
 import src.*;
 import java.util.Scanner;
@@ -101,6 +102,11 @@ public class Bosses
         return this.isDefeated;
     }
 
+    public Wand getWand()
+    {
+        return this.bossWand;
+    }
+
     // SETTERS
 
     public void setBossName(String bossName) 
@@ -156,10 +162,20 @@ public class Bosses
     *******************/
     public void fight()
     {
+        MainCharacter character = new Main.character; // error on this line
         boolean defenseMode = true; // user always starts from defense mode
         Scanner scanner = new Scanner(System.in);
         double userHP = character.getHP();
         double bossHP = this.getHp();
+        double bossDefense = this.getDefense();
+        double bossAttack = this.getOffense();
+        double userDefense = character.getDefense();
+        double userAttack = character.getOffense();
+        double userOffense = character.getOffense();
+        double userWandDefense = character.getCurrentWand().getDefense();
+        double userWandAttack = character.getCurrentWand().getOffense();
+        double bossWandDefense = this.getWand().getDefense();
+        double bossWandAttack = this.getWand().getOffense();
         int bossNum; 
         int userNum;
         int n = 1;
