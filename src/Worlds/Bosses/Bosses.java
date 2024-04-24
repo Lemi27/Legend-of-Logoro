@@ -30,6 +30,7 @@ public class Bosses
     private boolean isDefeated;
     private Scanner scanner;
 
+
     // constructor method
     public Bosses()
     {

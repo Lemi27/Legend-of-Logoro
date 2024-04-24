@@ -1,8 +1,17 @@
+/********************************************************
+@author(s)          Lemi Miyu
+@date               24-April-2024
+@teacher            Andrew Carreiro
+@file               MasterBoss.java
+@description        The class setting the attributes of the
+                    boss of the master realm.
+********************************************************/
 package src.Worlds.Bosses;
 import src.Worlds.Wand.*;
 
 public class MasterBoss extends Bosses {
 
+    // CONSTRUCTOR
     public MasterBoss() {
 
         setBossName("Omnius the Operation Overlord");

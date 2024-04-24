@@ -11,6 +11,7 @@ import src.Worlds.Wand.*;
 
 public class AirBoss extends Bosses {
 
+    // CONSTRUCTOR
     public AirBoss() {
 
         setBossName("Aeritha the Summator");
