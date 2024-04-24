@@ -6,7 +6,10 @@
 @description        *insert class description here
 ********************************************************/
 package worlds;
-import Wand.Wand;
+
+import worlds.wand.Wand;
+
+
 
 public class MainCharacter
 {
