@@ -5,6 +5,7 @@ public class MasterBoss extends Bosses {
 
     public MasterBoss() {
 
+        setBossName("Omnius the Operation Overlord");
         setHp(8);
         setOffense(8);
         setDefense(3);

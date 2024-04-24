@@ -16,6 +16,7 @@ public class Bosses
 {
 
     // CLASS VARIABLES
+    private String bossName;
     private double hp;
     private double offense;
     private double defense;
@@ -32,6 +33,7 @@ public class Bosses
     public Bosses()
     {
         
+        bossName = "";
         hp = 0;
         offense = 0;
         defense = 0;
@@ -49,8 +51,13 @@ public class Bosses
 
     // GETTERS
 
-    public double getHp() 
+    public String getBossName() 
     {
+        return this.bossName;
+    }
+
+    public double getHp() {
+
         return this.hp;
     }
 
@@ -95,6 +102,12 @@ public class Bosses
     }
 
     // SETTERS
+
+    public void setBossName(String bossName) 
+    {
+        this.bossName = bossName;
+    }
+
     public void setHp(double hp) 
     {
         this.hp = hp;

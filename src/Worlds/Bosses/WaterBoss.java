@@ -5,6 +5,7 @@ public class WaterBoss extends Bosses {
     
     public WaterBoss() {
 
+        setBossName("Maritima the Wet Whirler");
         setHp(8);
         setOffense(8);
         setDefense(3);
