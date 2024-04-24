@@ -1,4 +1,4 @@
-package Wand; 
+package Worlds.Wand; 
 
 class IronWood extends Wand{
 

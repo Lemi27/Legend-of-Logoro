@@ -1,4 +1,4 @@
-package Wand;
+package Worlds.Wand;
 
 class Pine extends Wand{
     

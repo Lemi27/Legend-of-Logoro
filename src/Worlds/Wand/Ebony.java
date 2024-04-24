@@ -1,4 +1,4 @@
-package Wand;
+package Worlds.Wand;
 
 class Ebony extends Wand{
     

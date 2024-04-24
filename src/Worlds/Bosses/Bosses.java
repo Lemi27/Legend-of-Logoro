@@ -1,16 +1,14 @@
 /********************************************************
-@author(s)          Fawaaz Kamali Siddiqui
-@date               24 April 2024
+@author(s)          *insert here
+@date               *insert here
 @teacher            Andrew Carreiro
 @file               Bosses.java
 @description        *insert class description here
 ********************************************************/
-package Bosses;
+package Worlds.Bosses;
 
 public class Bosses
 {
-
-    // default boss settings
 
     
 
