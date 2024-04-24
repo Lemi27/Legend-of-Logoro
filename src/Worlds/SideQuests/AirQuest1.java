@@ -6,7 +6,7 @@
 @description        First side quest in the air world.
 ********************************************************/
 
-package worlds.SideQuests;
+package worlds.sideQuests;
 
 public class AirQuest1 extends SideQuests {
 
