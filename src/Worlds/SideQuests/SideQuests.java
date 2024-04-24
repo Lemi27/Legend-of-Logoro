@@ -6,7 +6,7 @@
 @description        Parent class for all side quests.
 ********************************************************/
 
-package worlds.sideQuests;
+package src.Worlds.SideQuests;
 
 public class SideQuests {
 

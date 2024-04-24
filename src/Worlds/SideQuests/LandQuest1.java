@@ -6,7 +6,7 @@
 @description        First side quest in the land world.
 ********************************************************/
 
-package worlds.sideQuests;
+package src.Worlds.SideQuests;
 
 public class LandQuest1 extends SideQuests {
     

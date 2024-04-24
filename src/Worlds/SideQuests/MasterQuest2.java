@@ -6,7 +6,7 @@
 @description        Second side quest in the master world.
 ********************************************************/
 
-package worlds.sideQuests;
+package src.Worlds.SideQuests;
 
 public class MasterQuest2 extends SideQuests {
     

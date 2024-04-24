@@ -6,4 +6,4 @@
 @file               ExampleClass.java
 @description        *insert class description here
 ********************************************************/
-package worlds.wand;
+package src.Worlds.Wand;
