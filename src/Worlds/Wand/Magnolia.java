@@ -9,7 +9,7 @@
 
 package src.Worlds.Wand;
 
-class Magnolia extends Wand {
+public class Magnolia extends Wand {
     
     public Magnolia()
     {

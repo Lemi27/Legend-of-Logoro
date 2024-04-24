@@ -8,7 +8,7 @@
 ********************************************************/
 package src.Worlds.Wand;
 
-class IronWood extends Wand{
+public class IronWood extends Wand{
 
     public IronWood()
     {

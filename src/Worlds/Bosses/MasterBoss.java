@@ -1,4 +1,5 @@
 package src.Worlds.Bosses;
+import src.Worlds.Wand.*;
 
 public class MasterBoss extends Bosses {
 
@@ -6,8 +7,10 @@ public class MasterBoss extends Bosses {
 
         setHp(8);
         setOffense(8);
-        bossWand.setDefense(8);
-        bossWand.setOffense(8);
+        setDefense(3);
+        bossWand.setName("Elder Wand");
+        bossWand.setDefense(3);
+        bossWand.setOffense(3);
         setLevel(5);
         setMinAttack(9);
         setMinDefense(9);

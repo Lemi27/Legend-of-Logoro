@@ -8,7 +8,7 @@
 ********************************************************/
 package src.Worlds.Wand;
 
-class Maple extends Wand{
+public class Maple extends Wand{
 
     public Maple()
     {

@@ -1,4 +1,5 @@
 package src.Worlds.Bosses;
+import src.Worlds.Wand.*;
 
 public class WaterBoss extends Bosses {
     
@@ -6,8 +7,8 @@ public class WaterBoss extends Bosses {
 
         setHp(8);
         setOffense(8);
-        bossWand.setDefense(8);
-        bossWand.setOffense(8);
+        setDefense(3);
+        bossWand = new Willow();
         setLevel(3);
         setMinAttack(9);
         setMinDefense(9);
