@@ -6,7 +6,7 @@
 @description        First side quest in the water world.
 ********************************************************/
 
-package SideQuests;
+package worlds.sideQuests;
 
 public class WaterQuest1 extends SideQuests {
     

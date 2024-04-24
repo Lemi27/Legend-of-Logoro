@@ -1,4 +1,4 @@
-package worlds.wand;
+package Wand; 
 
 class Maple extends Wand{
 

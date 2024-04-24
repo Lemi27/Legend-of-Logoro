@@ -5,8 +5,8 @@
 @file               Bosses.java
 @description        *insert class description here
 ********************************************************/
-package src.Worlds.Bosses;
-import src.Worlds.Wand.*;
+package Worlds.Bosses;
+import Worlds.Wand.*;
 
 public class Bosses
 {

@@ -6,7 +6,7 @@
 @description        Functionalities for the program including restricting input
                     and controlling output.
 ********************************************************/ 
-package worlds.functionalities;
+package Functionalities;
 
 import java.util.Scanner;
 public class Utilities

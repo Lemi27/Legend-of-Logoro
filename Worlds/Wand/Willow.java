@@ -1,4 +1,4 @@
-package worlds.Wand;
+package Wand;
 
 class Willow extends Wand{
 

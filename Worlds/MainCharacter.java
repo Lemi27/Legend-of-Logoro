@@ -5,7 +5,6 @@
 @file               MainCharacter.java
 @description        *insert class description here
 ********************************************************/
-package worlds;
 import Wand.Wand;
 
 public class MainCharacter

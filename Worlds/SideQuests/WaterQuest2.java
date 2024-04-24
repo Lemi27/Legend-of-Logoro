@@ -2,12 +2,12 @@
 @author(s)          Lemi Miyu
 @date               19-April-2024
 @teacher            Andrew Carreiro
-@file               MasterQuest2.java
-@description        Second side quest in the master world.
+@file               WaterQuest2.java
+@description        Second side quest in the water world.
 ********************************************************/
 
-package worlds.sideQuests;
+package Worlds.SideQuests;
 
-public class MasterQuest2 extends SideQuests {
+public class WaterQuest2 extends SideQuests {
     
 }

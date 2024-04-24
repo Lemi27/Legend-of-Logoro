@@ -1,4 +1,4 @@
-package worlds.wand;
+package Wand;
 
 class Ebony extends Wand{
     

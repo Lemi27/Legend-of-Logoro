@@ -1,1 +1,1 @@
-package Worlds.Wand;
+package worlds.wand;

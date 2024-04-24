@@ -5,7 +5,7 @@
 @file               Shop.java
 @description        *insert class description here
 ********************************************************/
-package worlds.Wand;
+package Wand;
 
 public class Wand
 {
