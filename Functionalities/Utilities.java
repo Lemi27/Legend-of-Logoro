@@ -106,7 +106,28 @@ public class Utilities
           }
       }
     
-}
+} // end of visualHealthBar method
+
+        /*******************
+   slowPrint(int currentHp, int maxHp)
+    @param          text
+    @return        interval
+    @description   Print out text with a delay while printing.
+    *******************/
+  public static void slowPrint(String text, long interval) {
+      // Loop through each character in the text
+      for (int i = 0; i < text.length(); i++) {
+          // Print the current character
+          System.out.print(text.charAt(i));
+          try {
+              // Pause for the specified delay
+              Thread.sleep(interval);
+          } catch (InterruptedException e) {
+              // If interrupted while sleeping, print the stack trace
+              e.printStackTrace();
+          }
+      }
+  } // end of slowPrint method
 
     }
 
