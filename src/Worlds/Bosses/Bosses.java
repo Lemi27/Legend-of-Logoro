@@ -10,6 +10,9 @@ package Worlds.Bosses;
 public class Bosses
 {
 
-    
+    public Bosses()
+    {
+
+    }
 
 }
