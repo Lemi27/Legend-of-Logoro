@@ -8,13 +8,13 @@ package src.Worlds;
 @file               Main.java
 @description        *insert class description here
 ********************************************************/
-
+import java.util.Scanner;
 
 public class Main
 {
 
     // public variables
-    public MainCharacter character;
+    public static MainCharacter mainCharacter;
 
     /*******************
     main(String[] args)
@@ -25,7 +25,59 @@ public class Main
     *******************/
     public static void main(String[] args)
     {
-        // enter code here, remember to comment 
-    }
+        // variable declaration and instantiation section
+        Scanner scanner = new Scanner(System.in);
+        int progress = 1;
+        int livesRemaining;
+
+        // input section for user name
+        System.out.print("Enter your first name: ");
+        String firstName = scanner.nextLine();
+
+        System.out.print("Enter your last name: ");
+        String lastName = scanner.nextLine();
+
+        // MainCharacter instantiation
+        mainCharacter = new MainCharacter(firstName, lastName);
+        livesRemaining = mainCharacter.getLivesRemaining();
+
+        // keep user in loop
+        while (progress < 6 && livesRemaining > 0)
+        {
+            switch(progress)
+            {
+                case 1:
+                    mainCharacter.world1(mainCharacter);
+                    break;
+                case 2:
+                    mainCharacter.world2(mainCharacter);
+                    break;
+                case 3:
+                    mainCharacter.world3(mainCharacter);
+                    break;
+                case 4:
+                    mainCharacter.world4(mainCharacter);
+                    break;
+                case 5:
+                    mainCharacter.world5(mainCharacter);
+                    break;
+                default:
+            }
+
+            progress = mainCharacter.getCurrentWorld();
+            livesRemaining = mainCharacter.getLivesRemaining();
+        }
+
+        // if user has won the game
+        if (mainCharacter.getProgress()[4][2])
+        {
+            // storyline 
+        }
+        else // if user has lost the game
+        {
+            // output something
+        }
+
+    } // end of main()
 
 }
