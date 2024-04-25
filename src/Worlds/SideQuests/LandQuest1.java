@@ -27,7 +27,6 @@ public class LandQuest1 extends SideQuests {
     //Processing
    do
    {
-       input = uI.nextInt();
 
        if (answer != input)
        {

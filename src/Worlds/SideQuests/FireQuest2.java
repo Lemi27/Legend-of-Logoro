@@ -27,11 +27,12 @@ public class FireQuest2 extends SideQuests {
         //Processing
         do
         {
-            input = uI.nextInt();
     
             if (answer != input)
             {
-                System.out.println("The Ember Sage's flames wavered, its luminosity fading momentarily. \"Incorrect,\" it intoned, its voice carrying a hint of disappointment.\"You've lost 2 HP. Refocus your thoughts, or risk being ensnared by the fiery enigma of this realm.\"");
+                System.out.println("The Ember Sage's flames wavered, its luminosity fading momentarily. \"Incorrect,\" it intoned, its voice carrying a hint of disappointment.\""+
+                "You've lost 2 HP. Refocus your thoughts, or risk being ensnared by the fiery enigma of this realm.\"");
+
                 uI.nextLine();
     
                 //ADD DAMAGE REMOVAL

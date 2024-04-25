@@ -8,7 +8,10 @@
 
 package src.Worlds.SideQuests;
 
+<<<<<<< HEAD
 import java.util.Scanner;
+=======
+>>>>>>> main
 
 public class AirQuest2 extends SideQuests {
 
