@@ -8,44 +8,62 @@
 
 package src.Worlds.SideQuests;
 
-<<<<<<< HEAD
-import java.util.Scanner;
-=======
->>>>>>> main
+import src.Worlds.MainCharacter;
+import src.Worlds.Functionalities.Utilities;
 
 public class AirQuest2 extends SideQuests {
 
-    //Variable Decleration and Initialization
-    Scanner uI = new Scanner(System.in);
-    int answer = 12; //Answer to the riddle
-    int input; //Users guess
-
-    //Initial output
-    System.out.println("In the heart of a fog-shrouded forest, you feel a chill unlike any other. From the mist emerged an air monster, its form swirling with dark clouds and lightning."+
-    "\"Human,\" it rumbled, its voice echoing like thunder, \"to pass, unravel this cipher.\"It posed its cryptic riddle: \"I am an even number. If you add half of me to a third of me, you get 10.\"");
-
-    input = Utilities.inputInt("What number shall prevail?", -10000000000, 100000000);
-
-    //Processing
-    do
+    //Constructor
+    public AirQuest2()
     {
-        if (answer != input)
+        super();
+    }
+
+    public void execute(MainCharacter character)
+    {
+        if (!this.isComplete())
         {
-            System.out.println("\"Sorry, that's not correct,\" the monster's voice boomed, disappointment evident. You face the consequences of losing 2 HP. \"Try again if you wish.\"");
-            uI.nextLine();
+            //Variable Decleration and Initialization
+            int answer = 12; //Answer to the riddle
+            int input; //Users guess
+            int chances = 2; //Chances the user has to guess correctly
 
-            //ADD DAMAGE REMOVAL
+            //Initial output
+            Utilities.slowPrint("In the heart of a fog-shrouded forest, you feel a chill unlike any other. From the mist emerged an air monster, its form swirling with dark clouds and lightning."+
+            "\"Human,\" it rumbled, its voice echoing like thunder, \"to pass, unravel this cipher.\"It posed its cryptic riddle: \"I am an even number. If you add half of me to a third of me, you get 10.\"", 20);
 
+            //Processing
+            do
+            {
+                input = utilities.inputInt("What number shall prevail?", -10000, 100000);
+
+                if (answer != input && chances == 2)
+                {
+                    Utilities.slowPrint("Sorry, that's not correct,\" the monster's voice boomed with disgrace. You have 1 chance remaining.", 10);
+                    chances--;
+
+                }if (answer != input && chances == 1)
+                {
+                    Utilities.slowPrint("The monster responds with disappointment. You face the consequences of losing 2 HP. \"Try again if you wish.\"", 10);
+                    chances--;
+
+                    //Remove Character HP
+                    character.setHP(character.getHP() - 2);
+                }
+            } while (answer != input); //Force user to try again if they guess incorrectly
+
+            if (chances > 0)
+            {
+                Utilities.slowPrint("The air monster's stormy eyes narrowed, then softened. \"Correct,\" it grumbled approvingly. \"You may proceed.\""+
+                "With a thunderous clap, the monster dissipated into the mist, unveiling the hidden prize. Emboldened, you ventured forth.", 10);
+
+                //Gives the user currency once they guess correctly.
+                character.setCurrency(character.getCurrency() + 10);
+            }
+
+        }else //Else in case the side quest has been completed
+        {
+            Utilities.slowPrint("This Side Quest has been completed", 10);
         }
-    } while (answer != input); //Force user to try again if they guess incorrectly
-
-
-System.out.println ("The air monster's stormy eyes narrowed, then softened. \"Correct,\" it grumbled approvingly. \"You may proceed.\""+
-"With a thunderous clap, the monster dissipated into the mist, unveiling the hidden prize. Emboldened, you ventured forth.");
-
-
-//ADD COIN INCREMENTER
-
-  
-    
+    } //End of Method
 }

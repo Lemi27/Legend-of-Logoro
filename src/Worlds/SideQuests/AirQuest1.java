@@ -8,40 +8,66 @@
 
 package src.Worlds.SideQuests;
 
-import java.util.Scanner;
+import src.Worlds.MainCharacter;
+import src.Worlds.Functionalities.Utilities;
 
 public class AirQuest1 extends SideQuests 
 {
-
-    //Variable Decleration and Initialization
-    Scanner uI = new Scanner(System.in);
-    int answer = 112; //Answer to the riddle
-    int input; //Users guess
-
-    //Initial output
-    System.out.println("Deep within the mystical air world, you encounter an ethereal air spirit, its form shimmering like a gentle breeze."+
-    "\"Traveler,\" it whispers, \"answer my riddle to proceed.\" It presents the riddle: \"Dancing among clouds, a dozen fowl fly high in the sky, add a centuries leap, and you shall find the the prize.\"");
-
-    input = Utilities.inputInt("What number am I?", -10000000000, 100000000);
-
-    //Processing
-    do
+    //Contructor
+    public AirQuest1 ()
     {
-        if (answer != input)
+        super();
+    }
+
+
+    public void execute(MainCharacter character)
+    {
+        if (!this.isComplete())
         {
-            System.out.println("As you ponder the next step, a sudden gust of wind catches you off guard,"+ 
-            "stealing your balance momentarily.\n You lose your footing and stumble, taking 1 point of damage. The spirit then prompts you to try again");
-            uI.nextLine();
+            //Variable Decleration and Initialization
+            int answer = 112; //Answer to the riddle
+            int input; //Users guess
+            int chances = 2; //Chances the user has to guess correctly
 
-            //ADD DAMAGE REMOVAL
+            //Initial output
+            Utilities.slowPrint("Deep within the mystical air world, you encounter an ethereal air spirit, its form shimmering like a gentle breeze."+
+            "\"Traveler,\" it whispers, \"answer my riddle in two guesses to proceed.\" It presents the riddle: \"Dancing among clouds, a dozen fowl fly high in the sky, add a centuries leap, and you shall find the the prize.\"", 20);
 
+            //Processing
+            do
+            {
+                input = utilities.inputInt("What number am I?", -10000, 100000);
+
+                if (answer != input && chances == 2)
+                {
+                    Utilities.slowPrint("As you ponder the next step, a sudden gust of wind catches you off guard,"+ 
+                    "stealing your balance momentarily. You have 1 chance remaining.", 10);
+                    chances--;
+                
+
+                } if (answer != input && chances == 1)
+                {
+                    Utilities.slowPrint("You lose your footing and stumble, taking 1 point of damage. The spirit then exits your domain", 10);
+                    chances--;
+
+                    //Remove Character HP
+                    character.setHP(character.getHP() - 1);
+                }
+            } while (answer != input && chances != 0); //Force user to try again if they guess incorrectly
+
+            if (chances > 0){
+                Utilities.slowPrint("The spirit's eyes sparkle. \"Correct! You have claimed the prize of 5 coins.\"With a graceful swirl, the spirit vanishes. Encouraged, you continue, eager to uncover the world's secrets.", 10);
+
+                //Gives the user currency once they guess correctly.
+                character.setCurrency(character.getCurrency() + 5);
+            }
+            
+
+        }else //Else in case the side quest has been completed
+        {
+            Utilities.slowPrint("This Side Quest has been completed", 10);
         }
-    } while (answer != input); //Force user to try again if they guess incorrectly
+    } //End of Method
 
 
-System.out.println ("The spirit's eyes sparkle. \"Correct! You have claimed the prize.\"With a graceful swirl, the spirit vanishes. Encouraged, you continue, eager to uncover the world's secrets. ");
-
-//ADD COIN INCREMENTER
-
-
-} //End of menthod
+} //End of class

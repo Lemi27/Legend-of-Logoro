@@ -8,42 +8,68 @@
 
 package src.Worlds.SideQuests;
 
-import java.util.Scanner;
+import src.Worlds.MainCharacter;
+import src.Worlds.Functionalities.Utilities;
 
 public class WaterQuest1 extends SideQuests {
 
-    //Variable Decleration and Initialization
-    Scanner uI = new Scanner(System.in);
-    int answer = 50; //Answer to the riddle
-    int input; //Users guess
-
-    //Initial output
-    System.out.println("Submerged in a world where oceans whispered secrets and waves painted tales, you encountered the Water Oracle—a luminescent figure formed of cascading waterfalls and shimmering pools."+
-    "\"Seeker of the depths,\" it murmured, its voice a gentle cascade, \"to navigate these aqueous realms, solve my riddle and prove your aquatic prowess.\""+
-    "It posed its cryptic challenge: \"Within the tides of ten and the waves of five, multiply the current's flow.\"");
-    
-    input = Utilities.inputInt("What truth shall arise?", -10000000000, 100000000);
- 
-    //Processing
-    do
+    public WaterQuest1()
     {
- 
-        if (answer != input)
+        super();
+    }
+
+    public void execute(MainCharacter character)
+    {
+        if (!this.isComplete())
         {
-           System.out.println("The Water Oracle's luminous form dimmed slightly. \"Incorrect,\" it intoned softly. \"Try again, or remain adrift in this realm's mysteries.\"You loose 1 health in the process");
-           uI.nextLine();
- 
-           //ADD DAMAGE REMOVAL
- 
+            //Variable Decleration and Initialization
+            int answer = 50; //Answer to the riddle
+            int input; //Users guess
+            int chances = 2; //Chances the user has to guess correctly
+
+
+            //Initial output
+            Utilities.slowPrint("Submerged in a world where oceans whispered secrets and waves painted tales, you encountered the Water Oracle—a luminescent figure formed of cascading waterfalls and shimmering pools."+
+            "\"Seeker of the depths,\" it murmured, its voice a gentle cascade, \"to navigate these aqueous realms, solve my riddle and prove your aquatic prowess.\""+
+            "It posed its cryptic challenge: \"Within the tides of ten and the waves of five, multiply the current's flow.\"", 20);
+
+            //Processing
+            do
+            {
+                input = utilities.inputInt("What truth shall arise?", -10000, 100000);
+
+                if (answer != input && chances == 2)
+                {
+                    Utilities.slowPrint("The Water Oracle's luminous form dimmed slightly. \"Incorrect, I must take 1 of your chances, 1 remains.\" it intoned softly.", 10);
+                    chances--;
+
+
+                }if (answer != input && chances == 1)
+                {
+
+                    Utilities.slowPrint("You guess wrong again and remain adrift in this realm's mysteries.\"You loose 1 health in the process", 10);
+                    chances--;
+
+                    //Remove Character HP
+                    character.setHP(character.getHP() - 1);
+
+                }
+            } while (answer != input); //Force user to try again if they guess incorrectly
+
+            if (chances > 0)
+            {
+                Utilities.slowPrint("The Water Oracle's luminous form brightened, casting a radiant glow. \"Correct,\" it echoed melodiously. \"Continue your journey through the watery depths, and take these 5 coins.\""+
+                "With a graceful swirl, the oracle parted the waters, revealing a path deeper into the mystical aquatic world. Emboldened, you venture forth, eager to unravel the secrets that the water realm held beneath its surface.", 10);
+            
+                //Gives the user currency once they guess correctly.
+                character.setCurrency(character.getCurrency() + 5);
+            
+            }
+            
+        }else //Else in case the side quest has been completed
+        {
+            Utilities.slowPrint("This Side Quest has been completed", 10);
         }
-    } while (answer != input); //Force user to try again if they guess incorrectly
- 
- 
-    System.out.println ("The Water Oracle's luminous form brightened, casting a radiant glow. \"Correct,\" it echoed melodiously. \"Continue your journey through the watery depths.\""+
-    "With a graceful swirl, the oracle parted the waters, revealing a path deeper into the mystical aquatic world. Emboldened, you venture forth, eager to unravel the secrets that the water realm held beneath its surface.");
-    
- 
-    //ADD COIN INCREMENTER
- 
- 
+    } //End of Method
+        
 }
