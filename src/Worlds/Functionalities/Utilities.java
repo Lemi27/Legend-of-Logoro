@@ -6,7 +6,7 @@
 @description        Functionalities for the program including restricting input
                     and controlling output.
 ********************************************************/ 
-package worlds.functionalities;
+package src.Worlds.Functionalities;
 
 import java.util.Scanner;
 public class Utilities
@@ -90,9 +90,50 @@ public class Utilities
         } while (!isValidInput); // Continously loop until user inputs an answer that is acceptable.
         return answer;
     } //end of inputString() method
-    public void slowPrint(double interval){
-        
-    }
+  
+      /*******************
+   slowPrint(int currentHp, int maxHp)
+    @param          text
+    @param          interval
+    @return        void
+    @description   Print out text with a delay while printing.
+    *******************/
+  public static void slowPrint(String text, long interval) {
+      // Loop through each character in the text
+      for (int i = 0; i < text.length(); i++) {
+          // Print the current character
+          System.out.print(text.charAt(i));
+          try {
+              // Pause for the specified delay
+              Thread.sleep(interval);
+          } catch (InterruptedException e) {
+              // If interrupted while sleeping, print the stack trace
+              e.printStackTrace();
+          }
+      }
+  } //end of slowPrint() method
+
+      /*******************
+  visualHealthBar(String prompt, String[] acceptedAnswers)
+    @param          currentHealth
+    @param          maxHealth
+    @return         void
+    @description   Print out a visual representation of the main character's health
+    *******************/
+    public static void visualHealthBar(int currentHealth, int maxHealth) {
+
+      System.out.print("Health: ");
+
+      for (int i = 0; i < maxHealth; i++) {
+          if (i < currentHealth) {
+              System.out.print("#"); // Print filled portion of the health bar
+          } else {
+              System.out.print("-"); // Print empty portion of the health bar
+          }
+      }
+
+
+  } // end of printHealthBar method
 }
 
     /*****

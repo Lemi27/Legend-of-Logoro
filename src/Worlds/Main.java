@@ -1,3 +1,4 @@
+package src.Worlds;
 /********************************************************
 @author(s)          Fawaaz Kamali Siddiqui, Shreekavin Umasankar,
                     Lemi Miyu, Matthew Kostuch, Steven Wang, 
@@ -11,6 +12,9 @@
 
 public class Main
 {
+
+    // public variables
+    public MainCharacter character;
 
     /*******************
     main(String[] args)

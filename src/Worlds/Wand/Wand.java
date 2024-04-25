@@ -5,7 +5,9 @@
 @file               Shop.java
 @description        *insert class description here
 ********************************************************/
-package worlds.Wand;
+
+package src.Worlds.Wand;
+
 
 public class Wand
 {
@@ -31,7 +33,7 @@ public class Wand
     {
         return this.defense; 
     }
-    public double offense()
+    public double getOffense()
     {
         return this.offense; 
     }
