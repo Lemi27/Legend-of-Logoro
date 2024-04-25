@@ -141,6 +141,20 @@ public class MainCharacter
     {
         // code to add wand to inventory by adding 
         // another list element
+        // copy array
+        Wand[] nA = new Wand[this.getInventory().length+1];
+        for (int i = 0; i < this.getInventory().length; i++)
+        {
+            nA[i] = this.getInventory()[i];
+        }
+        nA[this.getInventory().length] = wand;
+        
+        // copy nA to inventory
+        this.inventory = new Wand[nA.length];
+        for (int i = 0; i < nA.length; i++)
+        {
+            this.inventory[i] = nA[i];
+        }
     }
 
     public void setCurrentWorld(int world)
