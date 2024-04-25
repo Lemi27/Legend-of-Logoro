@@ -13,14 +13,22 @@ import src.Worlds.Functionalities.Utilities;
 
 public class WaterQuest1 extends SideQuests {
 
+    //Constructor
     public WaterQuest1()
     {
         super();
     }
 
-    public void execute(MainCharacter character)
+    /*******************
+    execute(MainCharacter character)
+    @param          character
+    @return         void
+    @description    This method runs the side quest program for WaterQuest1
+    *******************/
+
+    public void execute(MainCharacter character) 
     {
-        if (!this.isComplete())
+        if (!this.isComplete()) //Checks if the side quest has been completed already
         {
             //Variable Decleration and Initialization
             int answer = 50; //Answer to the riddle
@@ -63,7 +71,6 @@ public class WaterQuest1 extends SideQuests {
             
                 //Gives the user currency once they guess correctly.
                 character.setCurrency(character.getCurrency() + 5);
-            
             }
             
         }else //Else in case the side quest has been completed
@@ -72,4 +79,4 @@ public class WaterQuest1 extends SideQuests {
         }
     } //End of Method
         
-}
+}//End of class

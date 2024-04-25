@@ -14,14 +14,22 @@ import src.Worlds.Functionalities.Utilities;
 
 public class WaterQuest2 extends SideQuests {
 
+    //Constructor
     public WaterQuest2()
     {
         super();
     }
  
+    /*******************
+    execute(MainCharacter character)
+    @param          character
+    @return         void
+    @description    This method runs the side quest program for WaterQuest2
+    *******************/
+
     public void execute(MainCharacter character)
     {
-        if (!this.isComplete())
+        if (!this.isComplete()) //Checks if the side quest has been completed already
         {
             //Variable Decleration and Initialization
             int answer = 0; //Answer to the riddle
@@ -69,8 +77,5 @@ public class WaterQuest2 extends SideQuests {
             Utilities.slowPrint("This Side Quest has been completed", 10);
         }
     } //End of Method
-        
 
-
-
-}
+}//End of class

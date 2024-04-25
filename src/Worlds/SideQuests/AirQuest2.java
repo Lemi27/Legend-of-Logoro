@@ -19,9 +19,16 @@ public class AirQuest2 extends SideQuests {
         super();
     }
 
+    /*******************
+    execute(MainCharacter character)
+    @param          character
+    @return         void
+    @description    This method runs the side quest program for AirQuest2
+    *******************/
+
     public void execute(MainCharacter character)
     {
-        if (!this.isComplete())
+        if (!this.isComplete()) //Checks if the side quest has been completed already
         {
             //Variable Decleration and Initialization
             int answer = 12; //Answer to the riddle
@@ -66,4 +73,6 @@ public class AirQuest2 extends SideQuests {
             Utilities.slowPrint("This Side Quest has been completed", 10);
         }
     } //End of Method
-}
+
+}//End of class
+

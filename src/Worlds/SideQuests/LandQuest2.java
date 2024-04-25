@@ -13,14 +13,22 @@ import src.Worlds.Functionalities.Utilities;
 
 public class LandQuest2 extends SideQuests {
 
+    //Constructor
     public LandQuest2()
     {
         super();
     }
 
+    /*******************
+    execute(MainCharacter character)
+    @param          character
+    @return         void
+    @description    This method runs the side quest program for LandQuest2
+    *******************/
+
     public void execute(MainCharacter character)
     {
-        if (!this.isComplete())
+        if (!this.isComplete()) //Checks if the side quest has been completed already
         {
             //Variable Decleration and Initialization
             int answer = 7; //Answer to the riddle
@@ -37,13 +45,13 @@ public class LandQuest2 extends SideQuests {
             {
                 input = utilities.inputInt("How many glowworms remain to light the cave?", -10000, 100000);
 
-                if (answer != input && chance == 2)
+                if (answer != input && chances == 2)
                 {
                     Utilities.slowPrint("The Earth Sentinel's stone features remained stern. \"Incorrect, you have 1 more chance\" it intoned gravely. \"", 10);
                     chances--;
 
                 }
-                if (answer != input && chance == 1)
+                if (answer != input && chances == 1)
                 {
                     Utilities.slowPrint("You fall again and now must face the consequences by taking 2 damage.", 10);
                     chances--;
@@ -70,4 +78,4 @@ public class LandQuest2 extends SideQuests {
         }
     } //End of Method
         
-}
+}//End of class
