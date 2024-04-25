@@ -6,7 +6,9 @@
 @description        Second side quest in the air world.
 ********************************************************/
 
-package worlds.SideQuests;
+package src.Worlds.SideQuests;
+
+import java.util.Scanner;
 
 public class AirQuest2 extends SideQuests {
 

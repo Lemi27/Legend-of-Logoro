@@ -8,6 +8,8 @@
 
 package worlds.sideQuests;
 
+import java.util.Scanner;
+
 public class MasterQuest2 extends SideQuests {
     
 }
