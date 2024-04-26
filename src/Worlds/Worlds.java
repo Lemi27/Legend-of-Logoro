@@ -98,6 +98,9 @@ public class Worlds
         // System.out.println("1: To access inventory. %n2: To do first sidequest. %n3: To do second sidequest. %n4: Fight Boss. %n5: Access Shop");
         do
         {
+            System.out.printf("Current HP: %s%n", character.getHP());
+            System.out.printf("Current Wand: %s. Offense %s, Defense %s%n", character.getCurrentWand().getName(), character.getCurrentWand().getOffense(), character.getCurrentWand().getDefense());
+            System.out.printf("Base Attack: %s. Base Defense: %s.%n", character.getOffense(), character.getDefense());
             menu = utilities.inputInt("Enter any of the menu options:%n1. Side Quest 1%n2. Side Quest 2%n3. Boss Fight%n4. Access Shop %n5. Access inventory (switch Current Wand)", 1, 5);
             switch(menu)
             {
