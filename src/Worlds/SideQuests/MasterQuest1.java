@@ -35,17 +35,20 @@ public class MasterQuest1 extends SideQuests {
             int input; //Users guess
             int chances = 2; //Chances the user has to guess correctly
 
+
             //Initial output
             Utilities.slowPrint("In the realm of the Master Elementals, where magic intertwines with the very fabric of reality, you find yourself standing before the Gatekeeper of Equations."+ 
             "This ancient being, a fusion of fire, water, earth, and air, guards the path to untold knowledge.\"You seek passage?\" The Gatekeeper's voice booms like thunder, each syllable vibrating with elemental power."+
             "Before you lies a shimmering portal, its arcane symbols pulsing with energy. To unlock its secrets, you must solve the riddle posed by the Gatekeeper."+
             "\"In this realm, magic and logic dance in harmony. Answer me this, mortal:((60x2)÷4)+40\"", 20);
 
+
             //Processing
             do
             {
-                input = utilities.inputInt(" What is the result of the equation?", -10000, 100000);
+                input = utilities.inputInt(" What is the result of the equation?", -10000, 100000); //Assure input
 
+                //Check if the users guess is correct
                 if (answer != input && chances == 2)
                 {
                     Utilities.slowPrint("\"Ah, incorrect, try once more\" the spirit intones, its voice tinged with regret.", 10);
@@ -58,9 +61,12 @@ public class MasterQuest1 extends SideQuests {
 
                     //Remove Character HP
                     character.setHP(character.getHP() - 1);
+
                 }
             } while (answer != input); //Force user to try again if they guess incorrectly
 
+
+            //Gives the user their coins if they guess correctly
             if (chances > 0)
             {
                 Utilities.slowPrint("A moment of silence stretches out, the air thick with anticipation. Then, the gatekeepers spirit's form shimmers and fades, replaced by a radiant glow that envelops the Gate of Elements indicating you have guessed correctly. With a melodic hum, a pile of 5 coins appears in frount of you, and you continue to passage into the heart of the master world ready to face anything that comes in your way.", 10);
@@ -74,6 +80,7 @@ public class MasterQuest1 extends SideQuests {
         {
             Utilities.slowPrint("This Side Quest has been completed", 10);
         }
+        
     } //End of Method
         
 }//End of class

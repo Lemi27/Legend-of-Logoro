@@ -35,16 +35,19 @@ public class LandQuest2 extends SideQuests {
             int input; //Users guess
             int chances = 2; //Chances the user has to guess correctly
 
+
             //Initial output
             Utilities.slowPrint("In a land where valleys whispered tales and forests guarded ancient secrets, you stood before the Earth Sentinel—a massive being of roots and boulders."+
             "\"Traveler,\" it rumbled, its voice resonating like shifting tectonic plates, \"to traverse this sacred maze, unravel my riddle's cryptic haze.\""+
             "It presented its puzzling challenge: \"FINISH THIS Amidst the soil, beneath the sky's crown, subtract a quake's rumble, what's left to be found?\"", 20);
 
+            
             //Processing
             do
             {
                 input = utilities.inputInt("How many glowworms remain to light the cave?", -10000, 100000);
 
+                //Check if answer is correct
                 if (answer != input && chances == 2)
                 {
                     Utilities.slowPrint("The Earth Sentinel's stone features remained stern. \"Incorrect, you have 1 more chance\" it intoned gravely. \"", 10);
@@ -62,6 +65,8 @@ public class LandQuest2 extends SideQuests {
                 }
             } while (answer != input); //Force user to try again if they guess incorrectly
 
+
+            //Give the user their reward
             if (chances > 0)
             {
                 Utilities.slowPrint("The Earth Sentinel's stone features softened. \"Correct,\" it intoned with approval. \"Proceed on your path, and take these 10 coins.\""+
@@ -72,10 +77,12 @@ public class LandQuest2 extends SideQuests {
                 
             }
             
+
         }else //Else in case the side quest has been completed
         {
             Utilities.slowPrint("This Side Quest has been completed", 10);
         }
+
     } //End of Method
         
 }//End of class

@@ -35,23 +35,25 @@ public class FireQuest1 extends SideQuests {
             int input; //Users guess
             int chances = 2; //Chances the user has to guess correctly
 
+
             //Initial output
             Utilities.slowPrint("In a realm ablaze with fiery hues and molten landscapes, you found yourself standing before the Fire Seer—a formidable entity forged from flickering flames and glowing embers."+
             "\"Adventurer of the scorching expanse,\" it intoned, its voice crackling like a roaring fire, \"to pass through this infernal domain, decipher my riddle's burning refrain.\""+
             "It posed its cryptic challenge: \"I am a number. If you divide me by 4, I become 9.\"", 20);
 
+
             //Processing
             do
             {
-                input = utilities.inputInt("What number am I?", -10000, 100000);
+                input = utilities.inputInt("What number am I?", -10000, 100000); //Assure input
 
+                //Check for correct answer
                 if (answer != input && chances == 2)
                 {
                     Utilities.slowPrint("The Fire Seer's flames dimmed slightly, its gaze cooling with a hint of concern. \"Incorrect, try again!\"", 10);
                     chances--;
 
-                }
-                if (answer != input && chances == 1)
+                }if (answer != input && chances == 1)
                 {
                     Utilities.slowPrint("Its voice tinged with smoky disappointment, hinting at an incorrect answer. \"You've lost 1 HP. Rekindle your thoughts, or be consumed by the fiery conundrum of this realm.\"", 10);
                     chances--;
@@ -61,6 +63,8 @@ public class FireQuest1 extends SideQuests {
                 }
             } while (answer != input); //Force user to try again if they guess incorrectly
 
+
+            //Give the user their reward
             if (chances > 0)
             {
                 Utilities.slowPrint("The Fire Seer's flames flickered brighter, casting a radiant glow. \"Correct, take these coins\" it rumbled approvingly. \"Forge ahead through the fiery trials that await.\""+
@@ -75,6 +79,7 @@ public class FireQuest1 extends SideQuests {
         {
             Utilities.slowPrint("This Side Quest has been completed", 10);
         }
+        
     } //End of Method
 
 } //End of class

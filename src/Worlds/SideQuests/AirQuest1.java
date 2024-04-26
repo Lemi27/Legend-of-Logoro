@@ -53,7 +53,6 @@ public class AirQuest1 extends SideQuests
                     Utilities.slowPrint("As you ponder the next step, a sudden gust of wind catches you off guard,"+ 
                     "stealing your balance momentarily. You have 1 chance remaining.", 10);
                     chances--;
-                
 
                 } if (answer != input && chances == 1) //Second guess
                 {
@@ -62,6 +61,7 @@ public class AirQuest1 extends SideQuests
 
                     //Remove Character HP
                     character.setHP(character.getHP() - 1);
+
                 }
             } while (answer != input && chances != 0); //Force user to try again if they guess incorrectly
 
@@ -79,7 +79,7 @@ public class AirQuest1 extends SideQuests
         {
             Utilities.slowPrint("This Side Quest has been completed", 10);
         }
-        
+
     } //End of Method
 
 } //End of class

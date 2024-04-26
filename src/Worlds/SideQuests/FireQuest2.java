@@ -35,16 +35,19 @@ public class FireQuest2 extends SideQuests {
             int input; //Users guess
             int chances = 2; //Chances the user has to guess correctly
             
+
             //Initial output
             Utilities.slowPrint("In a land where flames painted the skies and lava rivers flowed, you found yourself facing the Ember Sage—a majestic figure crafted from dancing flames and glowing embers."+
             "\"Traveler of the fiery expanse,\" it intoned, its voice echoing like crackling logs, \"to journey through this scalding realm, unravel my riddle's burning test.\""+
             "It posed its cryptic challenge: \"Legend has it that the igenous jewels multiply when divided equally among the brave. If there are 720 jewels and they must be divided equally among 8 warriors.\"", 20);
             
+
             //Processing
             do
             {
-                input = utilities.inputInt("What number am I?", -10000, 100000);
+                input = utilities.inputInt("What number am I?", -10000, 100000); //Assure input
 
+                //Check for correct answer
                 if (answer != input && chances == 2)
                 {
                     Utilities.slowPrint("The Ember Sage's flames wavered, its luminosity fading momentarily. \"Incorrect, try again\" it intoned.", 10);
@@ -62,6 +65,7 @@ public class FireQuest2 extends SideQuests {
             } while (answer != input); //Force user to try again if they guess incorrectly
     
 
+            //Gives the user their reward if their guess is correct
             if (chances > 0)
             {
                 Utilities.slowPrint("The Ember Sage's flames brightened, casting a warm glow. \"Correct,\" it affirmed. \"Forge ahead through the blazing challenges that await using these 10 coins.\""+
@@ -77,6 +81,6 @@ public class FireQuest2 extends SideQuests {
             Utilities.slowPrint("This Side Quest has been completed", 10);
         }
     
-        } //End of Method 
+    } //End of Method 
 
 }//End of class

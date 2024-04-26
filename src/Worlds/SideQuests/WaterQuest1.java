@@ -41,11 +41,13 @@ public class WaterQuest1 extends SideQuests {
             "\"Seeker of the depths,\" it murmured, its voice a gentle cascade, \"to navigate these aqueous realms, solve my riddle and prove your aquatic prowess.\""+
             "It posed its cryptic challenge: \"Within the tides of ten and the waves of five, multiply the current's flow.\"", 20);
 
+
             //Processing
             do
             {
-                input = utilities.inputInt("What truth shall arise?", -10000, 100000);
+                input = utilities.inputInt("What truth shall arise?", -10000, 100000); //Assure input
 
+                //Check if guess is correct
                 if (answer != input && chances == 2)
                 {
                     Utilities.slowPrint("The Water Oracle's luminous form dimmed slightly. \"Incorrect, I must take 1 of your chances, 1 remains.\" it intoned softly.", 10);
@@ -64,6 +66,8 @@ public class WaterQuest1 extends SideQuests {
                 }
             } while (answer != input); //Force user to try again if they guess incorrectly
 
+
+            //Give the user their reward
             if (chances > 0)
             {
                 Utilities.slowPrint("The Water Oracle's luminous form brightened, casting a radiant glow. \"Correct,\" it echoed melodiously. \"Continue your journey through the watery depths, and take these 5 coins.\""+
@@ -73,10 +77,12 @@ public class WaterQuest1 extends SideQuests {
                 character.setCurrency(character.getCurrency() + 5);
             }
             
+
         }else //Else in case the side quest has been completed
         {
             Utilities.slowPrint("This Side Quest has been completed", 10);
         }
+        
     } //End of Method
         
 }//End of class
