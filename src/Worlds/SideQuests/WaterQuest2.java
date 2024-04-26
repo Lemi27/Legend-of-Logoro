@@ -11,7 +11,6 @@ package src.Worlds.SideQuests;
 import src.Worlds.MainCharacter;
 import src.Worlds.Functionalities.Utilities;
 
-
 public class WaterQuest2 extends SideQuests {
 
     //Constructor

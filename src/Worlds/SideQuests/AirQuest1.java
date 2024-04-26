@@ -14,7 +14,7 @@ import src.Worlds.Functionalities.Utilities;
 public class AirQuest1 extends SideQuests 
 {
     //Contructor
-    public AirQuest1 ()
+    public AirQuest1()
     {
         super();
     }

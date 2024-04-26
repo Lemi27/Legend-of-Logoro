@@ -14,7 +14,7 @@ import src.Worlds.Functionalities.Utilities;
 public class LandQuest1 extends SideQuests {
 
     //Constructor
-    public LandQuest1 ()
+    public LandQuest1()
     {
         super();
     }
