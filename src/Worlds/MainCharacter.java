@@ -52,6 +52,7 @@ public class MainCharacter
         defense = 1;
         currentWorld = 1;
         currentWand = new Wand();
+        inventory = new Wand[1];
         inventory[0] = currentWand;
         livesRemaining = 3;
         currency = 2;

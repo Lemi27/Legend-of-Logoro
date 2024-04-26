@@ -108,7 +108,14 @@ public class Worlds
                 character.setLivesRemaining(character.getLivesRemaining()-1);
             }
 
-            menu = utilities.inputInt("Enter any of the menu options:%n1. Side Quest 1%n2. Side Quest 2%n3. Boss Fight%n4. Access Shop %n5. Access inventory (switch Current Wand)", 1, 5);
+            // menu = utilities.inputInt("Enter any of the menu options:%n1. Side Quest 1%n2. Side Quest 2%n3. Boss Fight%n4. Access Shop %n5. Access inventory (switch Current Wand)", 1, 5);
+            System.out.println("Enter any of the menu options:");
+            System.out.println("1. Side Quest 1");
+            System.out.println("2. Side Quest 2");
+            System.out.println("3. Boss Fight");
+            System.out.println("4. Access Shop");
+            System.out.println("5. Access Inventory (switch current wand)");
+            menu = utilities.inputInt("> ", 1, 5);
             switch(menu)
             {
                 case 1:
