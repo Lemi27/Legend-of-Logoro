@@ -14,8 +14,6 @@ import src.Worlds.Wand.*;
 import src.Worlds.Functionalities.*;
 
 
-
-
 public class Worlds
 {
 
@@ -27,6 +25,7 @@ public class Worlds
     
     public Scanner scanner;
     public Utilities utilities;
+    private boolean isWorldComplete;
 
     
 
@@ -38,9 +37,52 @@ public class Worlds
 
         
         boss = new AirBoss();
+        isWorldComplete = boss.isDefeated();
 
         scanner = new Scanner(System.in);
         utilities = new Utilities();
+    }
+
+    // GETTERS
+    public SideQuests getSideQuest1()
+    {
+        return this.sidequest1;
+    }
+
+    public SideQuests getSideQuest2()
+    {
+        return this.sidequest2;
+    }
+
+    public Bosses getBoss()
+    {
+        return this.boss;
+    }
+
+    public boolean isWorldComplete()
+    {
+        return this.isWorldComplete;
+    }
+
+    // SETTERS
+    public void setSideQuest1(SideQuests sideQuest)
+    {
+        this.sidequest1 = sideQuest;
+    }
+
+    public void setSideQuest2(SideQuests sideQuest)
+    {
+        this.sidequest2 = sideQuest;
+    }
+
+    public void setBoss(Bosses boss)
+    {
+        this.boss = boss;
+    }
+
+    public void setIsWorldComplete(boolean completion)
+    {
+        this.isWorldComplete = completion;
     }
 
 
@@ -56,17 +98,20 @@ public class Worlds
         // System.out.println("1: To access inventory. %n2: To do first sidequest. %n3: To do second sidequest. %n4: Fight Boss. %n5: Access Shop");
         do
         {
+            System.out.printf("Current HP: %s%n", character.getHP());
+            System.out.printf("Current Wand: %s. Offense %s, Defense %s%n", character.getCurrentWand().getName(), character.getCurrentWand().getOffense(), character.getCurrentWand().getDefense());
+            System.out.printf("Base Attack: %s. Base Defense: %s.%n", character.getOffense(), character.getDefense());
             menu = utilities.inputInt("Enter any of the menu options:%n1. Side Quest 1%n2. Side Quest 2%n3. Boss Fight%n4. Access Shop %n5. Access inventory (switch Current Wand)", 1, 5);
             switch(menu)
             {
                 case 1:
-                    sidequest1.execute();
+                    sidequest1.execute(character);
                     break;
                 case 2:
-                    sidequest2.execute();
+                    sidequest2.execute(character);
                     break;
                 case 3:
-                    boss.fight();
+                    boss.fight(character);
                     break;
                 case 4:
                     this.accessShop(character);
