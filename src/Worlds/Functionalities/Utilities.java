@@ -53,7 +53,7 @@ public class Utilities
       }
 
     } while (input < min || input > max); // Continously loop until user inputs a value that is lower then min and
-                                          // higher then max
+    
     return input;
   } // end of inputInt() method
     
