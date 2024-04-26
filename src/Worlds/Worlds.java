@@ -14,8 +14,6 @@ import src.Worlds.Wand.*;
 import src.Worlds.Functionalities.*;
 
 
-
-
 public class Worlds
 {
 
@@ -27,6 +25,7 @@ public class Worlds
     
     public Scanner scanner;
     public Utilities utilities;
+    private boolean isWorldComplete;
 
     
 
@@ -38,9 +37,52 @@ public class Worlds
 
         
         boss = new AirBoss();
+        isWorldComplete = boss.isDefeated();
 
         scanner = new Scanner(System.in);
         utilities = new Utilities();
+    }
+
+    // GETTERS
+    public SideQuests getSideQuest1()
+    {
+        return this.sidequest1;
+    }
+
+    public SideQuests getSideQuest2()
+    {
+        return this.sidequest2;
+    }
+
+    public Bosses getBoss()
+    {
+        return this.boss;
+    }
+
+    public boolean isWorldComplete()
+    {
+        return this.isWorldComplete;
+    }
+
+    // SETTERS
+    public void setSideQuest1(SideQuests sideQuest)
+    {
+        this.sidequest1 = sideQuest;
+    }
+
+    public void setSideQuest2(SideQuests sideQuest)
+    {
+        this.sidequest2 = sideQuest;
+    }
+
+    public void setBoss(Bosses boss)
+    {
+        this.boss = boss;
+    }
+
+    public void setIsWorldComplete(boolean completion)
+    {
+        this.isWorldComplete = completion;
     }
 
 
@@ -66,7 +108,7 @@ public class Worlds
                     sidequest2.execute();
                     break;
                 case 3:
-                    boss.fight();
+                    boss.fight(character);
                     break;
                 case 4:
                     this.accessShop(character);
