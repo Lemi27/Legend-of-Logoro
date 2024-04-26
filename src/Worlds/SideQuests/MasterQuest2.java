@@ -53,7 +53,7 @@ public class MasterQuest2 extends SideQuests {
                     Utilities.slowPrint("The Elemental Master's aura flickered, its energies dimming briefly. \"Incorrect, try once more.\"", 10);
                     chances--;
 
-                }if (answer != input && chances == 2)
+                }else if (answer != input && chances == 2)
                 {
                     Utilities.slowPrint("Its voice carried a subtle disappointment. \"You've lost 2 HP. Refine your understanding, or be lost amidst the complexities of the elemental enigma.\"", 10);
                     chances--;

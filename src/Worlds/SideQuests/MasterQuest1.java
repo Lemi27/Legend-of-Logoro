@@ -54,7 +54,7 @@ public class MasterQuest1 extends SideQuests {
                     Utilities.slowPrint("\"Ah, incorrect, try once more\" the spirit intones, its voice tinged with regret.", 10);
                     chances--;
 
-                }if (answer != input && chances == 1)
+                }else if (answer != input && chances == 1)
                 {
                     Utilities.slowPrint("\"You feel a sharp sting as if a gust of icy wind has grazed your skin. Your vision blurs momentarily, and you sense a loss of vitality. You've lost 1 HP from the elemental backlash of your incorrect answer.\"", 10);
                     chances--;

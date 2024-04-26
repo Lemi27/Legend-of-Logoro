@@ -54,7 +54,7 @@ public class WaterQuest2 extends SideQuests {
                     Utilities.slowPrint("The Water Guardian's watery gaze dimmed momentarily. \"Incorrect,\" it intoned softly. 1 guess remains. \"", 10);
                     chances--;
 
-                }if (answer != input && chances == 1)
+                }else if (answer != input && chances == 1)
                 {
                     Utilities.slowPrint("\"Incorrect again,\" said the Guardian. \"I shall remove 2 health and let you rethink the depths of the puzzle.", 10);
                     chances--;

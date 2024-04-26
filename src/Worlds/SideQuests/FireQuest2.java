@@ -53,7 +53,7 @@ public class FireQuest2 extends SideQuests {
                     Utilities.slowPrint("The Ember Sage's flames wavered, its luminosity fading momentarily. \"Incorrect, try again\" it intoned.", 10);
                     chances--;
 
-                }if (answer != input && chances == 1)
+                }else if (answer != input && chances == 1)
                 {
                     Utilities.slowPrint("Its voice carrying a hint of disappointment.\"You've lost 2 HP. Refocus your thoughts, or risk being ensnared by the fiery enigma of this realm.\"", 10);
                     chances--;

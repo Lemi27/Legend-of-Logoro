@@ -53,8 +53,7 @@ public class LandQuest2 extends SideQuests {
                     Utilities.slowPrint("The Earth Sentinel's stone features remained stern. \"Incorrect, you have 1 more chance\" it intoned gravely. \"", 10);
                     chances--;
 
-                }
-                if (answer != input && chances == 1)
+                }else if (answer != input && chances == 1)
                 {
                     Utilities.slowPrint("You fall again and now must face the consequences by taking 2 damage.", 10);
                     chances--;

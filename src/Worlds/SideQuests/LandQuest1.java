@@ -53,7 +53,7 @@ public class LandQuest1 extends SideQuests {
                     Utilities.slowPrint("Sorry, that's not correct,\" the Guardian's voice roared. You have 1 chance remaning.", 10);
                     chances--;
 
-                } if (answer != input && chances == 1)
+                }else if (answer != input && chances == 1)
                 {
                     Utilities.slowPrint("After guessing incorrectly, you face the consequences by taking 1 damage.", 10);
                     chances--;

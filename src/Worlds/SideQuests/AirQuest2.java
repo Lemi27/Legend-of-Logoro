@@ -52,7 +52,7 @@ public class AirQuest2 extends SideQuests {
                     Utilities.slowPrint("Sorry, that's not correct,\" the monster's voice boomed with disgrace. You have 1 chance remaining.", 10);
                     chances--;
 
-                }if (answer != input && chances == 1)
+                }else if (answer != input && chances == 1)
                 {
                     Utilities.slowPrint("The monster responds with disappointment. You face the consequences of losing 2 HP. \"Try again if you wish.\"", 10);
                     chances--;

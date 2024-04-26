@@ -54,7 +54,7 @@ public class WaterQuest1 extends SideQuests {
                     chances--;
 
 
-                }if (answer != input && chances == 1)
+                }else if (answer != input && chances == 1)
                 {
 
                     Utilities.slowPrint("You guess wrong again and remain adrift in this realm's mysteries.\"You loose 1 health in the process", 10);

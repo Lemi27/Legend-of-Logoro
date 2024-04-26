@@ -53,7 +53,7 @@ public class FireQuest1 extends SideQuests {
                     Utilities.slowPrint("The Fire Seer's flames dimmed slightly, its gaze cooling with a hint of concern. \"Incorrect, try again!\"", 10);
                     chances--;
 
-                }if (answer != input && chances == 1)
+                }else if (answer != input && chances == 1)
                 {
                     Utilities.slowPrint("Its voice tinged with smoky disappointment, hinting at an incorrect answer. \"You've lost 1 HP. Rekindle your thoughts, or be consumed by the fiery conundrum of this realm.\"", 10);
                     chances--;

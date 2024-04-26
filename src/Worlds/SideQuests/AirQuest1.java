@@ -54,7 +54,7 @@ public class AirQuest1 extends SideQuests
                     "stealing your balance momentarily. You have 1 chance remaining.", 10);
                     chances--;
 
-                } if (answer != input && chances == 1) //Second guess
+                }else if (answer != input && chances == 1) //Second guess
                 {
                     Utilities.slowPrint("You lose your footing and stumble, taking 1 point of damage. The spirit then exits your domain", 10);
                     chances--;
