@@ -74,6 +74,9 @@ public class WaterQuest2 extends SideQuests {
 
                 //Gives the user currency once they guess correctly.
                 character.setCurrency(character.getCurrency() + 10);
+
+                //Update game progress
+                character.updateProgress(2, 1);
             }
             
 

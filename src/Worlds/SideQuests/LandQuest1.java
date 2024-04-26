@@ -75,6 +75,8 @@ public class LandQuest1 extends SideQuests {
                 //Gives the user currency once they guess correctly.
                 character.setCurrency(character.getCurrency() + 5);
 
+                //Update game progress
+                character.updateProgress(1, 0);
             }
             
             

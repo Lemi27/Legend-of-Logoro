@@ -74,6 +74,8 @@ public class MasterQuest2 extends SideQuests {
                 //Gives the user currency once they guess correctly.
                 character.setCurrency(character.getCurrency() + 15);
 
+                //Update game progress
+                character.updateProgress(4, 1);
             }
             
         }else //Else in case the side quest has been completed

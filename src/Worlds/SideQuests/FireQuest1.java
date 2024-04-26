@@ -72,7 +72,9 @@ public class FireQuest1 extends SideQuests {
                 
                 //Gives the user currency once they guess correctly.
                 character.setCurrency(character.getCurrency() + 5);
-    
+
+                //Update game progress
+                character.updateProgress(3, 0);
             }
             
         }else //Else in case the side quest has been completed
