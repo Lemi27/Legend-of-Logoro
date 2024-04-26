@@ -12,7 +12,7 @@ import java.util.Scanner;
 public class Utilities
 {
 
-    private Scanner uI;
+    private static Scanner uI;
 
     // constructor method
     public Utilities() 
@@ -23,9 +23,9 @@ public class Utilities
     
     /*******************
     inputInt(String prompt, int min, int max)
+    @param          prompt
     @param          min
     @param          max
-    @param          prompt
     @return         int
     @description    Continously loop until user inputs a value that is lower then max and higher then min
     *******************/
@@ -62,7 +62,7 @@ public class Utilities
     @description   Continously loop until user inputs an answer that is an acceptable
                     answer that comes from a list if possible accepted answers.
     *******************/
-    public String inputString(String prompt, String[] acceptedAnswers) {
+    public static String inputString(String prompt, String[] acceptedAnswers) {
 
         String answer;
         boolean isValidInput;

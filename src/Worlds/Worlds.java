@@ -99,8 +99,15 @@ public class Worlds
         do
         {
             System.out.printf("Current HP: %s%n", character.getHP());
+            System.out.printf("Lives Remaining: %s.%n", character.getLivesRemaining());
             System.out.printf("Current Wand: %s. Offense %s, Defense %s%n", character.getCurrentWand().getName(), character.getCurrentWand().getOffense(), character.getCurrentWand().getDefense());
             System.out.printf("Base Attack: %s. Base Defense: %s.%n", character.getOffense(), character.getDefense());
+
+            if (character.getHP() <= 0)
+            {
+                character.setLivesRemaining(character.getLivesRemaining()-1);
+            }
+
             menu = utilities.inputInt("Enter any of the menu options:%n1. Side Quest 1%n2. Side Quest 2%n3. Boss Fight%n4. Access Shop %n5. Access inventory (switch Current Wand)", 1, 5);
             switch(menu)
             {
@@ -275,6 +282,16 @@ public class Worlds
         }
 
         
+    }
+
+    public void beginningStoryline()
+    {
+        // will be overriden in child classes
+    }
+
+    public void endStoryline()
+    {
+        // will be overriden in child classes
     }
 
     private Wand[] addWand(Wand[] wands, Wand wand)
