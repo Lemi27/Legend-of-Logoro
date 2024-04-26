@@ -71,7 +71,7 @@ public class Main
         // if user has won the game
         if (mainCharacter.getProgress()[4][2])
         {
-            // storyline 
+            // storyline after game is won
         }
         else // if user has lost the game
         {

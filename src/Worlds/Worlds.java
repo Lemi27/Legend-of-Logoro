@@ -102,10 +102,10 @@ public class Worlds
             switch(menu)
             {
                 case 1:
-                    sidequest1.execute();
+                    sidequest1.execute(character);
                     break;
                 case 2:
-                    sidequest2.execute();
+                    sidequest2.execute(character);
                     break;
                 case 3:
                     boss.fight(character);
