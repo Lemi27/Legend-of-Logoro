@@ -37,8 +37,8 @@ public class LandQuest2 extends SideQuests {
 
 
             //Initial output
-            Utilities.slowPrint("In a land where valleys whispered tales and forests guarded ancient secrets, you stood before the Earth Sentinel—a massive being of roots and boulders."+
-            "\"Traveler,\" it rumbled, its voice resonating like shifting tectonic plates, \"to traverse this sacred maze, unravel my riddle's cryptic haze.\""+
+            Utilities.slowPrint("In a land where valleys whispered tales and forests guarded ancient secrets, you stood before the Earth Sentinel—a massive being of roots and boulders.\n"+
+            "\"Traveler,\" it rumbled, its voice resonating like shifting tectonic plates, \"to traverse this sacred maze, unravel my riddle's cryptic haze.\"\n"+
             "It presented its puzzling challenge: \"FINISH THIS Amidst the soil, beneath the sky's crown, subtract a quake's rumble, what's left to be found?\"", 20);
 
             
@@ -50,7 +50,7 @@ public class LandQuest2 extends SideQuests {
                 //Check if answer is correct
                 if (answer != input && chances == 2)
                 {
-                    Utilities.slowPrint("The Earth Sentinel's stone features remained stern. \"Incorrect, you have 1 more chance\" it intoned gravely. \"", 10);
+                    Utilities.slowPrint("The Earth Sentinel's stone features remained stern. \"Incorrect, you have 1 more chance,\" it intoned gravely.", 10);
                     chances--;
 
                 }else if (answer != input && chances == 1)
@@ -68,7 +68,7 @@ public class LandQuest2 extends SideQuests {
             //Give the user their reward
             if (chances > 0)
             {
-                Utilities.slowPrint("The Earth Sentinel's stone features softened. \"Correct,\" it intoned with approval. \"Proceed on your path, and take these 10 coins.\""+
+                Utilities.slowPrint("The Earth Sentinel's stone features softened. \"Correct,\" it intoned with approval. \"Proceed on your path, and take these 10 coins.\"\n"+
                 "With a gentle shift, the sentinel opened a hidden passage, guiding you deeper into the labyrinthine world. Filled with determination, you ventured forth, ready to explore the mysteries that lay ahead.", 10);
 
                 //Gives the user currency once they guess correctly.

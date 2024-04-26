@@ -37,8 +37,8 @@ public class WaterQuest1 extends SideQuests {
 
 
             //Initial output
-            Utilities.slowPrint("Submerged in a world where oceans whispered secrets and waves painted tales, you encountered the Water Oracle—a luminescent figure formed of cascading waterfalls and shimmering pools."+
-            "\"Seeker of the depths,\" it murmured, its voice a gentle cascade, \"to navigate these aqueous realms, solve my riddle and prove your aquatic prowess.\""+
+            Utilities.slowPrint("Submerged in a world where oceans whispered secrets and waves painted tales, you encountered the Water Oracle—a luminescent figure formed of cascading waterfalls and shimmering pools.\n"+
+            "\"Seeker of the depths,\" it murmured, its voice a gentle cascade, \"to navigate these aqueous realms, solve my riddle and prove your aquatic prowess.\"\n"+
             "It posed its cryptic challenge: \"Within the tides of ten and the waves of five, multiply the current's flow.\"", 20);
 
 
@@ -70,7 +70,7 @@ public class WaterQuest1 extends SideQuests {
             //Give the user their reward
             if (chances > 0)
             {
-                Utilities.slowPrint("The Water Oracle's luminous form brightened, casting a radiant glow. \"Correct,\" it echoed melodiously. \"Continue your journey through the watery depths, and take these 5 coins.\""+
+                Utilities.slowPrint("The Water Oracle's luminous form brightened, casting a radiant glow. \"Correct,\" it echoed melodiously. \"Continue your journey through the watery depths, and take these 5 coins.\"\n"+
                 "With a graceful swirl, the oracle parted the waters, revealing a path deeper into the mystical aquatic world. Emboldened, you venture forth, eager to unravel the secrets that the water realm held beneath its surface.", 10);
             
                 //Gives the user currency once they guess correctly.

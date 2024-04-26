@@ -38,8 +38,8 @@ public class WaterQuest2 extends SideQuests {
 
 
             //Initial output
-            Utilities.slowPrint("Navigating a realm where shimmering lakes mirrored the sky and waterfalls sang ancient melodies, you found yourself standing before the Water Guardian—a majestic figure sculpted from flowing rivers and misty streams."+
-            "\"Traveler of the aquatic expanse,\" it murmured, its voice a soothing ripple, \"to journey further into these aqueous lands, unravel my enigmatic riddle and reveal your insight.\""+
+            Utilities.slowPrint("Navigating a realm where shimmering lakes mirrored the sky and waterfalls sang ancient melodies, you found yourself standing before the Water Guardian—a majestic figure sculpted from flowing rivers and misty streams.\n"+
+            "\"Traveler of the aquatic expanse,\" it murmured, its voice a soothing ripple, \"to journey further into these aqueous lands, unravel my enigmatic riddle and reveal your insight.\"\n"+
             "It presented its cryptic challenge: \" If you multiply the number of legs on a crab by the number of bones on a shark, you get me.\"", 20);
 
 
@@ -51,7 +51,7 @@ public class WaterQuest2 extends SideQuests {
                 //Check if answer is correct
                 if (answer != input && chances == 2)
                 {
-                    Utilities.slowPrint("The Water Guardian's watery gaze dimmed momentarily. \"Incorrect,\" it intoned softly. 1 guess remains. \"", 10);
+                    Utilities.slowPrint("The Water Guardian's watery gaze dimmed momentarily. \"Incorrect,\" it intoned softly. 1 guess remains.\"", 10);
                     chances--;
 
                 }else if (answer != input && chances == 1)
@@ -69,7 +69,7 @@ public class WaterQuest2 extends SideQuests {
             //Give the user their answer reward
             if (chances > 0)
             {
-                Utilities.slowPrint("The Water Guardian's watery gaze shimmered with approval. \"Correct,\" it echoed melodically. \"Forge ahead on your aquatic quest, and take these 10 coins."+
+                Utilities.slowPrint("The Water Guardian's watery gaze shimmered with approval. \"Correct,\" it echoed melodically. \"Forge ahead on your aquatic quest, and take these 10 coins.\"\n"+
                 "With a graceful gesture, the guardian parted the waters, unveiling a pathway deeper into the enchanting water world. Fueled by success, you ventured forth, eager to discover the submerged secrets awaiting you.", 10);
 
                 //Gives the user currency once they guess correctly.

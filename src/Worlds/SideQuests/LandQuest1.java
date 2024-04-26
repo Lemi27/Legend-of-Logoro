@@ -37,8 +37,8 @@ public class LandQuest1 extends SideQuests {
 
 
             //Initial output
-            Utilities.slowPrint("In a realm where mountains touched the sky and rivers sang ancient songs, you find yourself facing the Earth Guardian—a colossal figure of stone and moss."+
-            "\"Seeker,\" it intoned, its voice deep as rumbling earth, \"to pass this sacred ground, solve my riddle and prove your worth.\""+
+            Utilities.slowPrint("In a realm where mountains touched the sky and rivers sang ancient songs, you find yourself facing the Earth Guardian—a colossal figure of stone and moss.\n"+
+            "\"Seeker,\" it intoned, its voice deep as rumbling earth, \"to pass this sacred ground, solve my riddle and prove your worth.\"\n"+
             "It posed its cryptic challenge: \"Ten glowworms illuminate a dark cave. A hungry badger snatches three for a midnight snack.\"", 20);
 
 
@@ -69,7 +69,7 @@ public class LandQuest1 extends SideQuests {
             if (chances > 0)
             {
             
-                Utilities.slowPrint("The Earth Guardian's stony visage cracked into a smile. \"Correct,\" it boomed approvingly and gave 5 coins. \"You may continue your journey.\""+
+                Utilities.slowPrint("The Earth Guardian's stony visage cracked into a smile. \"Correct,\" it boomed approvingly and gave 5 coins. \"You may continue your journey.\"\n"+
                 "With a gentle tremor, the guardian stepped aside and went deep into the mystical land. Inspired, you moved forward, eager to uncover the world's secrets.", 10);
 
                 //Gives the user currency once they guess correctly.
