@@ -29,30 +29,33 @@ public class Utilities
     @return         int
     @description    Continously loop until user inputs a value that is lower then max and higher then min
     *******************/
-    public int inputInt(String prompt, int min, int max) {
+  public static int inputInt(String prompt, int min, int max) {
+    Scanner uI = new Scanner(System.in);
+    int input;
 
-        int input;
-        do
-        {
-            System.out.println(prompt);
+    System.out.println(prompt);
+    do {
 
-            // If the user does not input an int then you loop until they input an integer. 
-            while (!uI.hasNextInt()) 
-            { 
-                System.out.println("Please enter a valid integer. ");
-                uI.next();
-            }
-            input =uI.nextInt();
+      // If the user does not input an int then you loop until they input an integer.
+      while (!uI.hasNextInt()) {
+        System.out.println("Please enter a valid integer. ");
+        System.out.println(prompt);
+        uI.nextLine();
+      }
+      input = uI.nextInt();
 
-            //Check if the input value is higher then max or lower than min. If so, loop until input is lower then max and higher then min
-            while (input< min || input > max) 
-            {
-                System.out.println("Please enter a valid integer");
-                System.out.print(prompt);
-            }
-        } while (input > min || input < max); // Continously loop until user inputs a value that is lower then max and higher then min
-        return input;
-    } // end of inputInt() method
+      // Check if the input value is higher then max or lower than min. If so, loop
+      // until input is lower then max and higher then min
+      if (input < min || input > max) {
+        System.out.println("Please enter a valid integer");
+        System.out.println(prompt);
+        uI.nextLine();
+      }
+
+    } while (input < min || input > max); // Continously loop until user inputs a value that is lower then min and
+                                          // higher then max
+    return input;
+  } // end of inputInt() method
     
     /*******************
     inputString(String prompt, String[] acceptedAnswers)
