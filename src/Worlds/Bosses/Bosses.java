@@ -9,7 +9,7 @@
 package src.Worlds.Bosses;
 import src.Worlds.MainCharacter;
 import src.Worlds.Wand.*;
-import src.*;
+import src.Worlds.Functionalities.Utilities;
 import java.util.Scanner;
 
 
@@ -19,6 +19,7 @@ public class Bosses
     // CLASS VARIABLES
     private String bossName;
     private double hp;
+    private double maxHP;
     private double offense;
     private double defense;
     Wand bossWand = new Wand();
@@ -30,13 +31,16 @@ public class Bosses
     private boolean isDefeated;
     private Scanner scanner;
 
+    public Utilities utilities;
+
 
     // constructor method
     public Bosses()
     {
-        
+        // default boss name
         bossName = "";
         hp = 0;
+        maxHP = 10;
         offense = 0;
         defense = 0;
         bossWand.setName("Boss Wand");
@@ -47,7 +51,10 @@ public class Bosses
         maxAttack = 0;
         maxDefense = 0; 
         isDefeated = false;
+        level = 0;
         scanner = new Scanner(System.in);
+
+        utilities = new Utilities();
 
     }
 
@@ -61,6 +68,11 @@ public class Bosses
     public double getHp() {
 
         return this.hp;
+    }
+
+    public double getMaxHP()
+    {
+        return this.maxHP;
     }
 
     public double getOffense() 
@@ -120,6 +132,11 @@ public class Bosses
         this.hp = hp;
     }
 
+    public void setMaxHP(double hp)
+    {
+        this.maxHP = hp;
+    }
+
     public void setOffense(double offense) 
     {
         this.offense = offense;
@@ -161,18 +178,16 @@ public class Bosses
     @return         void
     @description    Method used by each boss to 
     *******************/
-    public void fight()
+    public void fight(MainCharacter character)
     {
-        MainCharacter character = new Main.character; // error on this line
+        // MainCharacter character = new Main.character; // error on this line
         boolean defenseMode = true; // user always starts from defense mode
-        Scanner scanner = new Scanner(System.in);
         double userHP = character.getHP();
         double bossHP = this.getHp();
         double bossDefense = this.getDefense();
         double bossAttack = this.getOffense();
         double userDefense = character.getDefense();
         double userAttack = character.getOffense();
-        double userOffense = character.getOffense();
         double userWandDefense = character.getCurrentWand().getDefense();
         double userWandAttack = character.getCurrentWand().getOffense();
         double bossWandDefense = this.getWand().getDefense();
@@ -236,14 +251,35 @@ public class Bosses
             }
 
             // display each user's HP after a round
-            System.out.printf("User HP: %d%n", userHP);
-            System.out.printf("Boss HP: %d%n", bossHP);
+            System.out.printf("User HP: %d  ", userHP);
+            // visual health bar
+            utilities.visualHealthBar((int)userHP, (int)character.getMaxHP());
+            System.out.printf("Boss HP: %d  ", bossHP);
+            utilities.visualHealthBar((int)bossHP, (int)this.getMaxHP());
         }
 
         // if user has defeated the boss
         if (userHP > 0)
         {
-            System.out.println("Congratulations. You have defeated the boss.");
+            utilities.slowPrint("Congratulations. You have defeated " + this.getBossName() + ".", 20);
+            character.setCurrency(character.getCurrency()+3);
+            this.isDefeated = true;
+            this.updateProgress(character);
+            character.setCurrentWorld(character.getCurrentWorld()+1); // character advances to next world
+        }
+        else // if user has lost to the boss
+        {
+            utilities.slowPrint("You have lost a life. " + this.getBossName() + "remains undefeated.", 20);
+            character.setLivesRemaining(character.getLivesRemaining()-1); // removing a life remaining
+        }
+    }
+
+    // method for updating user progress once boss has been defeated
+    public void updateProgress(MainCharacter character)
+    {
+        if (this.isDefeated)
+        {
+            character.updateProgress(level-1, 2); // index 2 of an array is always the boss fight
         }
     }
 

@@ -18,6 +18,9 @@ public class MasterBoss extends Bosses {
         setHp(8);
         setOffense(8);
         setDefense(3);
+        
+        // master has his own unique 'Elder Wand'
+        // most powerful wand ever
         bossWand.setName("Elder Wand");
         bossWand.setDefense(3);
         bossWand.setOffense(3);

@@ -10,6 +10,7 @@ package src.Worlds.SideQuests;
 
 import java.util.Scanner;
 import src.Worlds.Functionalities.*;
+import src.Worlds.MainCharacter;
 
 public class SideQuests {
 
@@ -31,6 +32,11 @@ public class SideQuests {
     public boolean isComplete()
     {
         return this.isComplete;
+    }
+
+    public void execute(MainCharacter character)
+    {
+        // do nothing, will be overriden in other files
     }
 
 }
