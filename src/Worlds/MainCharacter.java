@@ -182,4 +182,56 @@ public class MainCharacter
         this.currency = currency;
     }
 
+    // methods to travel to different worlds
+
+    /*******************
+    world1()
+    @return         void
+    @description    *insert here
+    *******************/
+    public void world1(MainCharacter character)
+    {
+        // TODO: Implement World class functions here
+    }
+
+    /*******************
+    world2()
+    @return         void
+    @description    *insert here
+    *******************/
+    public void world2(MainCharacter character)
+    {
+        // TODO: Implement World class functions here
+    }
+
+    /*******************
+    world3()
+    @return         void
+    @description    *insert here
+    *******************/
+    public void world3(MainCharacter character)
+    {
+        // TODO: Implement World class functions here
+    }
+
+    /*******************
+    world4()
+    @return         void
+    @description    *insert here
+    *******************/
+    public void world4(MainCharacter character)
+    {
+        // TODO: Implement World class functions here
+    }
+
+    /*******************
+    world5()
+    @return         void
+    @description    *insert here
+    *******************/
+    public void world5(MainCharacter character)
+    {
+        // TODO: Implement World class functions here
+    }
+
 }
