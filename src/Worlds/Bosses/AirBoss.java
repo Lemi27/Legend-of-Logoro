@@ -22,8 +22,8 @@ public class AirBoss extends Bosses {
         setDefense(2);
         bossWand = new Ebony();
         setLevel(1);
-        setMinAttack(9);
-        setMinDefense(9);
+        setMinAttack(1);
+        setMinDefense(1);
         setMaxAttack(9);
         setMaxDefense(9);
 
