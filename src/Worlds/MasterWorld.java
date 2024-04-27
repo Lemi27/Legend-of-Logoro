@@ -1,4 +1,3 @@
-package src.Worlds;
 /********************************************************
 @author(s)          Fawaaz Kamali Siddiqui
 @date               25 April 2024
@@ -6,8 +5,13 @@ package src.Worlds;
 @file               MasterWorld.java
 @description        *insert class description here
 ********************************************************/
-import src.Worlds.SideQuests.*;
-import src.Worlds.Bosses.*;
+
+package worlds;
+
+import worlds.bosses.MasterBoss;
+import worlds.sidequests.MasterQuest1;
+import worlds.sidequests.MasterQuest2;
+
 
 public class MasterWorld extends Worlds
 {

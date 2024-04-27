@@ -1,4 +1,3 @@
-package src.Worlds;
 /********************************************************
 @author(s)          Fawaaz Kamali Siddiqui, Shreekavin Umasankar,
                     Lemi Miyu, Matthew Kostuch, Steven Wang, 
@@ -8,7 +7,12 @@ package src.Worlds;
 @file               Main.java
 @description        *insert class description here
 ********************************************************/
+
+package worlds;
+
 import java.util.Scanner;
+
+import worlds.functionalities.Utilities;
 
 public class Main
 {
@@ -47,19 +51,19 @@ public class Main
             switch(progress)
             {
                 case 1:
-                    mainCharacter.world1(mainCharacter);
+                    mainCharacter.world(mainCharacter, progress);
                     break;
                 case 2:
-                    mainCharacter.world2(mainCharacter);
+                    mainCharacter.world(mainCharacter, progress);
                     break;
                 case 3:
-                    mainCharacter.world3(mainCharacter);
+                    mainCharacter.world(mainCharacter, progress);
                     break;
                 case 4:
-                    mainCharacter.world4(mainCharacter);
+                    mainCharacter.world(mainCharacter, progress);
                     break;
                 case 5:
-                    mainCharacter.world5(mainCharacter);
+                    mainCharacter.world(mainCharacter, progress);
                     break;
                 default:
             }
@@ -73,12 +77,11 @@ public class Main
         {
             // storyline after game is won
         }
-        else // if user has lost the game
+        else // if user has lost the game, or quit
         {
             // output something
+            Utilities.slowPrint("Braver men than you have tried and failed. Till next time.", 50);
         }
-
-        scanner.close();
 
     } // end of main()
 

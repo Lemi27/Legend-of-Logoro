@@ -6,11 +6,12 @@
 @description        Parent class for the Bosses, creating 
                     necessary attributes for bosses.
 ********************************************************/
-package src.Worlds.Bosses;
-import src.Worlds.MainCharacter;
-import src.Worlds.Wand.*;
-import src.Worlds.Functionalities.Utilities;
+package worlds.bosses;
 import java.util.Scanner;
+
+import worlds.MainCharacter;
+import worlds.functionalities.Utilities;
+import worlds.wand.Wand;
 
 
 public class Bosses 

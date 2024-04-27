@@ -8,7 +8,7 @@
 ********************************************************/
 // 1
 
-package src.Worlds.Wand;
+package worlds.wand;
 
 public class Willow extends Wand{
 
