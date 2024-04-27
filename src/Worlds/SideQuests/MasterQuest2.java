@@ -45,7 +45,7 @@ public class MasterQuest2 extends SideQuests {
             //Processing
             do
             {
-                input = utilities.inputInt("What cosmic truth shall you uncover?", -10000, 100000); //Assure input
+                input = utilities.inputInt("What cosmic truth shall you uncover? ", -10000, 100000); //Assure input
 
                 //Check for correct answer
                 if (answer != input && chances == 2)

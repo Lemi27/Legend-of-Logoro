@@ -44,7 +44,7 @@ public class AirQuest2 extends SideQuests {
             //Processing
             do
             {
-                input = utilities.inputInt("What number shall prevail?", -10000, 100000); //Assure input
+                input = utilities.inputInt("What number shall prevail? ", -10000, 100000); //Assure input
 
                 //Check if the user has guessed correctly
                 if (answer != input && chances == 2)

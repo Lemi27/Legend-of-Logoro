@@ -33,13 +33,13 @@ public class Utilities
     Scanner uI = new Scanner(System.in);
     int input;
 
-    System.out.println(prompt);
+    System.out.print(prompt);
     do {
 
       // If the user does not input an int then you loop until they input an integer.
       while (!uI.hasNextInt()) {
         System.out.println("Please enter a valid integer. ");
-        System.out.println(prompt);
+        System.out.print(prompt);
         uI.nextLine();
       }
       input = uI.nextInt();
@@ -48,7 +48,7 @@ public class Utilities
       // until input is lower then max and higher then min
       if (input < min || input > max) {
         System.out.println("Please enter a valid integer");
-        System.out.println(prompt);
+        System.out.print(prompt);
         uI.nextLine();
       }
 
