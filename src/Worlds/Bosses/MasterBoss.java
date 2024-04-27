@@ -6,8 +6,7 @@
 @description        The class setting the attributes of the
                     boss of the master realm.
 ********************************************************/
-package src.Worlds.Bosses;
-import src.Worlds.Wand.*;
+package worlds.bosses;
 
 public class MasterBoss extends Bosses {
 

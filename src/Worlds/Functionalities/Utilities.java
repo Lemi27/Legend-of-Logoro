@@ -6,26 +6,19 @@
 @description        Functionalities for the program including restricting input
                     and controlling output.
 ********************************************************/ 
-package src.Worlds.Functionalities;
+package worlds.functionalities;
 
 import java.util.Scanner;
 public class Utilities
 {
 
-    private Scanner uI;
-
-    // constructor method
-    public Utilities() 
-    {
-        this.uI = new Scanner(System.in);
-    
-    }
+    private static Scanner uI = new Scanner(System.in);
     
     /*******************
     inputInt(String prompt, int min, int max)
+    @param          prompt
     @param          min
     @param          max
-    @param          prompt
     @return         int
     @description    Continously loop until user inputs a value that is lower then max and higher then min
     *******************/
@@ -33,13 +26,13 @@ public class Utilities
     Scanner uI = new Scanner(System.in);
     int input;
 
-    System.out.println(prompt);
+    System.out.print(prompt);
     do {
 
       // If the user does not input an int then you loop until they input an integer.
       while (!uI.hasNextInt()) {
         System.out.println("Please enter a valid integer. ");
-        System.out.println(prompt);
+        System.out.print(prompt);
         uI.nextLine();
       }
       input = uI.nextInt();
@@ -48,12 +41,12 @@ public class Utilities
       // until input is lower then max and higher then min
       if (input < min || input > max) {
         System.out.println("Please enter a valid integer");
-        System.out.println(prompt);
+        System.out.print(prompt);
         uI.nextLine();
       }
 
     } while (input < min || input > max); // Continously loop until user inputs a value that is lower then min and
-                                          // higher then max
+    
     return input;
   } // end of inputInt() method
     
@@ -65,7 +58,7 @@ public class Utilities
     @description   Continously loop until user inputs an answer that is an acceptable
                     answer that comes from a list if possible accepted answers.
     *******************/
-    public String inputString(String prompt, String[] acceptedAnswers) {
+    public static String inputString(String prompt, String[] acceptedAnswers) {
 
         String answer;
         boolean isValidInput;

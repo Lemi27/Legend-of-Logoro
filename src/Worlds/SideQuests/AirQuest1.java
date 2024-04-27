@@ -6,10 +6,10 @@
 @description        First side quest in the air world.
 ********************************************************/
 
-package src.Worlds.SideQuests;
+package worlds.sidequests;
 
-import src.Worlds.MainCharacter;
-import src.Worlds.Functionalities.Utilities;
+import worlds.MainCharacter;
+import worlds.functionalities.Utilities;
 
 public class AirQuest1 extends SideQuests 
 {
@@ -46,7 +46,7 @@ public class AirQuest1 extends SideQuests
             //Processing
             do
             {
-                input = utilities.inputInt("What number am I?", -10000, 100000); //Assure input
+                input = Utilities.inputInt("What number am I? ", -10000, 100000); //Assure input
 
                 //Check if the user has guess correctly
                 if (answer != input && chances == 2) //First Guess
