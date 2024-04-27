@@ -78,6 +78,8 @@ public class Main
             // output something
         }
 
+        scanner.close();
+
     } // end of main()
 
 }
