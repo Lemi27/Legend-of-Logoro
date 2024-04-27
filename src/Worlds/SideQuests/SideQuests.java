@@ -6,23 +6,23 @@
 @description        Parent class for all side quests.
 *******************************************************S*/
 
-package src.Worlds.SideQuests;
+package worlds.sidequests;
 
 import java.util.Scanner;
-import src.Worlds.Functionalities.*;
-import src.Worlds.MainCharacter;
+
+import worlds.MainCharacter;
+
+
 
 public class SideQuests {
 
     private boolean isComplete;
     public Scanner scanner;
-    public Utilities utilities;
 
     public SideQuests()
     {
         isComplete = false;
         scanner = new Scanner(System.in);
-        utilities = new Utilities();
     }
 
     public void begin() {

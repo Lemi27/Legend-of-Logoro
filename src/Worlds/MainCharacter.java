@@ -5,10 +5,11 @@
 @file               MainCharacter.java
 @description        *insert class description here
 ********************************************************/
-package src.Worlds;
 
-import src.Worlds.Wand.Wand;
-import src.Worlds.Functionalities.*;
+package worlds;
+
+import worlds.wand.Wand;
+import worlds.functionalities.*;
 
 
 

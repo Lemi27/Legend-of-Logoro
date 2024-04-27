@@ -6,10 +6,10 @@
 @description        First side quest in the land world.
 ********************************************************/
 
-package src.Worlds.SideQuests;
+package worlds.sidequests;
 
-import src.Worlds.MainCharacter;
-import src.Worlds.Functionalities.Utilities;
+import worlds.MainCharacter;
+import worlds.functionalities.Utilities;
 
 public class LandQuest1 extends SideQuests {
 
@@ -45,7 +45,7 @@ public class LandQuest1 extends SideQuests {
             //Processing
             do
             {
-                input = utilities.inputInt("How many glowworms remain to light the cave? ", -10000, 100000); //Assure input
+                input = Utilities.inputInt("How many glowworms remain to light the cave? ", -10000, 100000); //Assure input
 
                 //Check if the user has guessed correctly
                 if (answer != input && chances == 2)

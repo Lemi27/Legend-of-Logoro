@@ -1,4 +1,3 @@
-package src.Worlds;
 /********************************************************
 @author(s)          Fawaaz Kamali Siddiqui
 @date               25 April 2024
@@ -6,8 +5,13 @@ package src.Worlds;
 @file               WaterWorld.java
 @description        *insert class description here
 ********************************************************/
-import src.Worlds.SideQuests.*;
-import src.Worlds.Bosses.*;
+
+package worlds;
+
+import worlds.bosses.WaterBoss;
+import worlds.sidequests.WaterQuest1;
+import worlds.sidequests.WaterQuest2;
+
 
 public class WaterWorld extends Worlds
 {

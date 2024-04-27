@@ -6,10 +6,10 @@
 @description        Second side quest in the land world.
 ********************************************************/
 
-package src.Worlds.SideQuests;
+package worlds.sidequests;
 
-import src.Worlds.MainCharacter;
-import src.Worlds.Functionalities.Utilities;
+import worlds.MainCharacter;
+import worlds.functionalities.Utilities;
 
 public class LandQuest2 extends SideQuests {
 
@@ -45,7 +45,7 @@ public class LandQuest2 extends SideQuests {
             //Processing
             do
             {
-                input = utilities.inputInt("What number shall I be? ", -10000, 100000);
+                input = Utilities.inputInt("What number shall I be? ", -10000, 100000);
 
                 //Check if answer is correct
                 if (answer != input && chances == 2)

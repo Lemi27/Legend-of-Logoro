@@ -6,20 +6,13 @@
 @description        Functionalities for the program including restricting input
                     and controlling output.
 ********************************************************/ 
-package src.Worlds.Functionalities;
+package worlds.functionalities;
 
 import java.util.Scanner;
 public class Utilities
 {
 
-    private static Scanner uI;
-
-    // constructor method
-    public Utilities() 
-    {
-        this.uI = new Scanner(System.in);
-    
-    }
+    private static Scanner uI = new Scanner(System.in);
     
     /*******************
     inputInt(String prompt, int min, int max)

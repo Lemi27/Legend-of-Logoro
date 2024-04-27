@@ -6,10 +6,10 @@
 @description        Second side quest in the fire world.
 ********************************************************/
 
-package src.Worlds.SideQuests;
+package worlds.sidequests;
 
-import src.Worlds.MainCharacter;
-import src.Worlds.Functionalities.Utilities;
+import worlds.MainCharacter;
+import worlds.functionalities.Utilities;
 
 public class FireQuest2 extends SideQuests {
 

@@ -6,8 +6,9 @@
 @description        The class setting the attributes of the
                     boss of the water realm.
 ********************************************************/
-package src.Worlds.Bosses;
-import src.Worlds.Wand.*;
+package worlds.bosses;
+
+import worlds.wand.Willow;
 
 public class WaterBoss extends Bosses {
     

@@ -1,4 +1,3 @@
-package src.Worlds;
 /********************************************************
 @author(s)          Fawaaz Kamali Siddiqui
 @date               25 April 2024
@@ -6,8 +5,11 @@ package src.Worlds;
 @file               AirWorld.java
 @description        *insert class description here
 ********************************************************/
-import src.Worlds.SideQuests.*;
-import src.Worlds.Bosses.*;
+
+package worlds;
+
+import worlds.sidequests.*;
+import worlds.bosses.*;
 
 public class AirWorld extends Worlds
 {

@@ -6,8 +6,9 @@
 @description        The class setting the attributes of the
                     boss of the land realm.
 ********************************************************/
-package src.Worlds.Bosses;
-import src.Worlds.Wand.*;
+package worlds.bosses;
+
+import worlds.wand.Oak;
 
 public class LandBoss extends Bosses {
 

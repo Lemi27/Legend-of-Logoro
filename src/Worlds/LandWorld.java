@@ -1,4 +1,3 @@
-package src.Worlds;
 /********************************************************
 @author(s)          Fawaaz Kamali Siddiqui
 @date               25 April 2024
@@ -6,8 +5,14 @@ package src.Worlds;
 @file               LandWorld.java
 @description        *insert class description here
 ********************************************************/
-import src.Worlds.SideQuests.*;
-import src.Worlds.Bosses.*;
+
+package worlds;
+
+import worlds.bosses.LandBoss;
+import worlds.sidequests.LandQuest1;
+import worlds.sidequests.LandQuest2;
+
+
 
 public class LandWorld extends Worlds
 {

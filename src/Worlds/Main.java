@@ -1,4 +1,3 @@
-package src.Worlds;
 /********************************************************
 @author(s)          Fawaaz Kamali Siddiqui, Shreekavin Umasankar,
                     Lemi Miyu, Matthew Kostuch, Steven Wang, 
@@ -8,9 +7,12 @@ package src.Worlds;
 @file               Main.java
 @description        *insert class description here
 ********************************************************/
+
+package worlds;
+
 import java.util.Scanner;
 
-import src.Worlds.Functionalities.Utilities;
+import worlds.functionalities.Utilities;
 
 public class Main
 {

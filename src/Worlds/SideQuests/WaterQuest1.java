@@ -6,10 +6,10 @@
 @description        First side quest in the water world.
 ********************************************************/
 
-package src.Worlds.SideQuests;
+package worlds.sidequests;
 
-import src.Worlds.MainCharacter;
-import src.Worlds.Functionalities.Utilities;
+import worlds.MainCharacter;
+import worlds.functionalities.Utilities;
 
 public class WaterQuest1 extends SideQuests {
 
@@ -42,10 +42,10 @@ public class WaterQuest1 extends SideQuests {
             "It posed its cryptic challenge: \"Within the tides of ten and the waves of five, multiply the current's flow.\"", 20);
 
 
-            //Processing
+            //ProcessingS
             do
             {
-                input = utilities.inputInt("What truth shall arise? ", -10000, 100000); //Assure input
+                input = Utilities.inputInt("What truth shall arise? ", -10000, 100000); //Assure input
 
                 //Check if guess is correct
                 if (answer != input && chances == 2)

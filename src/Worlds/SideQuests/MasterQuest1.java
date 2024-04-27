@@ -6,10 +6,10 @@
 @description        First side quest in the master world.
 ********************************************************/
 
-package src.Worlds.SideQuests;
+package worlds.sidequests;
 
-import src.Worlds.MainCharacter;
-import src.Worlds.Functionalities.Utilities;
+import worlds.MainCharacter;
+import worlds.functionalities.Utilities;
 
 public class MasterQuest1 extends SideQuests {
 
@@ -46,7 +46,7 @@ public class MasterQuest1 extends SideQuests {
             //Processing
             do
             {
-                input = utilities.inputInt(" What is the result of the equation? ", -10000, 100000); //Assure input
+                input = Utilities.inputInt(" What is the result of the equation? ", -10000, 100000); //Assure input
 
                 //Check if the users guess is correct
                 if (answer != input && chances == 2)

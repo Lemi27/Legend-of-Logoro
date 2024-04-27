@@ -6,10 +6,10 @@
 @description        Second side quest in the master world.
 ********************************************************/
 
-package src.Worlds.SideQuests;
+package worlds.sidequests;
 
-import src.Worlds.MainCharacter;
-import src.Worlds.Functionalities.Utilities;
+import worlds.MainCharacter;
+import worlds.functionalities.Utilities;
 
 public class MasterQuest2 extends SideQuests {
 
@@ -45,7 +45,7 @@ public class MasterQuest2 extends SideQuests {
             //Processing
             do
             {
-                input = utilities.inputInt("What cosmic truth shall you uncover? ", -10000, 100000); //Assure input
+                input = Utilities.inputInt("What cosmic truth shall you uncover? ", -10000, 100000); //Assure input
 
                 //Check for correct answer
                 if (answer != input && chances == 2)

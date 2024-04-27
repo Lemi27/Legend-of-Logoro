@@ -6,10 +6,10 @@
 @description        First side quest in the fire world.
 ********************************************************/
 
-package src.Worlds.SideQuests;
+package worlds.sidequests;
 
-import src.Worlds.MainCharacter;
-import src.Worlds.Functionalities.Utilities;
+import worlds.MainCharacter;
+import worlds.functionalities.Utilities;
 
 public class FireQuest1 extends SideQuests {
 
@@ -45,7 +45,7 @@ public class FireQuest1 extends SideQuests {
             //Processing
             do
             {
-                input = utilities.inputInt("What number am I? ", -10000, 100000); //Assure input
+                input = Utilities.inputInt("What number am I? ", -10000, 100000); //Assure input
 
                 //Check for correct answer
                 if (answer != input && chances == 2)
