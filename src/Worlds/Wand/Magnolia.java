@@ -1,13 +1,12 @@
-
 /********************************************************
-@author(s)          *insert here
-@date               *insert here
+@author(s)          Sinan Shana, Muhummad Nomaan
+@date               2024-04-27
 @teacher            Andrew Carreiro
-@file               ExampleClass.java
-@description        *insert class description here
+@file               Magnolia.java
+@description        The class setting the attributes of the magnolia wand.
 ********************************************************/
 
-package worlds.wand;
+package src.Worlds.Wand;
 
 public class Magnolia extends Wand {
     

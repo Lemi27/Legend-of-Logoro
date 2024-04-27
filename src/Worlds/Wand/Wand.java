@@ -1,9 +1,10 @@
 /********************************************************
-@author(s):         Muhammad and Sinan
-@date               *insert here
+@author(s):         Muhammad Nomaan and Sinan Shana
+@date               2024-04-27
 @teacher            Andrew Carreiro
-@file               Shop.java
-@description        *insert class description here
+@file               Wand.java
+@description        Creates the wand characteristics to be inherited by every individual wand type, and creates setters 
+                    and getters.
 ********************************************************/
 
 package worlds.wand;
