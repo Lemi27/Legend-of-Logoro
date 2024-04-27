@@ -5,9 +5,11 @@
 @file               MainCharacter.java
 @description        *insert class description here
 ********************************************************/
-package src.Worlds;
 
-import src.Worlds.Wand.Wand;
+package worlds;
+
+import worlds.wand.Wand;
+import worlds.functionalities.*;
 
 
 
@@ -32,6 +34,7 @@ public class MainCharacter
     private int livesRemaining;
     private double maxHP; 
     private int currency;
+    private boolean hasQuit;
 
     private String firstName;
     private String lastName;
@@ -50,9 +53,11 @@ public class MainCharacter
         defense = 1;
         currentWorld = 1;
         currentWand = new Wand();
+        inventory = new Wand[1];
         inventory[0] = currentWand;
         livesRemaining = 3;
         currency = 2;
+        hasQuit = false;
     }
 
     // getter methods
@@ -114,6 +119,11 @@ public class MainCharacter
     public String getLastName()
     {
         return this.lastName;
+    }
+
+    public boolean hasQuit()
+    {
+        return this.hasQuit;
     }
 
     // setter methods
@@ -184,54 +194,71 @@ public class MainCharacter
 
     // methods to travel to different worlds
 
-    /*******************
-    world1()
-    @return         void
-    @description    *insert here
-    *******************/
-    public void world1(MainCharacter character)
-    {
-        // TODO: Implement World class functions here
-    }
 
     /*******************
-    world2()
+    world()
+    @param          character
+    @param          level
     @return         void
     @description    *insert here
     *******************/
-    public void world2(MainCharacter character)
+    public void world(MainCharacter character, int level)
     {
-        // TODO: Implement World class functions here
-    }
+        Worlds world = new Worlds();
+        switch (level)
+        {
+            case 1:
+                world = new AirWorld();
+                break;
+            case 2:
+                world = new LandWorld();
+                break;
+            case 3:
+                world = new WaterWorld();
+                break;
+            case 4:
+                world = new FireWorld();
+                break;
+            case 5:
+                world = new MasterWorld();
+                break;
+            default:
+        }
 
-    /*******************
-    world3()
-    @return         void
-    @description    *insert here
-    *******************/
-    public void world3(MainCharacter character)
-    {
-        // TODO: Implement World class functions here
-    }
+        // storyline for world 1 displayed here
 
-    /*******************
-    world4()
-    @return         void
-    @description    *insert here
-    *******************/
-    public void world4(MainCharacter character)
-    {
-        // TODO: Implement World class functions here
-    }
+        world.beginningStoryline();
 
-    /*******************
-    world5()
-    @return         void
-    @description    *insert here
-    *******************/
-    public void world5(MainCharacter character)
-    {
-        // TODO: Implement World class functions here
+        while (!world.getBoss().isDefeated() && character.getLivesRemaining() > 0)
+        {
+            world.menu(character);
+        }
+
+        // if user defeats boss and advances to next round
+        if (world.getBoss().isDefeated())
+        {
+            // storyline here
+            world.endStoryline();
+        }
+        else 
+        {
+            // user has lost all lives
+            Utilities.slowPrint("Game Over", 25);
+            Utilities.slowPrint("You have lost all lives. Enter 'r' to restart the game. Enter 'q' to quit.", 25);
+            String[] options = {"R", "r", "Q", "q"};
+            String menu = Utilities.inputString("> ", options);
+
+            if (menu.toLowerCase().equals("q"))
+            {
+                this.hasQuit = true;
+            }
+            else 
+            {
+                character = new MainCharacter(character.getFirstName(), character.getLastName());
+            }
+        }
+
+
     }
 
 }

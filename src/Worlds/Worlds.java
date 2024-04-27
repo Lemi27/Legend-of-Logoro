@@ -5,13 +5,27 @@
 @file               Worlds.java
 @description        *insert class description here
 ********************************************************/
-package src.Worlds;
+package worlds;
 import java.util.Scanner;
 
-import src.Worlds.Bosses.*;
-import src.Worlds.SideQuests.*;
-import src.Worlds.Wand.*;
-import src.Worlds.Functionalities.*;
+import worlds.bosses.AirBoss;
+import worlds.bosses.Bosses;
+import worlds.functionalities.Utilities;
+import worlds.sidequests.AirQuest1;
+import worlds.sidequests.AirQuest2;
+import worlds.sidequests.SideQuests;
+import worlds.wand.Birch;
+import worlds.wand.Cherry;
+import worlds.wand.Cypress;
+import worlds.wand.Ebony;
+import worlds.wand.IronWood;
+import worlds.wand.Magnolia;
+import worlds.wand.Maple;
+import worlds.wand.Oak;
+import worlds.wand.Pine;
+import worlds.wand.Spruce;
+import worlds.wand.Wand;
+import worlds.wand.Willow;
 
 
 public class Worlds
@@ -24,7 +38,6 @@ public class Worlds
     private Bosses boss;
     
     public Scanner scanner;
-    public Utilities utilities;
     private boolean isWorldComplete;
 
     
@@ -40,7 +53,6 @@ public class Worlds
         isWorldComplete = boss.isDefeated();
 
         scanner = new Scanner(System.in);
-        utilities = new Utilities();
     }
 
     // GETTERS
@@ -99,9 +111,23 @@ public class Worlds
         do
         {
             System.out.printf("Current HP: %s%n", character.getHP());
+            System.out.printf("Lives Remaining: %s.%n", character.getLivesRemaining());
             System.out.printf("Current Wand: %s. Offense %s, Defense %s%n", character.getCurrentWand().getName(), character.getCurrentWand().getOffense(), character.getCurrentWand().getDefense());
             System.out.printf("Base Attack: %s. Base Defense: %s.%n", character.getOffense(), character.getDefense());
-            menu = utilities.inputInt("Enter any of the menu options:%n1. Side Quest 1%n2. Side Quest 2%n3. Boss Fight%n4. Access Shop %n5. Access inventory (switch Current Wand)", 1, 5);
+
+            if (character.getHP() <= 0)
+            {
+                character.setLivesRemaining(character.getLivesRemaining()-1);
+            }
+
+            // menu = utilities.inputInt("Enter any of the menu options:%n1. Side Quest 1%n2. Side Quest 2%n3. Boss Fight%n4. Access Shop %n5. Access inventory (switch Current Wand)", 1, 5);
+            System.out.println("Enter any of the menu options:");
+            System.out.println("1. Side Quest 1");
+            System.out.println("2. Side Quest 2");
+            System.out.println("3. Boss Fight");
+            System.out.println("4. Access Shop");
+            System.out.println("5. Access Inventory (switch current wand)");
+            menu = Utilities.inputInt("> ", 1, 5);
             switch(menu)
             {
                 case 1:
@@ -187,7 +213,7 @@ public class Worlds
         System.out.print("Current Wand: ");
         character.getCurrentWand().displayStatistics();
 
-        menu = utilities.inputInt("Enter wand that should be switched to: ", 1, wands.length);
+        menu = Utilities.inputInt("Enter wand that should be switched to: ", 1, wands.length);
         character.setCurrentWand(wands[menu-1]);
     }
 
@@ -237,7 +263,7 @@ public class Worlds
 
         // input section
         int menu = 0;
-        menu = utilities.inputInt("What do you want to buy(enter number): ", 1, availableWands.length+1);
+        menu = Utilities.inputInt("What do you want to buy(enter number): ", 1, availableWands.length+1);
 
         // if user wanted to boost HP
         if (menu == availableWands.length + 1)
@@ -275,6 +301,16 @@ public class Worlds
         }
 
         
+    }
+
+    public void beginningStoryline()
+    {
+        // will be overriden in child classes
+    }
+
+    public void endStoryline()
+    {
+        // will be overriden in child classes
     }
 
     private Wand[] addWand(Wand[] wands, Wand wand)

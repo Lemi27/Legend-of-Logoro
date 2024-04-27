@@ -6,11 +6,12 @@
 @description        Parent class for the Bosses, creating 
                     necessary attributes for bosses.
 ********************************************************/
-package src.Worlds.Bosses;
-import src.Worlds.MainCharacter;
-import src.Worlds.Wand.*;
-import src.Worlds.Functionalities.Utilities;
+package worlds.bosses;
 import java.util.Scanner;
+
+import worlds.MainCharacter;
+import worlds.functionalities.Utilities;
+import worlds.wand.Wand;
 
 
 public class Bosses 
@@ -253,15 +254,15 @@ public class Bosses
             // display each user's HP after a round
             System.out.printf("User HP: %d  ", userHP);
             // visual health bar
-            utilities.visualHealthBar((int)userHP, (int)character.getMaxHP());
+            Utilities.visualHealthBar((int)userHP, (int)character.getMaxHP());
             System.out.printf("Boss HP: %d  ", bossHP);
-            utilities.visualHealthBar((int)bossHP, (int)this.getMaxHP());
+            Utilities.visualHealthBar((int)bossHP, (int)this.getMaxHP());
         }
 
         // if user has defeated the boss
         if (userHP > 0)
         {
-            utilities.slowPrint("Congratulations. You have defeated " + this.getBossName() + ".", 20);
+            Utilities.slowPrint("Congratulations. You have defeated " + this.getBossName() + ".", 20);
             character.setCurrency(character.getCurrency()+3);
             this.isDefeated = true;
             this.updateProgress(character);
@@ -269,7 +270,7 @@ public class Bosses
         }
         else // if user has lost to the boss
         {
-            utilities.slowPrint("You have lost a life. " + this.getBossName() + "remains undefeated.", 20);
+            Utilities.slowPrint("You have lost a life. " + this.getBossName() + "remains undefeated.", 20);
             character.setLivesRemaining(character.getLivesRemaining()-1); // removing a life remaining
         }
     }
