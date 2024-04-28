@@ -110,10 +110,12 @@ public class Worlds
         // System.out.println("1: To access inventory. %n2: To do first sidequest. %n3: To do second sidequest. %n4: Fight Boss. %n5: Access Shop");
         do
         {
+            System.out.println("========================================================");
             System.out.printf("Current HP: %s%n", character.getHP());
             System.out.printf("Lives Remaining: %s.%n", character.getLivesRemaining());
-            System.out.printf("Current Wand: %s. Offense %s, Defense %s%n", character.getCurrentWand().getName(), character.getCurrentWand().getOffense(), character.getCurrentWand().getDefense());
+            System.out.printf("Current Wand: \n%s. Offense %s, Defense %s%n", character.getCurrentWand().getName(), character.getCurrentWand().getOffense(), character.getCurrentWand().getDefense());
             System.out.printf("Base Attack: %s. Base Defense: %s.%n", character.getOffense(), character.getDefense());
+            System.out.println("========================================================");
 
             if (character.getHP() <= 0)
             {
@@ -201,10 +203,10 @@ public class Worlds
         int menu = 0;
 
         // display wands
-        System.out.printf("%-20s %-10s %-10s %-10s", "Name", "Defense", "Offense", "Price");
+        System.out.printf("%-10s %-30s %-10s %-10s %-10s%n", "No.",  "Name", "Defense", "Offense", "Price");
         for (int i = 0; i < wands.length; i++)
         {
-            System.out.print(i+1);
+            System.out.printf("%-10s", i+1);
             wands[i].displayStatistics();
         }
 
@@ -219,20 +221,21 @@ public class Worlds
 
     public void accessShop(MainCharacter character)
     {
+        Wand birch = new Birch();
+        Wand cherry = new Cherry(); 
+        Wand cypress = new Cypress();
+        Wand ebony = new Ebony();
+        Wand ironwood = new IronWood(); 
+        Wand magnolia = new Magnolia(); 
+        Wand maple = new Maple(); 
+        Wand oak = new Oak();
+        Wand pine = new Pine(); 
+        Wand spruce = new Spruce();
+        Wand willow = new Willow(); 
         // all possible wands
         Wand[] wands = 
         {
-            new Birch(), 
-            new Cherry(), 
-            new Cypress(),
-            new Ebony(), 
-            new IronWood(), 
-            new Magnolia(), 
-            new Maple(), 
-            new Oak(), 
-            new Pine(), 
-            new Spruce(),
-            new Willow() 
+            birch, cherry, cypress, ebony, ironwood, magnolia, maple, oak, pine, spruce, willow
         };
 
         // array of wands that are not bought
@@ -240,18 +243,21 @@ public class Worlds
 
         for (int i = 0; i < wands.length; i++)
         {
-            if (!wands[i].getIsBought())
+            if (countWands(character.getInventory(), wands[i]) == 0)
             {
                 availableWands = addWand(availableWands, wands[i]);
             }
         }
 
+        System.out.println("===========================================================================");
+        System.out.printf("Money: %s coins%n", character.getCurrency());
+        System.out.println("===========================================================================");
         // Displaying available wands
         System.out.println("Wands");
-        System.out.printf("%-20s %-10s %-10s %-10s", "Name", "Defense", "Offense", "Price");
+        System.out.printf("%-10s %-30s %-10s %-10s %-10s%n", "No.",  "Name", "Defense", "Offense", "Price");
         for (int i = 0; i < availableWands.length; i++)
         {
-            System.out.print(i+1);
+            System.out.printf("%-10s", i+1);
             availableWands[i].displayStatistics();
         }
 
@@ -323,6 +329,20 @@ public class Worlds
         }
         nA[wands.length] = wand;
         return nA;
+    }
+
+    // count the number of occurences a wand has in an array
+    private static int countWands(Wand[] wands, Wand wand)
+    {   
+        int count = 0;
+        for (int i = 0; i < wands.length; i++)
+        {
+            if (wands[i].getName().equals(wand.getName()))
+            {
+                count ++;
+            }
+        }
+        return count;
     }
 
 }
