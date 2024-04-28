@@ -8,7 +8,7 @@
 ********************************************************/
 package worlds.bosses;
 
-import worlds.wand.Oak;
+import worlds.wand.Cypress;
 
 public class LandBoss extends Bosses {
 
@@ -19,8 +19,8 @@ public class LandBoss extends Bosses {
         setHp(18);
         setMaxHP(18);
         setOffense(1);
-        setDefense(2);
-        bossWand = new Oak();
+        setDefense(1.25);
+        bossWand = new Cypress();
         setLevel(2);
         setMinAttack(1);
         setMinDefense(1);

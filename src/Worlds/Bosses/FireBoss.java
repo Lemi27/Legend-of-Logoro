@@ -8,7 +8,7 @@
 ********************************************************/
 package worlds.bosses;
 
-import worlds.wand.Magnolia;
+import worlds.wand.Spruce;
 
 public class FireBoss extends Bosses {
 
@@ -18,9 +18,9 @@ public class FireBoss extends Bosses {
         setBossName("Ignitia the Flame Fractionator");
         setHp(24);
         setMaxHP(24);
-        setOffense(2);
-        setDefense(1.5);
-        bossWand = new Magnolia();
+        setOffense(1.25);
+        setDefense(1.25);
+        bossWand = new Spruce();
         setLevel(4);
         setMinAttack(1);
         setMinDefense(1);

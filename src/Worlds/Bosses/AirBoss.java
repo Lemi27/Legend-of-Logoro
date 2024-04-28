@@ -20,7 +20,7 @@ public class AirBoss extends Bosses {
         setHp(16);
         setMaxHP(16);
         setOffense(1);
-        setDefense(1.25);
+        setDefense(1);
         bossWand = new Ebony();
         setLevel(1);
         setMinAttack(1);

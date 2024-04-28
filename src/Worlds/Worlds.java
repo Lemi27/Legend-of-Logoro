@@ -203,7 +203,7 @@ public class Worlds
         int menu = 0;
 
         // display wands
-        System.out.printf("%-10s %-30s %-10s %-10s %-10s%n", "No.",  "Name", "Defense", "Offense", "Price");
+        System.out.printf("%-10s%-30s%-10s%-10s%-10s%n", "No.",  "Name", "Defense", "Offense", "Price");
         for (int i = 0; i < wands.length; i++)
         {
             System.out.printf("%-10s", i+1);
@@ -212,7 +212,7 @@ public class Worlds
 
         System.out.println(); // newline
         // display current wand
-        System.out.print("Current Wand: ");
+        System.out.println("Current Wand: ");
         character.getCurrentWand().displayStatistics();
 
         menu = Utilities.inputInt("Enter wand that should be switched to: ", 1, wands.length);
@@ -254,7 +254,7 @@ public class Worlds
         System.out.println("===========================================================================");
         // Displaying available wands
         System.out.println("Wands");
-        System.out.printf("%-10s %-30s %-10s %-10s %-10s%n", "No.",  "Name", "Defense", "Offense", "Price");
+        System.out.printf("%-10s%-30s%-10s%-10s%-10s%n", "No.",  "Name", "Defense", "Offense", "Price");
         for (int i = 0; i < availableWands.length; i++)
         {
             System.out.printf("%-10s", i+1);
@@ -299,6 +299,7 @@ public class Worlds
             if (character.getCurrency() >= toBuy.getPrice())
             {
                 character.addWand(toBuy);
+                character.setCurrency(character.getCurrency() - toBuy.getPrice());
             }
             else 
             {

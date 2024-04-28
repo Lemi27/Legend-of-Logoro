@@ -14,8 +14,8 @@ public class Birch extends Wand
     {
         super();
         setName("Birch Scythe");
-        setDefense(1);
-        setOffense(1);
-        setPrice(10);
+        setDefense(1.1);
+        setOffense(1.1);
+        setPrice(3);
     }
 }
