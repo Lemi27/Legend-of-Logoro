@@ -7,9 +7,11 @@
                     an invintory for wands (wands are purachsed with in-game currency) and a way to store progress between diffrent
                     worlds.
 ********************************************************/
-package src.Worlds;
 
-import src.Worlds.Wand.Wand;
+package worlds;
+
+import worlds.wand.Wand;
+import worlds.functionalities.*;
 
 
 
@@ -34,6 +36,7 @@ public class MainCharacter
     private int livesRemaining;
     private double maxHP; 
     private int currency;
+    private boolean hasQuit;
 
     private String firstName;
     private String lastName;
@@ -52,9 +55,11 @@ public class MainCharacter
         defense = 1;
         currentWorld = 1;
         currentWand = new Wand();
+        inventory = new Wand[1];
         inventory[0] = currentWand;
         livesRemaining = 3;
         currency = 2;
+        hasQuit = false;
     }
 
     // getter methods
@@ -118,6 +123,11 @@ public class MainCharacter
         return this.lastName;
     }
 
+    public boolean hasQuit()
+    {
+        return this.hasQuit;
+    }
+
     // setter methods
     public void setHP(double hp)
     {
@@ -143,6 +153,20 @@ public class MainCharacter
     {
         // code to add wand to inventory by adding 
         // another list element
+        // copy array
+        Wand[] nA = new Wand[this.getInventory().length+1];
+        for (int i = 0; i < this.getInventory().length; i++)
+        {
+            nA[i] = this.getInventory()[i];
+        }
+        nA[this.getInventory().length] = wand;
+        
+        // copy nA to inventory
+        this.inventory = new Wand[nA.length];
+        for (int i = 0; i < nA.length; i++)
+        {
+            this.inventory[i] = nA[i];
+        }
     }
 
     public void setCurrentWorld(int world)
@@ -168,6 +192,75 @@ public class MainCharacter
     public void setCurrency(int currency)
     {
         this.currency = currency;
+    }
+
+    // methods to travel to different worlds
+
+
+    /*******************
+    world()
+    @param          character
+    @param          level
+    @return         void
+    @description    *insert here
+    *******************/
+    public void world(MainCharacter character, int level)
+    {
+        Worlds world = new Worlds();
+        switch (level)
+        {
+            case 1:
+                world = new AirWorld();
+                break;
+            case 2:
+                world = new LandWorld();
+                break;
+            case 3:
+                world = new WaterWorld();
+                break;
+            case 4:
+                world = new FireWorld();
+                break;
+            case 5:
+                world = new MasterWorld();
+                break;
+            default:
+        }
+
+        // storyline for world 1 displayed here
+
+        world.beginningStoryline();
+
+        while (!world.getBoss().isDefeated() && character.getLivesRemaining() > 0)
+        {
+            world.menu(character);
+        }
+
+        // if user defeats boss and advances to next round
+        if (world.getBoss().isDefeated())
+        {
+            // storyline here
+            world.endStoryline();
+        }
+        else 
+        {
+            // user has lost all lives
+            Utilities.slowPrint("Game Over", 25);
+            Utilities.slowPrint("You have lost all lives. Enter 'r' to restart the game. Enter 'q' to quit.", 25);
+            String[] options = {"R", "r", "Q", "q"};
+            String menu = Utilities.inputString("> ", options);
+
+            if (menu.toLowerCase().equals("q"))
+            {
+                this.hasQuit = true;
+            }
+            else 
+            {
+                character = new MainCharacter(character.getFirstName(), character.getLastName());
+            }
+        }
+
+
     }
 
 }
