@@ -220,9 +220,9 @@ public class Bosses
             {   
                 System.out.println("Defense Mode");
                 // input section for number guess
+                userNum = Utilities.inputInt("Enter a number between " + minDefense + " and " + maxDefense + ": ", minDefense, maxDefense);
                 bossNum = (int)(Math.random()*maxDefense + minDefense);
                 System.out.println("Boss guessed " + bossNum);
-                userNum = Utilities.inputInt("Enter a number between " + minDefense + " and " + maxDefense + ": ", minDefense, maxDefense);
 
                 // if user guesses number
                 if (userNum == bossNum)
@@ -243,10 +243,10 @@ public class Bosses
             else // attack mode for user
             {
                 System.out.println("Offense mode");
-                bossNum = (int)(Math.random()*maxAttack + minAttack);
-                System.out.println("Boss guessed " + bossNum);
                 // input section for number guess
                 userNum = Utilities.inputInt("Enter a number between " + minAttack + " and " + maxAttack + ": ", minAttack, maxAttack);
+                bossNum = (int)(Math.random()*maxAttack + minAttack);
+                System.out.println("Boss guessed " + bossNum);
 
                 // if boss guesses number
                 if (userNum == bossNum)
@@ -278,6 +278,7 @@ public class Bosses
         // if user has defeated the boss
         if (userHP > 0)
         {
+            this.endStoryline(character);
             Utilities.slowPrint("Congratulations. You have defeated " + this.getBossName() + ".", 20);
             System.out.println();
             character.setCurrency(character.getCurrency()+ reward);
