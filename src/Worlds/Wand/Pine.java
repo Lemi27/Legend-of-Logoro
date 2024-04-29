@@ -17,6 +17,6 @@ public class Pine extends Wand{
         setName("Ember Pinecrest"); 
         setDefense(2); 
         setOffense(1.5); 
-        setPrice(8); 
+        setPrice(30); 
     }
 }

@@ -46,7 +46,7 @@ public class MasterQuest1 extends SideQuests {
             //Processing
             do
             {
-                input = Utilities.inputInt(" What is the result of the equation? ", -10000, 100000); //Assure input
+                input = Utilities.inputInt(" What is the result of the equation? "); //Assure input
 
                 //Check if the users guess is correct
                 if (answer != input && chances == 2)
@@ -69,10 +69,10 @@ public class MasterQuest1 extends SideQuests {
             //Gives the user their coins if they guess correctly
             if (chances > 0)
             {
-                Utilities.slowPrint("A moment of silence stretches out, the air thick with anticipation. Then, the gatekeepers spirit's form shimmers and fades, replaced by a radiant glow that envelops the Gate of Elements indicating you have guessed correctly.\nWith a melodic hum, a pile of 5 coins appears in frount of you, and you continue to passage into the heart of the master world ready to face anything that comes in your way.\n", 10);
+                Utilities.slowPrint("A moment of silence stretches out, the air thick with anticipation. Then, the gatekeepers spirit's form shimmers and fades, replaced by a radiant glow that envelops the Gate of Elements indicating you have guessed correctly.\nWith a melodic hum, a pile of 22 coins appears in front of you, and you continue to passage into the heart of the master world ready to face anything that comes in your way.\n", 10);
                 
                 //Gives the user currency once they guess correctly.
-                character.setCurrency(character.getCurrency() + 5);
+                character.setCurrency(character.getCurrency() + 22);
 
                 //Update game progress
                 character.updateProgress(4, 0);

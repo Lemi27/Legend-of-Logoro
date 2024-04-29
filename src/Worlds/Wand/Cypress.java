@@ -16,6 +16,6 @@ public class Cypress extends Wand{
         setName("Celestial Cypressglen"); 
         setDefense(1.25); 
         setOffense(1.25); 
-        setPrice(5); 
+        setPrice(20); 
     }
 }
