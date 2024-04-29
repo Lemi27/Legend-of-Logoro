@@ -14,8 +14,8 @@ public class IronWood extends Wand{
     {
         super(); 
         setName("Ironbark Sentinel"); 
-        setDefense(2); 
-        setOffense(2); 
-        setPrice(9); 
+        setDefense(1.25); 
+        setOffense(1.5); 
+        setPrice(8); 
     }
 }
