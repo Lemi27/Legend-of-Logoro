@@ -109,6 +109,25 @@ public class Utilities
       }
   } //end of slowPrint() method
 
+
+   /*******************
+   freeze(int maxHp)
+    @param          interval
+    @return        void
+    @description   Momentary freeze program for a certain interval
+  ********************/
+  public static void freeze(long interval)
+  {
+    try 
+    {
+      Thread.sleep(interval);
+    }
+    catch (InterruptedException e)
+    {
+      e.printStackTrace();
+    }
+  }
+
       /*******************
   visualHealthBar(String prompt, String[] acceptedAnswers)
     @param          currentHealth
