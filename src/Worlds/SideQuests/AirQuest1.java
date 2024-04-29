@@ -6,7 +6,7 @@
 @description        First side quest in the air world.
 ********************************************************/
 
-package worlds.SideQuests;
+package worlds.sidequests;
 
 import worlds.MainCharacter;
 import worlds.functionalities.Utilities;
@@ -81,6 +81,8 @@ public class AirQuest1 extends SideQuests
 
                 //this.isComplete = true;
             }
+
+            Utilities.freeze(2000);
             
 
         }else //Else in case the side quest has been completed

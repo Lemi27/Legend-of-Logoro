@@ -18,19 +18,19 @@ public class MasterBoss extends Bosses {
 
         setBossName("Omnius the Operation Overlord");
         setHp(8);
-        setOffense(8);
-        setDefense(3);
+        setOffense(1.5);
+        setDefense(1.25);
         
         // master has his own unique 'Elder Wand'
         // most powerful wand ever
         bossWand.setName("Elder Wand");
-        bossWand.setDefense(3);
-        bossWand.setOffense(3);
+        bossWand.setDefense(2.5);
+        bossWand.setOffense(2.5);
         setLevel(5);
-        setMinAttack(9);
-        setMinDefense(9);
-        setMaxAttack(9);
-        setMaxDefense(9);
+        setMinAttack(1);
+        setMinDefense(1);
+        setMaxAttack(4);
+        setMaxDefense(4);
 
     }
 

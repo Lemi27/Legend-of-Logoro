@@ -81,6 +81,8 @@ public class WaterQuest1 extends SideQuests {
                 //Update game progress
                 character.updateProgress(2, 0);
             }
+
+            Utilities.freeze(2000);
             
 
         }else //Else in case the side quest has been completed

@@ -128,6 +128,7 @@ public class Worlds
             System.out.printf("Currency: %s coins.%n", character.getCurrency());
             System.out.printf("Current HP: %s    ", character.getHP());
             Utilities.visualHealthBar((int)character.getHP(), (int)character.getMaxHP());
+            System.out.println(); // newline
             System.out.printf("Lives Remaining: %s.%n", character.getLivesRemaining());
             System.out.printf("Current Wand: %s.\nWand Stats: Offense %s, Defense %s%n", character.getCurrentWand().getName(), character.getCurrentWand().getOffense(), character.getCurrentWand().getDefense());
             System.out.printf("Base Attack: %s. Base Defense: %s.%n", character.getOffense(), character.getDefense());

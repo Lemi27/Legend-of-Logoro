@@ -78,6 +78,7 @@ public class AirQuest2 extends SideQuests {
                 character.updateProgress(0, 1);
             }
 
+            Utilities.freeze(2000);
 
         }else //Else in case the side quest has been completed
         {

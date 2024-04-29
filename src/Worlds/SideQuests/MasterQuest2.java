@@ -38,7 +38,7 @@ public class MasterQuest2 extends SideQuests {
 
             //Initial output
             System.out.println("========================================================");
-            Utilities.slowPrint("In a realm where elements converged and ancient energies pulsed, you stood before the Elemental Master—a formidable entity woven from earth, air, fire, and water.\n"+
+            Utilities.slowPrint("In a realm where elements converged and ancient energies pulsed, you stood before the Elemental Master, a formidable entity woven from earth, air, fire, and water.\n"+
             "\"Seeker of the elemental balance,\" the Master intoned, its voice harmonizing with the world's energies, \"to continue on your path to Logoro of this realm,\nunravel my riddle's intricate weave.\""+
             "It presented its cryptic challenge: (20+10)x2-(30÷3)+(40-5).\n", 20);
 
@@ -55,7 +55,7 @@ public class MasterQuest2 extends SideQuests {
                     Utilities.slowPrint("The Elemental Master's aura flickered, its energies dimming briefly. \"Incorrect, try once more.\"\n", 10);
                     chances--;
 
-                }else if (answer != input && chances == 2)
+                }else if (answer != input && chances == 1)
                 {
                     Utilities.slowPrint("Its voice carried a subtle disappointment. \"You've lost 2 HP. Refine your understanding, or be lost amidst the complexities of the elemental enigma.\"\n", 10);
                     chances--;
@@ -79,6 +79,8 @@ public class MasterQuest2 extends SideQuests {
                 //Update game progress
                 character.updateProgress(4, 1);
             }
+
+            Utilities.freeze(2000);
             
         }else //Else in case the side quest has been completed
         {

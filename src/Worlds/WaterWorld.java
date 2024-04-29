@@ -37,6 +37,8 @@ public class WaterWorld extends Worlds
     @Override
     public void beginningStoryline(MainCharacter character)
     {
+        System.out.println("===========================================================================");
+        System.out.println("*Professor Puzzler Speaking:*");
         Utilities.slowPrint("Multiplya awaits, and you navigate a realm of multiplying marvels and expansive arrays, knowledge hidden in the world's oceans.", 50);
         System.out.println(); // newline
         Utilities.slowPrint(character.getFirstName() + ", your exploration might take a turn when you encounter water oracles and guardians that test your knowledge on multiplication.", 50);

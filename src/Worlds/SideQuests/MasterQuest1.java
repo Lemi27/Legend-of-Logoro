@@ -6,7 +6,7 @@
 @description        First side quest in the master world.
 ********************************************************/
 
-package worlds.SideQuests;
+package worlds.sidequests;
 
 import worlds.MainCharacter;
 import worlds.functionalities.Utilities;
@@ -80,6 +80,8 @@ public class MasterQuest1 extends SideQuests {
                 character.updateProgress(4, 0);
             }
             
+            Utilities.freeze(2000);
+
         }else //Else in case the side quest has been completed
         {
             System.out.println("========================================================"); 

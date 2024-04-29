@@ -38,7 +38,7 @@ public class FireQuest1 extends SideQuests {
 
             //Initial output
             System.out.println("========================================================");
-            Utilities.slowPrint("In a realm ablaze with fiery hues and molten landscapes, you found yourself standing before the Fire Seer—a formidable entity forged from flickering flames and glowing embers.\n"+
+            Utilities.slowPrint("In a realm ablaze with fiery hues and molten landscapes, you found yourself standing before the Fire Seer, a formidable entity forged from flickering flames and glowing embers.\n"+
             "\"Adventurer of the scorching expanse,\" it intoned, its voice crackling like a roaring fire, \"to pass through this infernal domain, decipher my riddle's burning refrain.\"\n"+
             "It posed its cryptic challenge: \"I am a number. If you divide me by 4, I become 9.\"\n", 20);
 
@@ -70,7 +70,7 @@ public class FireQuest1 extends SideQuests {
             if (chances > 0)
             {
                 Utilities.slowPrint("The Fire Seer's flames flickered brighter, casting a radiant glow. \"Correct, take these 15 coins\" it rumbled approvingly. \"Forge ahead through the fiery trials that await.\"\n"+
-                "With a sweeping gesture, the seer parted the flames, revealing a pathway deeper into the scorching world. Ignited by triumph, you pressed on, ready to confront the blazing mysteries that lay ahead.\n", 10);
+                "With a sweeping gesture, the seer parted the flames, revealing a pathway deeper into the scorching world. Ignited by triumph, you pressed on, ready to confront the blazing mysteries that lay ahead.\n", 20);
                 
                 //Gives the user currency once they guess correctly.
                 character.setCurrency(character.getCurrency() + 15);
@@ -78,6 +78,8 @@ public class FireQuest1 extends SideQuests {
                 //Update game progress
                 character.updateProgress(3, 0);
             }
+
+            Utilities.freeze(2000);
             
         }else //Else in case the side quest has been completed
         {

@@ -35,6 +35,8 @@ public class AirWorld extends Worlds
     @Override
     public void beginningStoryline(MainCharacter character)
     {
+        System.out.println("===========================================================================");
+        System.out.println("*Professor Puzzler Speaking:*");
         Utilities.slowPrint("Your journey begins on Mathania, a planet where equations flourish with enchanted arrays of addition.", 50);
         System.out.println(); // newline
         Utilities.slowPrint(character.getFirstName() + ", you will encounter evil air sprits and monsters who plague you with solving addition puzzles.", 50);

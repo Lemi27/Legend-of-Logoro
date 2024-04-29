@@ -55,9 +55,9 @@ public class AirBoss extends Bosses {
         System.out.println("\n"); // 2 newlines
         Utilities.slowPrint("Aeritha: You... you think you can defeat me? Mathania... will never be free from my influence... My power... will endure...", 50);
         System.out.println("\n"); 
-        Utilities.slowPrint(character.getFirstName() + ": Your power is fading, Aeritha. Give me the gragment, and let Mathania thrive without your oppression.", 50);
+        Utilities.slowPrint(character.getFirstName() + ": Your power is fading, Aeritha. Give me the fragment, and let Mathania thrive without your oppression.", 50);
         System.out.println("\n");
-        Utilities.slowPrint("Take it... Take the gragment.. but heed my warning... chaos will always find a way into the heart of power... and abuse it...", 50);
+        Utilities.slowPrint("Aeritha: Take it... Take the fragment.. but heed my warning... chaos will always find a way into the heart of power... and abuse it...", 50);
         System.out.println("\n"); 
         Utilities.freeze(3000); // give user reading time
     }

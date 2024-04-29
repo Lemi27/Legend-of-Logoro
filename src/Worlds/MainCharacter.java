@@ -244,7 +244,7 @@ public class MainCharacter
         {
             // user has lost all lives
 
-            Utilities.slowPrint("Game Over", 25);
+            Utilities.slowPrint("Game Over. ", 25);
             Utilities.slowPrint("You have lost all lives. Enter 'q' to quit.", 25);
             String[] options = {"Q", "q"};
             String menu = Utilities.inputString("> ", options);

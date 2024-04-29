@@ -54,7 +54,7 @@ public class LandBoss extends Bosses {
         System.out.println("\n");
         Utilities.slowPrint("Terraformer: You... you may have defeated me... but Subtractus... Subtractus will never break free... My legacy... will endure...", 50);
         System.out.println("\n");
-        Utilities.slowPrint(character.getFirstName() + "Your legacy will fade, Terraformer. Give me the fragment, and let Subtractus rebuild without your tyranny.", 50);
+        Utilities.slowPrint(character.getFirstName() + ": Your legacy will fade, Terraformer. Give me the fragment, and let Subtractus rebuild without your tyranny.", 50);
         System.out.println("\n");
         Utilities.slowPrint("Terraformer: Take it... Take the fragment... but remember... oppression... oppression will always find a way to control....", 50);
         System.out.println("\n");

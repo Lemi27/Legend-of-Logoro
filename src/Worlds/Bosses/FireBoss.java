@@ -54,7 +54,7 @@ public class FireBoss extends Bosses {
         System.out.println("\n");
         Utilities.slowPrint("Ignitia: You... you think you've bested me? Dividia... will never know peace... My flames... will consume everything...", 50);
         System.out.println("\n");
-        Utilities.slowPrint(character.getFirstName() + "Your flames are dying, Ignitia. You have no more tricks up your sleeve, its time to relinquish control of the fragment and let dividia thrive.", 50);
+        Utilities.slowPrint(character.getFirstName() + ": Your flames are dying, Ignitia. You have no more tricks up your sleeve, it's time to relinquish control of the fragment and let Dividia thrive.", 50);
         System.out.println("\n");
         Utilities.slowPrint("Ignitia: Take it... Take the fragment... but know this... fire... fire will always find a way to burn...", 50);
         System.out.println("\n");

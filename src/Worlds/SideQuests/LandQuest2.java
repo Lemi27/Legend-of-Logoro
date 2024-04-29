@@ -28,7 +28,7 @@ public class LandQuest2 extends SideQuests {
     @Override
     public void execute(MainCharacter character)
     {
-        if (!this.isComplete()) //Checks if the side quest has been completed already
+        if (!character.getProgress()[1][1]) //Checks if the side quest has been completed already
         {
             //Variable Decleration and Initialization
             int answer = 7; //Answer to the riddle
@@ -38,9 +38,9 @@ public class LandQuest2 extends SideQuests {
 
             //Initial output
             System.out.println("========================================================");
-            Utilities.slowPrint("In a land where valleys whispered tales and forests guarded ancient secrets, you stood before the Earth Sentinel—a massive being of roots and boulders.\n"+
+            Utilities.slowPrint("In a land where valleys whispered tales and forests guarded ancient secrets, you stood before the Earth Sentinel, a massive being of roots and boulders.\n"+
             "\"Traveler,\" it rumbled, its voice resonating like shifting tectonic plates, \"to traverse this sacred maze, unravel my riddle's cryptic haze.\"\n"+
-            "It presented its puzzling challenge: \"I am an odd number. If you take away one of the letters from my name, I become even.\"", 20);
+            "It presented its puzzling challenge: \"I am an odd number. If you take away one of the letters from my name, I become even.\" ", 20);
 
             
             //Processing
@@ -52,7 +52,7 @@ public class LandQuest2 extends SideQuests {
                 //Check if answer is correct
                 if (answer != input && chances == 2)
                 {
-                    Utilities.slowPrint("The Earth Sentinel's stone features remained stern. \"Incorrect, you have 1 more chance,\" it intoned gravely.", 10);
+                    Utilities.slowPrint("The Earth Sentinel's stone features remained stern. \"Incorrect, you have 1 more chance,\" it intoned gravely. ", 10);
                     chances--;
 
                 }else if (answer != input && chances == 1)
@@ -79,6 +79,8 @@ public class LandQuest2 extends SideQuests {
                 //Update game progress
                 character.updateProgress(1, 1);
             }
+
+            Utilities.freeze(2000);
             
 
         }else //Else in case the side quest has been completed

@@ -38,6 +38,8 @@ public class LandWorld extends Worlds
     @Override
     public void beginningStoryline(MainCharacter character)
     {
+        System.out.println("===========================================================================");
+        System.out.println("*Professor Puzzler Speaking:*");
         Utilities.slowPrint("Welcome to Subtractus, a planet where mountains touch the sky and rivers sing ancient songs.", 50);
         System.out.println(); // newline
         Utilities.slowPrint(character.getFirstName() + ", you will find yourself challenged by land monsters, collosal figures formed of millenia-old boulders and vegetation.", 50);

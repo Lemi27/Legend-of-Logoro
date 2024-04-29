@@ -38,7 +38,7 @@ public class WaterQuest2 extends SideQuests {
 
             //Initial output
             System.out.println("========================================================");
-            Utilities.slowPrint("Navigating a realm where shimmering lakes mirrored the sky and waterfalls sang ancient melodies, you found yourself standing before the Water Guardian—a majestic figure sculpted from flowing rivers and misty streams.\n"+
+            Utilities.slowPrint("Navigating a realm where shimmering lakes mirrored the sky and waterfalls sang ancient melodies, you found yourself standing before the Water Guardian, a majestic figure sculpted from flowing rivers and misty streams.\n"+
             "\"Traveler of the aquatic expanse,\" it murmured, its voice a soothing ripple, \"to journey further into these aqueous lands, unravel my enigmatic riddle and reveal your insight.\"\n"+
             "It presented its cryptic challenge: \" If you multiply the number of legs on a crab by the number of bones on a shark, you get me.\"\n", 20);
 
@@ -79,6 +79,8 @@ public class WaterQuest2 extends SideQuests {
                 //Update game progress
                 character.updateProgress(2, 1);
             }
+
+            Utilities.freeze(2000);
             
 
         }else //Else in case the side quest has been completed
