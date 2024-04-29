@@ -37,6 +37,7 @@ public class FireQuest2 extends SideQuests {
             
 
             //Initial output
+            System.out.println("========================================================");
             Utilities.slowPrint("In a land where flames painted the skies and lava rivers flowed, you found yourself facing the Ember Sage—a majestic figure crafted from dancing flames and glowing embers.\n"+
             "\"Traveler of the fiery expanse,\" it intoned, its voice echoing like crackling logs, \"to journey through this scalding realm, unravel my riddle's burning test.\"\n"+
             "It posed its cryptic challenge: \"Legend has it that the igenous jewels multiply when divided equally among the brave. If there are 720 jewels and they must be divided equally among 8 warriors.\"\n", 20);
@@ -46,6 +47,7 @@ public class FireQuest2 extends SideQuests {
             do
             {
                 input = Utilities.inputInt("What number am I? "); //Assure input
+                System.out.println("========================================================");
 
                 //Check for correct answer
                 if (answer != input && chances == 2)
