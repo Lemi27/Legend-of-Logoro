@@ -45,7 +45,7 @@ public class WaterQuest1 extends SideQuests {
             //Processing
             do
             {
-                input = Utilities.inputInt("What truth shall arise? ", -10000, 100000); //Assure input
+                input = Utilities.inputInt("What truth shall arise? "); //Assure input
 
                 //Check if guess is correct
                 if (answer != input && chances == 2)

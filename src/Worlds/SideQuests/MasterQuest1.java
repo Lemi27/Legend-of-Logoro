@@ -46,7 +46,7 @@ public class MasterQuest1 extends SideQuests {
             //Processing
             do
             {
-                input = Utilities.inputInt(" What is the result of the equation? ", -10000, 100000); //Assure input
+                input = Utilities.inputInt(" What is the result of the equation? "); //Assure input
 
                 //Check if the users guess is correct
                 if (answer != input && chances == 2)

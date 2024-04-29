@@ -45,7 +45,7 @@ public class WaterQuest2 extends SideQuests {
             //Processing
             do
             {
-                input = Utilities.inputInt("What number shall I be? ", -10000, 100000); //Assure input
+                input = Utilities.inputInt("What number shall I be? "); //Assure input
 
                 //Check if answer is correct
                 if (answer != input && chances == 2)

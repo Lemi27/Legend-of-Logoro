@@ -46,7 +46,7 @@ public class AirQuest1 extends SideQuests
             //Processing
             do
             {
-                input = Utilities.inputInt("What number am I? ", -10000, 100000); //Assure input
+                input = Utilities.inputInt("What number am I? "); //Assure input
 
                 //Check if the user has guess correctly
                 if (answer != input && chances == 2) //First Guess

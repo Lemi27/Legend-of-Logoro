@@ -45,7 +45,7 @@ public class LandQuest1 extends SideQuests {
             //Processing
             do
             {
-                input = Utilities.inputInt("How many glowworms remain to light the cave? ", -10000, 100000); //Assure input
+                input = Utilities.inputInt("How many glowworms remain to light the cave? "); //Assure input
 
                 //Check if the user has guessed correctly
                 if (answer != input && chances == 2)
