@@ -70,11 +70,11 @@ public class WaterQuest1 extends SideQuests {
             //Give the user their reward
             if (chances > 0)
             {
-                Utilities.slowPrint("The Water Oracle's luminous form brightened, casting a radiant glow. \"Correct,\" it echoed melodiously. \"Continue your journey through the watery depths, and take these 5 coins.\"\n"+
+                Utilities.slowPrint("The Water Oracle's luminous form brightened, casting a radiant glow. \"Correct,\" it echoed melodiously. \"Continue your journey through the watery depths, and take these 10 coins.\"\n"+
                 "With a graceful swirl, the oracle parted the waters, revealing a path deeper into the mystical aquatic world. Emboldened, you venture forth, eager to unravel the secrets that the water realm held beneath its surface.\n", 10);
             
                 //Gives the user currency once they guess correctly.
-                character.setCurrency(character.getCurrency() + 5);
+                character.setCurrency(character.getCurrency() + 10);
 
                 //Update game progress
                 character.updateProgress(2, 0);

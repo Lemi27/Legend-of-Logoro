@@ -69,10 +69,10 @@ public class AirQuest1 extends SideQuests
 
             if (chances > 0){ //Ensure the user gets their reward if they guess correctly
 
-                Utilities.slowPrint("The spirit's eyes sparkle. \"Correct! You have claimed the prize of 5 coins.\"\nWith a graceful swirl, the spirit vanishes. Encouraged, you continue, eager to uncover the world's secrets.\n", 10);
+                Utilities.slowPrint("The spirit's eyes sparkle. \"Correct! You have claimed the prize of 3 coins.\"\nWith a graceful swirl, the spirit vanishes. Encouraged, you continue, eager to uncover the world's secrets.\n", 10);
 
                 //Gives the user currency once they guess correctly.
-                character.setCurrency(character.getCurrency() + 5);
+                character.setCurrency(character.getCurrency() + 3);
 
                 //Update game progress
                 character.updateProgress(0, 0);

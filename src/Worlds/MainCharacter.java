@@ -243,8 +243,9 @@ public class MainCharacter
         else 
         {
             // user has lost all lives
-            Utilities.slowPrint("Game Over", 25);
-            Utilities.slowPrint("You have lost all lives. Enter 'r' to restart the game. Enter 'q' to quit.", 25);
+            Utilities.slowPrint("Game Over!", 25);
+            Utilities.slowPrint(" You have lost all lives.\nEnter 'r' to restart the game. Enter 'q' to quit.", 25);
+            System.out.println();
             String[] options = {"R", "r", "Q", "q"};
             String menu = Utilities.inputString("> ", options);
 

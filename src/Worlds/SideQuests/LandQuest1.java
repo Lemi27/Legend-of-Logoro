@@ -69,11 +69,11 @@ public class LandQuest1 extends SideQuests {
             if (chances > 0)
             {
             
-                Utilities.slowPrint("The Earth Guardian's stony visage cracked into a smile. \"Correct,\" it boomed approvingly and gave 5 coins. \"You may continue your journey.\"\n"+
+                Utilities.slowPrint("The Earth Guardian's stony visage cracked into a smile. \"Correct,\" it boomed approvingly and gave 6 coins. \"You may continue your journey.\"\n"+
                 "With a gentle tremor, the guardian stepped aside and went deep into the mystical land. Inspired, you moved forward, eager to uncover the world's secrets.\n", 10);
 
                 //Gives the user currency once they guess correctly.
-                character.setCurrency(character.getCurrency() + 5);
+                character.setCurrency(character.getCurrency() + 6);
 
                 //Update game progress
                 character.updateProgress(1, 0);

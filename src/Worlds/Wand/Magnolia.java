@@ -17,6 +17,6 @@ public class Magnolia extends Wand {
         setName("Tranquil Magnoliaspire"); 
         setDefense(0.5); 
         setOffense(2.5); 
-        setPrice(8); 
+        setPrice(30); 
     }
 }

@@ -68,11 +68,11 @@ public class MasterQuest2 extends SideQuests {
             //Give the user their reward if they guess rightly
             if (chances > 0)
             {
-                Utilities.slowPrint("The Elemental Master's aura shimmered brightly, reflecting all the elements. \"Correct,\" it echoed, its voice a harmonious blend. \"Forge ahead on your quest to understand the universe's balance. Take these 15 coins aswell.\"\n"+
+                Utilities.slowPrint("The Elemental Master's aura shimmered brightly, reflecting all the elements. \"Correct,\" it echoed, its voice a harmonious blend. \"Forge ahead on your quest to understand the universe's balance. Take these 28 coins aswell.\"\n"+
                 "With a graceful gesture, the Master opened a portal of swirling energies, revealing a path deeper into the elemental world. Empowered by your success, you ventured forth, eager to explore the interconnected mysteries that awaited you.\n", 10);
                 
                 //Gives the user currency once they guess correctly.
-                character.setCurrency(character.getCurrency() + 15);
+                character.setCurrency(character.getCurrency() + 28);
 
                 //Update game progress
                 character.updateProgress(4, 1);

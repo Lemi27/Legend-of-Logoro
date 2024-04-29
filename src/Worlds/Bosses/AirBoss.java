@@ -27,6 +27,7 @@ public class AirBoss extends Bosses {
         setMinDefense(1);
         setMaxAttack(5);
         setMaxDefense(4);
+        reward = 10;
 
     }
     

@@ -25,6 +25,7 @@ public class Bosses
     private double defense;
     Wand bossWand = new Wand();
     int level;
+    int reward;
     private int minAttack;
     private int minDefense;
     private int maxAttack;
@@ -278,7 +279,7 @@ public class Bosses
         {
             Utilities.slowPrint("Congratulations. You have defeated " + this.getBossName() + ".", 20);
             System.out.println();
-            character.setCurrency(character.getCurrency()+3);
+            character.setCurrency(character.getCurrency()+ reward);
             this.isDefeated = true;
             this.updateProgress(character);
             character.setCurrentWorld(character.getCurrentWorld()+1); // character advances to next world
