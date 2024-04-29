@@ -8,6 +8,9 @@
 ********************************************************/
 package worlds.bosses;
 
+import worlds.MainCharacter;
+import worlds.functionalities.Utilities;
+
 public class MasterBoss extends Bosses {
 
     // CONSTRUCTOR
@@ -29,6 +32,27 @@ public class MasterBoss extends Bosses {
         setMinDefense(1);
         setMaxAttack(6);
         setMaxDefense(4);
+
+    }
+
+
+    // methods for storyline as user stumbles upon the Boss
+    // will be overriden in each method
+    @Override
+    public void beginningStoryline(MainCharacter character)
+    {
+        Utilities.slowPrint(character.getFirstName() + ": Onimus, your empire of chaos stops here. Hand over the final fragment of the Prism, or face the full force of my power.", 50);
+        System.out.println("\n"); // 2 newlines
+        Utilities.slowPrint("Onimus: Ah, the insolent worm dares to challenge me? I am the supreme ruler of Operationaria and the galaxy! I will crush you beneath my heel like the insignificant pest you are. Prepare to face oblivion!", 50);
+        System.out.println("\n"); 
+        Utilities.slowPrint(character.getFirstName() + ": Your arrogance blinds you. I'll bring an end to your tyranny and ensure that the galaxy knows peace once more, even if it costs me everything.", 50);
+        System.out.println("\n"); 
+        Utilities.freeze(100); // give character time to read dialogues
+    }
+
+    @Override
+    public void endStoryline(MainCharacter character)
+    {
 
     }
     
