@@ -57,12 +57,14 @@ public class Main
                     mainCharacter.world(mainCharacter, progress);
                     break;
                 case 3:
+                    mainCharacter.setMaxHP(24);
                     mainCharacter.world(mainCharacter, progress);
                     break;
                 case 4:
                     mainCharacter.world(mainCharacter, progress);
                     break;
                 case 5:
+                    mainCharacter.setMaxHP(26);
                     mainCharacter.world(mainCharacter, progress);
                     break;
                 default:

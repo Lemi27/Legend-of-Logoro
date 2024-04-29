@@ -280,7 +280,7 @@ public class Bosses
         if (userHP > 0)
         {
             this.endStoryline(character);
-            Utilities.slowPrint("Congratulations. You have defeated " + this.getBossName() + ".", 20);
+            Utilities.slowPrint("Congratulations. You have defeated " + this.getBossName() + ".\n", 20);
             character.setCurrency(character.getCurrency()+3);
             this.isDefeated = true;
             this.updateProgress(character);

@@ -25,6 +25,7 @@ public class LandWorld extends Worlds
         // set side quests for this world
         setSideQuest1(new LandQuest1());
         setSideQuest2(new LandQuest2());
+        setName("Land World (Subtractus)");
 
         // set boss for this world
         setBoss(new LandBoss());

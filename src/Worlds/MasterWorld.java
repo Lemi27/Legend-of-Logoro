@@ -24,6 +24,7 @@ public class MasterWorld extends Worlds
         // set side quests for this world
         setSideQuest1(new MasterQuest1());
         setSideQuest2(new MasterQuest2());
+        setName("Master World (Operationaria)");
 
         // set boss for this world
         setBoss(new MasterBoss());

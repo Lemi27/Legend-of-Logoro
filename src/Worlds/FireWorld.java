@@ -25,6 +25,7 @@ public class FireWorld extends Worlds
         // set side quests for this world
         setSideQuest1(new FireQuest1());
         setSideQuest2(new FireQuest2());
+        setName("Fire World (Dividia)");
 
         // set boss for this world
         setBoss(new FireBoss());

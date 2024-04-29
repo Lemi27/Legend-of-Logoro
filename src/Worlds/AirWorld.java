@@ -22,6 +22,7 @@ public class AirWorld extends Worlds
         // set side quests for this world
         setSideQuest1(new AirQuest1());
         setSideQuest2(new AirQuest2());
+        setName("Air World (Mathania)");
 
         // set boss for this world
         setBoss(new AirBoss());

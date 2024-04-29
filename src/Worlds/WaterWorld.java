@@ -24,6 +24,7 @@ public class WaterWorld extends Worlds
         // set side quests for this world
         setSideQuest1(new WaterQuest1());
         setSideQuest2(new WaterQuest2());
+        setName("Water World (Multiplya)");
 
         // set boss for this world
         setBoss(new WaterBoss());
