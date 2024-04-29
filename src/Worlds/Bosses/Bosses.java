@@ -175,12 +175,12 @@ public class Bosses
 
     // methods for storyline as user stumbles upon the Boss
     // will be overriden in each method
-    public void beginningStoryline()
+    public void beginningStoryline(MainCharacter character)
     {
 
     }
 
-    public void endStoryline()
+    public void endStoryline(MainCharacter character)
     {
 
     }
@@ -209,6 +209,9 @@ public class Bosses
         int userNum;
         int n = 1;
         double damage;
+
+        // display storyline before starting duel
+        this.beginningStoryline(character);
 
         while ((int)(userHP) > 0 && (int)(bossHP) > 0)
         {
@@ -276,6 +279,7 @@ public class Bosses
         // if user has defeated the boss
         if (userHP > 0)
         {
+            this.endStoryline(character);
             Utilities.slowPrint("Congratulations. You have defeated " + this.getBossName() + ".", 20);
             character.setCurrency(character.getCurrency()+3);
             this.isDefeated = true;
