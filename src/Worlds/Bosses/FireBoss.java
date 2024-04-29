@@ -50,28 +50,29 @@ public class FireBoss extends Bosses {
     @Override
     public void endStoryline(MainCharacter character)
     {
-
+        Utilities.slowPrint(character.getFirstName() + ": Ignitia, your flames of deceit have been extinguished. Now, give me the Prism fragment and accept your defeat.", 50);
+        System.out.println("\n");
+        Utilities.slowPrint("Ignitia: You... you think you've bested me? Dividia... will never know peace... My flames... will consume everything...", 50);
+        System.out.println("\n");
+        Utilities.slowPrint(character.getFirstName() + "Your flames are dying, Ignitia. You have no more tricks up your sleeve, its time to relinquish control of the fragment and let dividia thrive.", 50);
+        System.out.println("\n");
+        Utilities.slowPrint("Ignitia: Take it... Take the fragment... but know this... fire... fire will always find a way to burn...", 50);
+        System.out.println("\n");
+        Utilities.freeze(3000);
     }
 
-
-    // methods for storyline as user stumbles upon the Boss
-    // will be overriden in each method
-    @Override
-    public void beginningStoryline(MainCharacter character)
-    {
-        Utilities.slowPrint(character.getFirstName() + ": Ignitia, your deceitful schemes have no place in this galaxy. Give me the Prism fragment, or face the consequences.", 50);
-        System.out.println("\n"); // 2 newlines
-        Utilities.slowPrint("Ignitia: You have the audacity to stand before me? I am the master of Dividia, and I delight in the agony of my enemies. Prepare to be consumed by the flames of your own destruction!", 50);
-        System.out.println("\n"); 
-        Utilities.slowPrint(character.getFirstName() + ": Your wickedness disgusts me. I'll ensure that you never harm another soul on this planet again.", 50);
-        System.out.println("\n"); 
-        Utilities.freeze(100); // give character time to read dialogues
-    }
-
-    @Override
-    public void endStoryline(MainCharacter character)
-    {
-
-    }
     
 }
+/*
+**Player:** "Ignitia, your flames of deceit have been extinguished. Now, give me the Prism fragment and accept your defeat."
+
+**Ignitia:** "You... you think you've bested me? Dividia... will never know peace... My flames... will consume everything..."
+
+(Ignitia's fiery aura flickers, barely holding on)
+
+**Player:** "Your flames are dying, Ignitia. You habve no more tricks up your sleeve, its time to relinquish control of the fragment and let dividia thrive."
+
+(Ignitia begrudgingly hands over the Prism fragment)
+
+**Ignitia:** "Take it... Take the fragment... but know this... fire... fire will always find a way to burn..."
+ */
