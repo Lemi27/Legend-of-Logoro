@@ -122,8 +122,10 @@ public class Worlds
         // System.out.println("1: To access inventory. %n2: To do first sidequest. %n3: To do second sidequest. %n4: Fight Boss. %n5: Access Shop");
         do
         {
+            System.out.println("\n\n"); // 3 newlines
             System.out.println("========================================================");
             System.out.printf("Level %s: %s%n", character.getCurrentWorld(), this.getName());
+            System.out.printf("Currency: %s coins.%n", character.getCurrency());
             System.out.printf("Current HP: %s    ", character.getHP());
             Utilities.visualHealthBar((int)character.getHP(), (int)character.getMaxHP());
             System.out.printf("Lives Remaining: %s.%n", character.getLivesRemaining());
@@ -145,6 +147,8 @@ public class Worlds
             System.out.println("4. Access Shop");
             System.out.println("5. Access Inventory (switch current wand)");
             menu = Utilities.inputInt("> ", 1, 5);
+
+            System.out.println("\n\n"); // 3 newlines
             switch(menu)
             {
                 case 1:
