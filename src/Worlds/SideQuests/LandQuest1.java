@@ -37,6 +37,7 @@ public class LandQuest1 extends SideQuests {
 
 
             //Initial output
+            System.out.println("========================================================");
             Utilities.slowPrint("In a realm where mountains touched the sky and rivers sang ancient songs, you find yourself facing the Earth Guardian—a colossal figure of stone and moss.\n"+
             "\"Seeker,\" it intoned, its voice deep as rumbling earth, \"to pass this sacred ground, solve my riddle and prove your worth.\"\n"+
             "It posed its cryptic challenge: \"Ten glowworms illuminate a dark cave. A hungry badger snatches three for a midnight snack.\"\n", 20);
@@ -46,6 +47,7 @@ public class LandQuest1 extends SideQuests {
             do
             {
                 input = Utilities.inputInt("How many glowworms remain to light the cave? "); //Assure input
+                System.out.println("========================================================");
 
                 //Check if the user has guessed correctly
                 if (answer != input && chances == 2)

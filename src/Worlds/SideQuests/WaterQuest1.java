@@ -37,6 +37,7 @@ public class WaterQuest1 extends SideQuests {
 
 
             //Initial output
+            System.out.println("========================================================");
             Utilities.slowPrint("Submerged in a world where oceans whispered secrets and waves painted tales, you encountered the Water Oracle—a luminescent figure formed of cascading waterfalls and shimmering pools.\n"+
             "\"Seeker of the depths,\" it murmured, its voice a gentle cascade, \"to navigate these aqueous realms, solve my riddle and prove your aquatic prowess.\"\n"+
             "It posed its cryptic challenge: \"Within the tides of ten and the waves of five, multiply the current's flow.\"\n", 20);
@@ -46,6 +47,7 @@ public class WaterQuest1 extends SideQuests {
             do
             {
                 input = Utilities.inputInt("What truth shall arise? "); //Assure input
+                System.out.println("========================================================");
 
                 //Check if guess is correct
                 if (answer != input && chances == 2)

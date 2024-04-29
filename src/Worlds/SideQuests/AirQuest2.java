@@ -37,6 +37,7 @@ public class AirQuest2 extends SideQuests {
 
 
             //Initial output
+            System.out.println("========================================================");
             Utilities.slowPrint("In the heart of a fog-shrouded forest, you feel a chill unlike any other. From the mist emerged an air monster, its form swirling with dark clouds and lightning.\n"+
             "\"Human,\" it rumbled, its voice echoing like thunder, \"to pass, unravel this cipher.\"It posed its cryptic riddle: \"I am an even number. If you add half of me to a third of me, you get 10.\"\n", 20);
 
@@ -45,6 +46,7 @@ public class AirQuest2 extends SideQuests {
             do
             {
                 input = Utilities.inputInt("What number shall prevail? "); //Assure input
+                System.out.println("========================================================");
 
                 //Check if the user has guessed correctly
                 if (answer != input && chances == 2)

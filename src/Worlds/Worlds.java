@@ -122,14 +122,12 @@ public class Worlds
         // System.out.println("1: To access inventory. %n2: To do first sidequest. %n3: To do second sidequest. %n4: Fight Boss. %n5: Access Shop");
         do
         {
-            System.out.println("\n\n"); // 3 newlines
             System.out.println("========================================================");
             System.out.printf("Level %s: %s%n", character.getCurrentWorld(), this.getName());
-            System.out.printf("Currency: %s coins.%n", character.getCurrency());
             System.out.printf("Current HP: %s    ", character.getHP());
             Utilities.visualHealthBar((int)character.getHP(), (int)character.getMaxHP());
             System.out.printf("Lives Remaining: %s.%n", character.getLivesRemaining());
-            System.out.printf("Current Wand: \n    %s.\n    Offense %s, Defense %s%n", character.getCurrentWand().getName(), character.getCurrentWand().getOffense(), character.getCurrentWand().getDefense());
+            System.out.printf("Current Wand: \n%s. Offense %s, Defense %s%n", character.getCurrentWand().getName(), character.getCurrentWand().getOffense(), character.getCurrentWand().getDefense());
             System.out.printf("Base Attack: %s. Base Defense: %s.%n", character.getOffense(), character.getDefense());
             System.out.println("========================================================");
 
@@ -147,8 +145,6 @@ public class Worlds
             System.out.println("4. Access Shop");
             System.out.println("5. Access Inventory (switch current wand)");
             menu = Utilities.inputInt("> ", 1, 5);
-
-            System.out.println("\n\n"); // 3 newlines
             switch(menu)
             {
                 case 1:
@@ -275,7 +271,7 @@ public class Worlds
         System.out.printf("Money: %s coins%n", character.getCurrency());
         System.out.println("===========================================================================");
         // Displaying available wands
-        System.out.println("Wands");
+        System.out.println("WANDS");
         System.out.printf("%-10s%-30s%-10s%-10s%-10s%n", "No.",  "Name", "Defense", "Offense", "Price");
         for (int i = 0; i < availableWands.length; i++)
         {
@@ -284,14 +280,17 @@ public class Worlds
         }
 
         // HP Increase
-        System.out.println("   HP Increase");
-        System.out.printf("%s %-25s %-20s", availableWands.length+1, "Increase HP by 1 point", "2 coins");
+        System.out.println("===========================================================================");
+        System.out.println("HEALTH");
+        System.out.printf("%-10s%-30s%25s%n", availableWands.length+1, "Increase HP by 1", "2");
+        System.out.print("===========================================================================");
 
         System.out.println(); // newline
 
         // input section
         int menu = 0;
         menu = Utilities.inputInt("Enter number to buy wand, 0 to leave the shop: ", 0, availableWands.length+1);
+        System.out.println("===========================================================================");
 
         // if user wanted to boost HP
         if (menu == availableWands.length + 1)
