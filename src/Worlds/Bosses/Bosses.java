@@ -277,6 +277,7 @@ public class Bosses
         if (userHP > 0)
         {
             Utilities.slowPrint("Congratulations. You have defeated " + this.getBossName() + ".", 20);
+            System.out.println();
             character.setCurrency(character.getCurrency()+3);
             this.isDefeated = true;
             this.updateProgress(character);
@@ -284,7 +285,8 @@ public class Bosses
         }
         else // if user has lost to the boss
         {
-            Utilities.slowPrint("You have lost a life. " + this.getBossName() + "remains undefeated.\n", 20);
+            Utilities.slowPrint("You have lost a life. " + this.getBossName() + " remains undefeated.\n", 20);
+            System.out.println();
             character.setLivesRemaining(character.getLivesRemaining()-1); // removing a life remaining
         }
     }
