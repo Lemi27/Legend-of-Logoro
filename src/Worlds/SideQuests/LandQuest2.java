@@ -83,7 +83,8 @@ public class LandQuest2 extends SideQuests {
 
         }else //Else in case the side quest has been completed
         {
-            Utilities.slowPrint("This Side Quest has been completed", 10);
+            System.out.println("========================================================"); 
+            Utilities.slowPrint("This Side Quest has been completed\n", 10);
         }
 
     } //End of Method
