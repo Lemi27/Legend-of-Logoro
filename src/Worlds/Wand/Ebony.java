@@ -7,7 +7,7 @@
 @description        The class setting the attributes of the ebony wand.
 ********************************************************/
 
-package src.Worlds.Wand;
+package worlds.wand;
 
 public class Ebony extends Wand{
     

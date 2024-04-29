@@ -5,7 +5,7 @@
 @file               Worlds.java
 @description        *insert class description here
 ********************************************************/
-package src.Worlds;
+package worlds;
 import java.util.Scanner;
 
 import src.Worlds.Bosses.*;

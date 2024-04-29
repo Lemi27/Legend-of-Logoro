@@ -6,7 +6,7 @@
 @file               IronWood.java
 @description        The class setting the attributes of the ironwood wand.
 ********************************************************/
-package src.Worlds.Wand;
+package worlds.wand;
 
 public class IronWood extends Wand{
 

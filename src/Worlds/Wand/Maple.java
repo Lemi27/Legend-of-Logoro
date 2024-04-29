@@ -5,7 +5,7 @@
 @file               Maple.java
 @description        The class setting the attributes of the maple wand.
 ********************************************************/
-package src.Worlds.Wand;
+package worlds.wand;
 
 public class Maple extends Wand{
 

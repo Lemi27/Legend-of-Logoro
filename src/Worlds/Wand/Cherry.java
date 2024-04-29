@@ -5,7 +5,7 @@
 @file               Cherry.java
 @description        The class setting the attributes of the cherry wand.
 ********************************************************/
-package src.Worlds.Wand;
+package worlds.wand;
 
 public class Cherry extends Wand
 {

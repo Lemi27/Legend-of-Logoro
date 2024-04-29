@@ -5,7 +5,7 @@
 @file               Cypress.java
 @description        The class setting the attributes of the cypress wand.
 ********************************************************/
-package src.Worlds.Wand;
+package worlds.wand;
 
 public class Cypress extends Wand{
     

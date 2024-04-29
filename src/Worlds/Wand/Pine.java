@@ -6,7 +6,7 @@
 @description        The class setting the attributes of the pine wand.
 ********************************************************/
 
-package src.Worlds.Wand;
+package worlds.wand;
 
 public class Pine extends Wand{
     

@@ -6,7 +6,7 @@
 @description        The class setting the attributes of the oak wand.
 ********************************************************/
 
-package src.Worlds.Wand;
+package worlds.wand;
 
 public class Oak extends Wand{
 
