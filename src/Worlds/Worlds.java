@@ -143,7 +143,6 @@ public class Worlds
             System.out.println("1. Side Quest 1");
             System.out.println("2. Side Quest 2");
             System.out.printf("3. Boss Fight w/ %s (Base DEF %s, Base OFF %s, Wand DEF %s, Wand OFF %s)\n", this.getBoss().getBossName(),this.getBoss().getDefense(), this.getBoss().getOffense(), this.getBoss().getWand().getDefense(), this.getBoss().getWand().getOffense());
-            //System.out.printf("           (Base DEF %s, Base OFF %s, Wand DEF %s, Wand OFF %s)\n", this.getBoss().getDefense(), this.getBoss().getOffense(), this.getBoss().getWand().getDefense(), this.getBoss().getWand().getOffense());
             System.out.println("4. Access Shop");
             System.out.println("5. Access Inventory (switch current wand)");
             menu = Utilities.inputInt("> ", 1, 5);
@@ -288,7 +287,7 @@ public class Worlds
         }
 
         // HP Increase
-        System.out.println("HP Increase");
+        System.out.println("   HP Increase");
         System.out.printf("%s %-25s %-20s", availableWands.length+1, "Increase HP by 1 point", "2 coins");
 
         System.out.println(); // newline
