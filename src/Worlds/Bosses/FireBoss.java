@@ -52,5 +52,26 @@ public class FireBoss extends Bosses {
     {
 
     }
+
+
+    // methods for storyline as user stumbles upon the Boss
+    // will be overriden in each method
+    @Override
+    public void beginningStoryline(MainCharacter character)
+    {
+        Utilities.slowPrint(character.getFirstName() + ": Ignitia, your deceitful schemes have no place in this galaxy. Give me the Prism fragment, or face the consequences.", 50);
+        System.out.println("\n"); // 2 newlines
+        Utilities.slowPrint("Ignitia: You have the audacity to stand before me? I am the master of Dividia, and I delight in the agony of my enemies. Prepare to be consumed by the flames of your own destruction!", 50);
+        System.out.println("\n"); 
+        Utilities.slowPrint(character.getFirstName() + ": Your wickedness disgusts me. I'll ensure that you never harm another soul on this planet again.", 50);
+        System.out.println("\n"); 
+        Utilities.freeze(100); // give character time to read dialogues
+    }
+
+    @Override
+    public void endStoryline(MainCharacter character)
+    {
+
+    }
     
 }
