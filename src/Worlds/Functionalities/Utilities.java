@@ -91,7 +91,7 @@ public class Utilities
         boolean isValidInput;
         do 
         {
-            System.out.println(prompt);
+            System.out.print(prompt);
             answer = uI.next();
             isValidInput = false;
 
