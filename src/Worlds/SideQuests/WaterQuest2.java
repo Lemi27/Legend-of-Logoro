@@ -83,6 +83,7 @@ public class WaterQuest2 extends SideQuests {
 
         }else //Else in case the side quest has been completed
         {
+            System.out.println("========================================================"); 
             Utilities.slowPrint("This Side Quest has been completed\n", 10);
         }
         

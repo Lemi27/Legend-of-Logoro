@@ -218,6 +218,7 @@ public class Worlds
         int menu = 0;
 
         // display wands
+        System.out.println("========================================================"); 
         System.out.printf("%-10s%-30s%-10s%-10s%-10s%n", "No.",  "Name", "Defense", "Offense", "Price");
         for (int i = 0; i < wands.length; i++)
         {
