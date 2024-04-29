@@ -140,8 +140,7 @@ public class Worlds
             System.out.println("Enter any of the menu options:");
             System.out.println("1. Side Quest 1");
             System.out.println("2. Side Quest 2");
-            System.out.printf("3. Boss Fight w/ %s%n", this.getBoss().getBossName());
-            System.out.printf("           (Base Defense %s, Base Offense %s), Wand Defense %s, Wand Offense %s%n", this.getBoss().getDefense(), this.getBoss().getOffense(), this.getBoss().getWand().getDefense(), this.getBoss().getWand().getOffense());
+            System.out.printf("3. Boss Fight w/ %s (Base DEF %s, Base OFF %s, Wand DEF %s, Wand OFF %s)\n", this.getBoss().getBossName(),this.getBoss().getDefense(), this.getBoss().getOffense(), this.getBoss().getWand().getDefense(), this.getBoss().getWand().getOffense());
             System.out.println("4. Access Shop");
             System.out.println("5. Access Inventory (switch current wand)");
             menu = Utilities.inputInt("> ", 1, 5);
