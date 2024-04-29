@@ -222,8 +222,7 @@ public class Bosses
                 // input section for number guess
                 bossNum = (int)(Math.random()*maxDefense + minDefense);
                 System.out.println("Boss guessed " + bossNum);
-                System.out.printf("Enter a number between %d and %d: ", minDefense, maxDefense);
-                userNum = scanner.nextInt();
+                userNum = Utilities.inputInt("Enter a number between " + minDefense + " and " + maxDefense + ": ", minDefense, maxDefense);
 
                 // if user guesses number
                 if (userNum == bossNum)
@@ -247,8 +246,7 @@ public class Bosses
                 bossNum = (int)(Math.random()*maxAttack + minAttack);
                 System.out.println("Boss guessed " + bossNum);
                 // input section for number guess
-                System.out.printf("Enter a number between %d and %d: ", minAttack, maxAttack);
-                userNum = scanner.nextInt();
+                userNum = Utilities.inputInt("Enter a number between " + minAttack + " and " + maxAttack + ": ", minAttack, maxAttack);
 
                 // if boss guesses number
                 if (userNum == bossNum)
