@@ -40,7 +40,7 @@ public class AirQuest1 extends SideQuests
 
             //Initial output
             Utilities.slowPrint("Deep within the mystical air world, you encounter an ethereal air spirit, its form shimmering like a gentle breeze."+
-            "\"Traveler,\" it whispers,\n\"answer my riddle in two guesses to proceed.\"It presents the riddle: \"Dancing among clouds, a dozen fowl fly high in the sky, add a centuries leap, and you shall find the the prize.\"\n", 20);
+            " \"Traveler,\" it whispers,\n\"answer my riddle in two guesses to proceed. \"It presents the riddle: \"Dancing among clouds, a dozen fowl fly high in the sky, add a centuries leap,\nand you shall find the the prize.\"\n", 20);
 
 
             //Processing
@@ -52,12 +52,12 @@ public class AirQuest1 extends SideQuests
                 if (answer != input && chances == 2) //First Guess
                 {
                     Utilities.slowPrint("As you ponder the next step, a sudden gust of wind catches you off guard,"+ 
-                    "stealing your balance momentarily.\nYou have 1 chance remaining.\n", 10);
+                    "stealing your balance momentarily.\nYou have 1 chance remaining.\n", 13);
                     chances--;
 
                 }else if (answer != input && chances == 1) //Second guess
                 {
-                    Utilities.slowPrint("You lose your footing and stumble, taking 1 point of damage. The spirit then exits your domain\n", 10);
+                    Utilities.slowPrint("You lose your footing and stumble, taking 1 point of damage. The spirit then exits your domain\n", 12);
                     chances--;
 
                     //Remove Character HP
@@ -69,7 +69,7 @@ public class AirQuest1 extends SideQuests
 
             if (chances > 0){ //Ensure the user gets their reward if they guess correctly
 
-                Utilities.slowPrint("The spirit's eyes sparkle. \"Correct! You have claimed the prize of 3 coins.\"\nWith a graceful swirl, the spirit vanishes. Encouraged, you continue, eager to uncover the world's secrets.\n", 10);
+                Utilities.slowPrint("The spirit's eyes sparkle. \"Correct! You have claimed the prize of 3 coins.\"\nWith a graceful swirl, the spirit vanishes. Encouraged, you continue, eager to uncover the world's secrets.\n", 15);
 
                 //Gives the user currency once they guess correctly.
                 character.setCurrency(character.getCurrency() + 3);
