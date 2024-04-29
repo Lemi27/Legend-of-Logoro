@@ -28,7 +28,7 @@ public class FireQuest2 extends SideQuests {
     @Override
     public void execute(MainCharacter character)
     {
-        if (!this.isComplete()) //Checks if the side quest has been completed already
+        if (!character.getProgress()[3][1]) //Checks if the side quest has been completed already
         {
             //Variable Decleration and Initialization
             int answer = 90; //Answer to the riddle
@@ -39,7 +39,7 @@ public class FireQuest2 extends SideQuests {
             //Initial output
             Utilities.slowPrint("In a land where flames painted the skies and lava rivers flowed, you found yourself facing the Ember Sage—a majestic figure crafted from dancing flames and glowing embers.\n"+
             "\"Traveler of the fiery expanse,\" it intoned, its voice echoing like crackling logs, \"to journey through this scalding realm, unravel my riddle's burning test.\"\n"+
-            "It posed its cryptic challenge: \"Legend has it that the igenous jewels multiply when divided equally among the brave. If there are 720 jewels and they must be divided equally among 8 warriors.\"", 20);
+            "It posed its cryptic challenge: \"Legend has it that the igenous jewels multiply when divided equally among the brave. If there are 720 jewels and they must be divided equally among 8 warriors.\"\n", 20);
             
 
             //Processing
@@ -50,26 +50,26 @@ public class FireQuest2 extends SideQuests {
                 //Check for correct answer
                 if (answer != input && chances == 2)
                 {
-                    Utilities.slowPrint("The Ember Sage's flames wavered, its luminosity fading momentarily. \"Incorrect, try again\" it intoned.", 10);
+                    Utilities.slowPrint("The Ember Sage's flames wavered, its luminosity fading momentarily. \"Incorrect, try again\" it intoned.\n", 10);
                     chances--;
 
                 }else if (answer != input && chances == 1)
                 {
-                    Utilities.slowPrint("Its voice carrying a hint of disappointment.\"You've lost 2 HP. Refocus your thoughts, or risk being ensnared by the fiery enigma of this realm.\"", 10);
+                    Utilities.slowPrint("Its voice carrying a hint of disappointment.\"You've lost 2 HP. Refocus your thoughts, or risk being ensnared by the fiery enigma of this realm.\"\n", 10);
                     chances--;
 
                     //Remove Character HP
                     character.setHP(character.getHP() - 2);
 
                 }
-            } while (answer != input); //Force user to try again if they guess incorrectly
+            } while (answer != input && chances != 0); //Force user to try again if they guess incorrectly
     
 
             //Gives the user their reward if their guess is correct
             if (chances > 0)
             {
                 Utilities.slowPrint("The Ember Sage's flames brightened, casting a warm glow. \"Correct,\" it affirmed. \"Forge ahead through the blazing challenges that await using these 10 coins.\"\n"+
-                "With a sweeping gesture, the sage cleared a path through the flames, revealing a way deeper into the scorching world. Inspired by your success, you moved forward, ready to face the burning secrets ahead.", 10);
+                "With a sweeping gesture, the sage cleared a path through the flames, revealing a way deeper into the scorching world. Inspired by your success, you moved forward, ready to face the burning secrets ahead.\n", 10);
         
                 //Gives the user currency once they guess correctly.
                 character.setCurrency(character.getCurrency() + 10);
@@ -81,7 +81,7 @@ public class FireQuest2 extends SideQuests {
 
         }else //Else in case the side quest has been completed
         {
-            Utilities.slowPrint("This Side Quest has been completed", 10);
+            Utilities.slowPrint("This Side Quest has been completed\n", 10);
         }
     
     } //End of Method 
