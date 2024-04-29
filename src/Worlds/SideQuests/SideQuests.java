@@ -21,11 +21,17 @@ public class SideQuests {
 
     public SideQuests()
     {
+        isComplete = false;
         scanner = new Scanner(System.in);
     }
 
     public void begin() {
 
+    }
+
+    public boolean isComplete()
+    {
+        return this.isComplete;
     }
 
     public void execute(MainCharacter character)

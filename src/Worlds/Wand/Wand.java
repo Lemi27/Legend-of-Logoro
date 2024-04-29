@@ -1,9 +1,10 @@
 /********************************************************
-@author(s):         Muhammad and Sinan
-@date               *insert here
+@author(s):         Muhammad Nomaan and Sinan Shana
+@date               2024-04-27
 @teacher            Andrew Carreiro
-@file               Shop.java
-@description        *insert class description here
+@file               Wand.java
+@description        Creates the wand characteristics to be inherited by every individual wand type, and creates setters 
+                    and getters.
 ********************************************************/
 
 package worlds.wand;
@@ -72,7 +73,7 @@ public class Wand
 
     public void displayStatistics()
     {   
-        System.out.printf("%-30s %-10s %-10s %-10s%n", this.getName(), this.getDefense(), this.getOffense(), this.getPrice());
+        System.out.printf("%-20s %-10s %-10s %-10s%n", this.getName(), this.getDefense(), this.getOffense(), this.getPrice());
     }
 }
 
