@@ -8,7 +8,7 @@
 ********************************************************/
 package worlds.bosses;
 
-import worlds.wand.Willow;
+import worlds.wand.Magnolia;
 
 public class WaterBoss extends Bosses {
     
@@ -16,15 +16,16 @@ public class WaterBoss extends Bosses {
     public WaterBoss() {
 
         setBossName("Maritima the Wet Whirler");
-        setHp(8);
-        setOffense(8);
-        setDefense(3);
-        bossWand = new Willow();
+        setHp(20);
+        setMaxHP(20);
+        setOffense(1.1);
+        setDefense(1.25);
+        bossWand = new Magnolia();
         setLevel(3);
-        setMinAttack(9);
-        setMinDefense(9);
-        setMaxAttack(9);
-        setMaxDefense(9);
+        setMinAttack(1);
+        setMinDefense(1);
+        setMaxAttack(4);
+        setMaxDefense(4);
 
     }
 

@@ -17,15 +17,16 @@ public class AirBoss extends Bosses {
     public AirBoss() {
 
         setBossName("Aeritha the Summator");
-        setHp(8);
+        setHp(16);
+        setMaxHP(16);
         setOffense(1);
-        setDefense(2);
+        setDefense(1);
         bossWand = new Ebony();
         setLevel(1);
-        setMinAttack(9);
-        setMinDefense(9);
-        setMaxAttack(9);
-        setMaxDefense(9);
+        setMinAttack(1);
+        setMinDefense(1);
+        setMaxAttack(5);
+        setMaxDefense(4);
 
     }
     

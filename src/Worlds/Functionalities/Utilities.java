@@ -127,6 +127,7 @@ public class Utilities
               System.out.print("-"); // Print empty portion of the health bar
           }
       }
+      System.out.println(); // newline
 
 
   } // end of printHealthBar method
