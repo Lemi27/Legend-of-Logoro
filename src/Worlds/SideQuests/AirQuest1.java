@@ -29,7 +29,7 @@ public class AirQuest1 extends SideQuests
     @Override
     public void execute(MainCharacter character)
     {
-        if (!this.isComplete()) //Checks if the side quest has been completed already
+        if (!character.getProgress()[0][0]) //Checks if the side quest has been completed already
         {
 
             //Variable Decleration and Initialization
@@ -40,7 +40,7 @@ public class AirQuest1 extends SideQuests
 
             //Initial output
             Utilities.slowPrint("Deep within the mystical air world, you encounter an ethereal air spirit, its form shimmering like a gentle breeze."+
-            "\"Traveler,\" it whispers,\n\"answer my riddle in two guesses to proceed.\"It presents the riddle: \"Dancing among clouds, a dozen fowl fly high in the sky, add a centuries leap, and you shall find the the prize.\"", 20);
+            "\"Traveler,\" it whispers,\n\"answer my riddle in two guesses to proceed.\"It presents the riddle: \"Dancing among clouds, a dozen fowl fly high in the sky, add a centuries leap, and you shall find the the prize.\"\n", 20);
 
 
             //Processing
@@ -76,13 +76,14 @@ public class AirQuest1 extends SideQuests
 
                 //Update game progress
                 character.updateProgress(0, 0);
+
+                //this.isComplete = true;
             }
             
 
         }else //Else in case the side quest has been completed
         {
-            Utilities.slowPrint("This Side Quest has been completed", 10);
-            System.out.println(); // newline
+            Utilities.slowPrint("This Side Quest has been completed\n", 10);
         }
 
     } //End of Method
