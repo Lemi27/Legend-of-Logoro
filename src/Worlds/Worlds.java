@@ -228,8 +228,10 @@ public class Worlds
 
         System.out.println(); // newline
         // display current wand
-        System.out.println("Current Wand: ");
-        character.getCurrentWand().displayStatistics();
+        System.out.println("========================================================");
+        System.out.printf("Current Wand: %s (DEF %s, OFF %s)\n", character.getCurrentWand().getName(),character.getCurrentWand().getDefense(),character.getCurrentWand().getOffense());
+        System.out.println("========================================================");
+    
 
         menu = Utilities.inputInt("Enter wand that should be switched to, 0 to quit inventory: ", 0, wands.length);
         if (menu != 0)
