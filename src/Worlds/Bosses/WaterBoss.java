@@ -28,6 +28,7 @@ public class WaterBoss extends Bosses {
         setMinDefense(1);
         setMaxAttack(4);
         setMaxDefense(4);
+        reward = 20;
 
     }
 

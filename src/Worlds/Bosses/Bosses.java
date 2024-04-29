@@ -25,6 +25,7 @@ public class Bosses
     private double defense;
     Wand bossWand = new Wand();
     int level;
+    int reward;
     private int minAttack;
     private int minDefense;
     private int maxAttack;
@@ -279,16 +280,17 @@ public class Bosses
         // if user has defeated the boss
         if (userHP > 0)
         {
-            this.endStoryline(character);
-            Utilities.slowPrint("Congratulations. You have defeated " + this.getBossName() + ".\n", 20);
-            character.setCurrency(character.getCurrency()+3);
+            Utilities.slowPrint("Congratulations. You have defeated " + this.getBossName() + ".", 20);
+            System.out.println();
+            character.setCurrency(character.getCurrency()+ reward);
             this.isDefeated = true;
             this.updateProgress(character);
             character.setCurrentWorld(character.getCurrentWorld()+1); // character advances to next world
         }
         else // if user has lost to the boss
         {
-            Utilities.slowPrint("You have lost a life. " + this.getBossName() + "remains undefeated.\n", 20);
+            Utilities.slowPrint("You have lost a life. " + this.getBossName() + " remains undefeated.\n", 20);
+            System.out.println();
             character.setLivesRemaining(character.getLivesRemaining()-1); // removing a life remaining
         }
     }

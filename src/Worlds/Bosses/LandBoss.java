@@ -28,6 +28,7 @@ public class LandBoss extends Bosses {
         setMinDefense(1);
         setMaxAttack(6);
         setMaxDefense(5);
+        reward = 15;
 
     }
 

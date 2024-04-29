@@ -18,6 +18,6 @@ public class Willow extends Wand{
         setName("Whisperwind Willow");
         setDefense(2);
         setOffense(2); 
-        setPrice(17); 
+        setPrice(40); 
     }
 }

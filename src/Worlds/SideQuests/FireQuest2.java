@@ -45,7 +45,7 @@ public class FireQuest2 extends SideQuests {
             //Processing
             do
             {
-                input = Utilities.inputInt("What number am I? ", -10000, 100000); //Assure input
+                input = Utilities.inputInt("What number am I? "); //Assure input
 
                 //Check for correct answer
                 if (answer != input && chances == 2)
@@ -68,11 +68,11 @@ public class FireQuest2 extends SideQuests {
             //Gives the user their reward if their guess is correct
             if (chances > 0)
             {
-                Utilities.slowPrint("The Ember Sage's flames brightened, casting a warm glow. \"Correct,\" it affirmed. \"Forge ahead through the blazing challenges that await using these 10 coins.\"\n"+
+                Utilities.slowPrint("The Ember Sage's flames brightened, casting a warm glow. \"Correct,\" it affirmed. \"Forge ahead through the blazing challenges that await using these 21 coins.\"\n"+
                 "With a sweeping gesture, the sage cleared a path through the flames, revealing a way deeper into the scorching world. Inspired by your success, you moved forward, ready to face the burning secrets ahead.\n", 10);
         
                 //Gives the user currency once they guess correctly.
-                character.setCurrency(character.getCurrency() + 10);
+                character.setCurrency(character.getCurrency() + 21);
 
                 //Update game progress
                 character.updateProgress(3, 1);

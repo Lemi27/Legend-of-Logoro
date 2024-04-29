@@ -28,6 +28,7 @@ public class FireBoss extends Bosses {
         setMinDefense(1);
         setMaxAttack(4);
         setMaxDefense(3);
+        reward = 25;
 
     }
 

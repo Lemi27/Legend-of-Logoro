@@ -45,7 +45,7 @@ public class WaterQuest2 extends SideQuests {
             //Processing
             do
             {
-                input = Utilities.inputInt("What number shall I be? ", -10000, 100000); //Assure input
+                input = Utilities.inputInt("What number shall I be? "); //Assure input
 
                 //Check if answer is correct
                 if (answer != input && chances == 2)
@@ -68,11 +68,11 @@ public class WaterQuest2 extends SideQuests {
             //Give the user their answer reward
             if (chances > 0)
             {
-                Utilities.slowPrint("The Water Guardian's watery gaze shimmered with approval. \"Correct,\" it echoed melodically. \"Forge ahead on your aquatic quest, and take these 10 coins.\"\n"+
+                Utilities.slowPrint("The Water Guardian's watery gaze shimmered with approval. \"Correct,\" it echoed melodically. \"Forge ahead on your aquatic quest, and take these 14 coins.\"\n"+
                 "With a graceful gesture, the guardian parted the waters, unveiling a pathway deeper into the enchanting water world. Fueled by success, you ventured forth, eager to discover the submerged secrets awaiting you.\n", 10);
 
                 //Gives the user currency once they guess correctly.
-                character.setCurrency(character.getCurrency() + 10);
+                character.setCurrency(character.getCurrency() + 14);
 
                 //Update game progress
                 character.updateProgress(2, 1);
