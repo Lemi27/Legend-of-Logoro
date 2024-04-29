@@ -1,7 +1,7 @@
 # Legend of Logoro Storyline
 In the distant reaches of the universe lies a galaxy teeming with magical energy and mathematical mysteries. The inhabitants of this galaxy, known as the Mathematicians, have long safeguarded the secrets of mathematics, using its power to maintain balance and order across the cosmos.
 
-Among these mathematicians is Logoro, a brilliant, old wizard known for his unparalleled mastery of equations. However, when an ancient artifact known as the Prism of Equations is shattered, Logoro is caught in the ensuing chaos and disappears without a trace, his whereabouts unknown.
+Among these mathematicians is Logoro, a brilliant prodigy known for his unparalleled mastery of equations. However, when an ancient artifact known as the Prism of Equations is shattered, Logoro is caught in the ensuing chaos and disappears without a trace, his whereabouts unknown.
 
 Trouble brews as the shattered Prism's fragments scatter across five distant planets, unleashing chaos and threatening the very fabric of reality. As an apprentice mathematician under the guidance of Professor Puzzler, you receive a mysterious summons. It becomes clear that Logoro's disappearance is linked to the Prism's destruction, and your mission is not only to restore the Prism but also to rescue Logoro and save the galaxy from impending doom.
 
@@ -26,7 +26,7 @@ The journey begins on Mathania, a planet where equations flourish within enchant
 
 (Aeritha begrudgingly hands over the Prism fragment)
 
-**Aeritha:** "Take it... Take the fragment... but heed my warning... chaos will always find a way into the heart of power.... and sbuse it...."
+**Aeritha:** "Take it... Take the fragment... but heed my warning... chaos will always find a way into the heart of power.... and abuse it...."
 
 ## Planet 2: Subtractus (Subtraction- Land Planet)
 Next, you travel to Subtractus, a realm where mountains touch the sky and rivers sing ancient songs. Amazed by the numbers drifting amid subtractive mists, you find yourself challenged by Earth monsters, colossal figures formed of millennia-old boulders and vegetation. They challenge you to solve subtraction-themed puzzles in exchange for safe passage. Continuing on your journey, the monstrous Terraformer the Land Lacerator, has brought misery to his planet by ruling it with an iron fist, he hears of your emergence and sends you a message demanding a public duel to make an example of you infront of the whole planet, you emerge victorious giving hope back to the people and they rewarded you with the second fragment of the prism.

@@ -6,7 +6,7 @@
 @description        First side quest in the master world.
 ********************************************************/
 
-package worlds.sidequests;
+package worlds.SideQuests;
 
 import worlds.MainCharacter;
 import worlds.functionalities.Utilities;

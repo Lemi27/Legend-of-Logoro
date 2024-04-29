@@ -52,7 +52,30 @@ public class MasterBoss extends Bosses {
     @Override
     public void endStoryline(MainCharacter character)
     {
+        Utilities.slowPrint(character.getFirstName() + ": Onimus, your empire of chaos stops here. Hand over the final fragment of the Prism, and release Logoro from your grasp, or face the consequences.", 50);
+        System.out.println("\n");
+        Utilities.slowPrint("Onimus: You... you may have defeated me, but Logoro... Logoro belongs to me now. I will not give up my prize so easily. The Prism fragment... it's mine to control.", 50);
+        System.out.println("\n");;
+        Utilities.slowPrint(character.getFirstName() + ": Your time is over, Onimus. Release Logoro and give me the fragment. I will not repeat myself.", 50);
+        System.out.println("\n");
+        Utilities.slowPrint("Onimus: Take... take them if you must. But know this...Chaos... chaos will always find a way to thrive...not through me..... but through someone else...", 50);
+        System.out.println("\n");
+        Utilities.freeze(3000);
 
     }
     
 }
+/*
+**Player:** "Onimus, your empire of chaos stops here. Hand over the final fragment of the Prism, and release Logoro from your grasp, or face the consequences."
+
+**Onimus:** "You... you may have defeated me, but Logoro... Logoro belongs to me now. I will not give up my prize so easily. The Prism fragment... it's mine to control."
+
+(Onimus's voice is weak, his once intimidating presence diminished)
+
+**Player:** "Your time is over, Onimus. Release Logoro and give me the fragment. I will not repeat myself."
+
+(Onimus struggles to maintain his grip on the Prism fragment)
+
+**Onimus:** "Take... take them if you must. But know this...Chaos... chaos will always find a way to thrive...not through me..... but through someone else..."
+
+ */
