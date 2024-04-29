@@ -229,7 +229,7 @@ public class MainCharacter
 
         // storyline for world 1 displayed here
 
-        world.beginningStoryline();
+        world.beginningStoryline(character);
 
         while (!world.getBoss().isDefeated() && character.getLivesRemaining() > 0)
         {
@@ -245,18 +245,15 @@ public class MainCharacter
         else 
         {
             // user has lost all lives
+
             Utilities.slowPrint("Game Over", 25);
-            Utilities.slowPrint("You have lost all lives. Enter 'r' to restart the game. Enter 'q' to quit.", 25);
-            String[] options = {"R", "r", "Q", "q"};
+            Utilities.slowPrint("You have lost all lives. Enter 'q' to quit.", 25);
+            String[] options = {"Q", "q"};
             String menu = Utilities.inputString("> ", options);
 
             if (menu.toLowerCase().equals("q"))
             {
                 this.hasQuit = true;
-            }
-            else 
-            {
-                character = new MainCharacter(character.getFirstName(), character.getLastName());
             }
         }
 

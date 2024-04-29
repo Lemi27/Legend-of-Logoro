@@ -37,6 +37,7 @@ public class MasterQuest2 extends SideQuests {
 
 
             //Initial output
+            System.out.println("========================================================");
             Utilities.slowPrint("In a realm where elements converged and ancient energies pulsed, you stood before the Elemental Master—a formidable entity woven from earth, air, fire, and water.\n"+
             "\"Seeker of the elemental balance,\" the Master intoned, its voice harmonizing with the world's energies, \"to continue on your path to Logoro of this realm,\nunravel my riddle's intricate weave.\""+
             "It presented its cryptic challenge: (20+10)x2-(30÷3)+(40-5).\n", 20);
@@ -45,7 +46,8 @@ public class MasterQuest2 extends SideQuests {
             //Processing
             do
             {
-                input = Utilities.inputInt("What cosmic truth shall you uncover? ", -10000, 100000); //Assure input
+                input = Utilities.inputInt("What cosmic truth shall you uncover? "); //Assure input
+                System.out.println("========================================================");
 
                 //Check for correct answer
                 if (answer != input && chances == 2)
@@ -68,11 +70,11 @@ public class MasterQuest2 extends SideQuests {
             //Give the user their reward if they guess rightly
             if (chances > 0)
             {
-                Utilities.slowPrint("The Elemental Master's aura shimmered brightly, reflecting all the elements. \"Correct,\" it echoed, its voice a harmonious blend. \"Forge ahead on your quest to understand the universe's balance. Take these 15 coins aswell.\"\n"+
+                Utilities.slowPrint("The Elemental Master's aura shimmered brightly, reflecting all the elements. \"Correct,\" it echoed, its voice a harmonious blend. \"Forge ahead on your quest to understand the universe's balance. Take these 28 coins aswell.\"\n"+
                 "With a graceful gesture, the Master opened a portal of swirling energies, revealing a path deeper into the elemental world. Empowered by your success, you ventured forth, eager to explore the interconnected mysteries that awaited you.\n", 10);
                 
                 //Gives the user currency once they guess correctly.
-                character.setCurrency(character.getCurrency() + 15);
+                character.setCurrency(character.getCurrency() + 28);
 
                 //Update game progress
                 character.updateProgress(4, 1);

@@ -35,15 +35,27 @@ public class Main
         int livesRemaining;
 
         // input section for user name
+        System.out.println("========================================================"); 
         System.out.print("Enter your first name: ");
         String firstName = scanner.nextLine();
 
         System.out.print("Enter your last name: ");
         String lastName = scanner.nextLine();
+        System.out.println("========================================================");
 
         // MainCharacter instantiation
         mainCharacter = new MainCharacter(firstName, lastName);
         livesRemaining = mainCharacter.getLivesRemaining();
+
+        // storyline to begin story
+        // Utilities.slowPrint("In the distant reaches of the universe lies a galaxy teeming with magical energy and mathematical mysteries. The inhabitants of this galaxy, known as the Mathematicians, have long safeguarded the secrets of mathematics, using its power to maintain balance and order across the cosmos.", 50);
+        // System.out.println(); // newline
+        // Utilities.slowPrint("Among these mathematicians is Logoro, a brilliant, old wizard known for his unparalleled mastery of equations. However, when an ancient artifact known as the Prism of Equations is shattered, Logoro is caught in the ensuing chaos and disappears without a trace, his whereabouts unknown.", 50);
+        // System.out.println(); 
+        // Utilities.slowPrint("Trouble brews as the shattered Prism's fragments scatter across five distant planets, unleashing chaos and threatening the very fabric of reality. As an apprentice mathematician under the guidance of Professor Puzzler, you receive a mysterious summons. It becomes clear that Logoro's disappearance is linked to the Prism's destruction, and your mission is not only to restore the Prism but also to rescue Logoro and save the galaxy from impending doom.", 50);
+        // System.out.println(); 
+        // Utilities.freeze(5000); // give user reading time
+        // System.out.println("========================================================");
 
         // keep user in loop
         while (progress < 6 && livesRemaining > 0)
@@ -57,12 +69,14 @@ public class Main
                     mainCharacter.world(mainCharacter, progress);
                     break;
                 case 3:
+                    mainCharacter.setMaxHP(24);
                     mainCharacter.world(mainCharacter, progress);
                     break;
                 case 4:
                     mainCharacter.world(mainCharacter, progress);
                     break;
                 case 5:
+                    mainCharacter.setMaxHP(26);
                     mainCharacter.world(mainCharacter, progress);
                     break;
                 default:
@@ -76,6 +90,8 @@ public class Main
         if (mainCharacter.getProgress()[4][2])
         {
             // storyline after game is won
+            Utilities.slowPrint("\n\nYou have rescued Logoro. Balance has been restored. Tyranny has been suppressed. Thank you, " + mainCharacter.getFirstName() + " " + mainCharacter.getLastName(), 150);
+            System.out.println(".\n");
         }
         else // if user has lost the game, or quit
         {

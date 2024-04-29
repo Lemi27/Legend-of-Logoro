@@ -18,6 +18,6 @@ public class Spruce extends Wand {
         setName("Sapphire Sprig"); 
         setDefense(1.75); 
         setOffense(2); 
-        setPrice(10); 
+        setPrice(35); 
     }
 }

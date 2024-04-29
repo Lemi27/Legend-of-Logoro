@@ -37,6 +37,7 @@ public class AirQuest2 extends SideQuests {
 
 
             //Initial output
+            System.out.println("========================================================");
             Utilities.slowPrint("In the heart of a fog-shrouded forest, you feel a chill unlike any other. From the mist emerged an air monster, its form swirling with dark clouds and lightning.\n"+
             "\"Human,\" it rumbled, its voice echoing like thunder, \"to pass, unravel this cipher.\"It posed its cryptic riddle: \"I am an even number. If you add half of me to a third of me, you get 10.\"\n", 20);
 
@@ -44,7 +45,8 @@ public class AirQuest2 extends SideQuests {
             //Processing
             do
             {
-                input = Utilities.inputInt("What number shall prevail? ", -10000, 100000); //Assure input
+                input = Utilities.inputInt("What number shall prevail? "); //Assure input
+                System.out.println("========================================================");
 
                 //Check if the user has guessed correctly
                 if (answer != input && chances == 2)
@@ -67,10 +69,10 @@ public class AirQuest2 extends SideQuests {
             if (chances > 0) //Ensure the user gets their reward if they guess correctly
             {
                 Utilities.slowPrint("The air monster's stormy eyes narrowed, then softened. \"Correct,\" it grumbled approvingly. \"You may proceed.\n\""+
-                "With a thunderous clap, the monster dissipated into the mist, unveiling the hidden prize. Emboldened, you ventured forth.\n", 10);
+                "With a thunderous clap, the monster dissipated into the mist, unveiling the hidden prize of 7 coins. Emboldened, you ventured forth.\n", 10);
 
                 //Gives the user currency once they guess correctly.
-                character.setCurrency(character.getCurrency() + 10);
+                character.setCurrency(character.getCurrency() + 7);
 
                 //Update game progress
                 character.updateProgress(0, 1);

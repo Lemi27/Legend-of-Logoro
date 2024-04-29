@@ -25,6 +25,7 @@ public class Bosses
     private double defense;
     Wand bossWand = new Wand();
     int level;
+    int reward;
     private int minAttack;
     private int minDefense;
     private int maxAttack;
@@ -175,12 +176,12 @@ public class Bosses
 
     // methods for storyline as user stumbles upon the Boss
     // will be overriden in each method
-    public void beginningStoryline()
+    public void beginningStoryline(MainCharacter character)
     {
 
     }
 
-    public void endStoryline()
+    public void endStoryline(MainCharacter character)
     {
 
     }
@@ -210,14 +211,16 @@ public class Bosses
         int n = 1;
         double damage;
 
+        // display storyline before starting duel
+        this.beginningStoryline(character);
+
         while ((int)(userHP) > 0 && (int)(bossHP) > 0)
         {
             if (defenseMode)
             {   
                 System.out.println("Defense Mode");
                 // input section for number guess
-                System.out.printf("Enter a number between %d and %d: ", minDefense, maxDefense);
-                userNum = scanner.nextInt();
+                userNum = Utilities.inputInt("Enter a number between " + minDefense + " and " + maxDefense + ": ", minDefense, maxDefense);
                 bossNum = (int)(Math.random()*maxDefense + minDefense);
                 System.out.println("Boss guessed " + bossNum);
 
@@ -241,8 +244,7 @@ public class Bosses
             {
                 System.out.println("Offense mode");
                 // input section for number guess
-                System.out.printf("Enter a number between %d and %d: ", minAttack, maxAttack);
-                userNum = scanner.nextInt();
+                userNum = Utilities.inputInt("Enter a number between " + minAttack + " and " + maxAttack + ": ", minAttack, maxAttack);
                 bossNum = (int)(Math.random()*maxAttack + minAttack);
                 System.out.println("Boss guessed " + bossNum);
 
@@ -276,15 +278,18 @@ public class Bosses
         // if user has defeated the boss
         if (userHP > 0)
         {
+            this.endStoryline(character);
             Utilities.slowPrint("Congratulations. You have defeated " + this.getBossName() + ".", 20);
-            character.setCurrency(character.getCurrency()+3);
+            System.out.println();
+            character.setCurrency(character.getCurrency()+ reward);
             this.isDefeated = true;
             this.updateProgress(character);
             character.setCurrentWorld(character.getCurrentWorld()+1); // character advances to next world
         }
         else // if user has lost to the boss
         {
-            Utilities.slowPrint("You have lost a life. " + this.getBossName() + "remains undefeated.\n", 20);
+            Utilities.slowPrint("You have lost a life. " + this.getBossName() + " remains undefeated.\n", 20);
+            System.out.println();
             character.setLivesRemaining(character.getLivesRemaining()-1); // removing a life remaining
         }
     }
