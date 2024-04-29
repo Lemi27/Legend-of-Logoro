@@ -1,9 +1,10 @@
+
 /********************************************************
-@author(s)          Sinan Shana, Muhummad Nomaan
-@date               2024-04-27
+@author(s)          *insert here
+@date               *insert here
 @teacher            Andrew Carreiro
-@file               Maple.java
-@description        The class setting the attributes of the maple wand.
+@file               ExampleClass.java
+@description        *insert class description here
 ********************************************************/
 package worlds.wand;
 
@@ -15,6 +16,6 @@ public class Maple extends Wand{
         setName("Silverleaf Maplestar"); 
         setDefense(2); 
         setOffense(1); 
-        setPrice(1); 
+        setPrice(25); 
     }
 }

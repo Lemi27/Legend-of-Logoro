@@ -1,9 +1,10 @@
+
 /********************************************************
-@author(s)          Sinan Shana, Muhummad Nomaan
-@date               2024-04-27
+@author(s)          *insert here
+@date               *insert here
 @teacher            Andrew Carreiro
-@file               Oak.java
-@description        The class setting the attributes of the oak wand.
+@file               ExampleClass.java
+@description        *insert class description here
 ********************************************************/
 
 package worlds.wand;
@@ -14,8 +15,8 @@ public class Oak extends Wand{
     {
         super(); 
         setName("Guardian Oakhear"); 
-        setDefense(2); 
-        setOffense(1); 
-        setPrice(7); 
+        setDefense(1.5); 
+        setOffense(1.25); 
+        setPrice(20); 
     }
 }

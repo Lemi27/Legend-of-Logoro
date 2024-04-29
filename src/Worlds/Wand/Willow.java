@@ -1,10 +1,12 @@
+
 /********************************************************
-@author(s)          Sinan Shana, Muhummad Nomaan
-@date               2024-04-27
+@author(s)          *insert here
+@date               *insert here
 @teacher            Andrew Carreiro
-@file               Willow.java
-@description        The class setting the attributes of the willow wand.
+@file               ExampleClass.java
+@description        *insert class description here
 ********************************************************/
+// 1
 
 package worlds.wand;
 
@@ -14,9 +16,8 @@ public class Willow extends Wand{
     {
         super();
         setName("Whisperwind Willow");
-        setDefense(1.25);
+        setDefense(2);
         setOffense(2); 
-        setPrice(4);
-        setIsBought(true);   
+        setPrice(40); 
     }
 }

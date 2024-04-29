@@ -1,9 +1,10 @@
+
 /********************************************************
-@author(s)          Sinan Shana, Muhummad Nomaan
-@date               2024-04-27
+@author(s)          *insert here
+@date               *insert here
 @teacher            Andrew Carreiro
-@file               Cherry.java
-@description        The class setting the attributes of the cherry wand.
+@file               ExampleClass.java
+@description        *insert class description here
 ********************************************************/
 package worlds.wand;
 
@@ -13,8 +14,8 @@ public class Cherry extends Wand
     {
         super();
         setName("Cherry Scepter");
-        setDefense(1);
-        setOffense(1);
-        setPrice(10);
+        setDefense(1.1);
+        setOffense(1.3);
+        setPrice(15);
     }
 }

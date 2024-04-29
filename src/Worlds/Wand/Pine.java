@@ -1,9 +1,10 @@
+
 /********************************************************
-@author(s)          Sinan Shana, Muhummad Nomaan
-@date               2024-04-27
+@author(s)          *insert here
+@date               *insert here
 @teacher            Andrew Carreiro
-@file               Pine.java
-@description        The class setting the attributes of the pine wand.
+@file               ExampleClass.java
+@description        *insert class description here
 ********************************************************/
 
 package worlds.wand;
@@ -15,7 +16,7 @@ public class Pine extends Wand{
         super(); 
         setName("Ember Pinecrest"); 
         setDefense(2); 
-        setOffense(1); 
-        setPrice(7); 
+        setOffense(1.5); 
+        setPrice(30); 
     }
 }

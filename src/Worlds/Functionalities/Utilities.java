@@ -49,6 +49,33 @@ public class Utilities
     
     return input;
   } // end of inputInt() method
+
+  /*******************
+    inputInt(String prompt)
+    @param          prompt
+    @return         int
+    @description    Continously loop until user inputs a valid integer
+    *******************/
+
+  public static int inputInt(String prompt) //Input Int without a range
+  {
+    Scanner uI = new Scanner(System.in);
+    int input;
+
+    System.out.print(prompt);
+
+    // If the user does not input an int then you loop until they input an integer.
+    while (!uI.hasNextInt()) 
+    {
+      System.out.println("Please enter a valid integer. ");
+      System.out.print(prompt);
+      uI.nextLine();
+    }
+
+    input = uI.nextInt();
+    return input;
+  
+  } // end of inputInt() method
     
     /*******************
     inputString(String prompt, String[] acceptedAnswers)
@@ -64,7 +91,7 @@ public class Utilities
         boolean isValidInput;
         do 
         {
-            System.out.println(prompt);
+            System.out.print(prompt);
             answer = uI.next();
             isValidInput = false;
 
@@ -109,6 +136,25 @@ public class Utilities
       }
   } //end of slowPrint() method
 
+
+   /*******************
+   freeze(int maxHp)
+    @param          interval
+    @return        void
+    @description   Momentary freeze program for a certain interval
+  ********************/
+  public static void freeze(long interval)
+  {
+    try 
+    {
+      Thread.sleep(interval);
+    }
+    catch (InterruptedException e)
+    {
+      e.printStackTrace();
+    }
+  }
+
       /*******************
   visualHealthBar(String prompt, String[] acceptedAnswers)
     @param          currentHealth
@@ -130,7 +176,11 @@ public class Utilities
 
 
   } // end of printHealthBar method
-}
+
+}//End of class
+
+
+
 
     /*****
      * TODO:

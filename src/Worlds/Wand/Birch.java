@@ -1,12 +1,12 @@
 
 /********************************************************
-@author(s)          Sinan Shana, Muhummad Nomaan
-@date               2024-04-27
+@author(s)          *insert here
+@date               *insert here
 @teacher            Andrew Carreiro
-@file               Birch.java
-@description        The class setting the attributes of the birch wand.
+@file               ExampleClass.java
+@description        *insert class description here
 ********************************************************/
-package src.Worlds.Wand;
+package worlds.wand;
 
 public class Birch extends Wand
 {
@@ -14,8 +14,8 @@ public class Birch extends Wand
     {
         super();
         setName("Birch Scythe");
-        setDefense(1);
-        setOffense(1);
+        setDefense(1.1);
+        setOffense(1.1);
         setPrice(10);
     }
 }

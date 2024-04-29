@@ -1,10 +1,10 @@
 
 /********************************************************
-@author(s)          Sinan Shana, Muhummad Nomaan
-@date               2024-04-27
+@author(s)          *insert here
+@date               *insert here
 @teacher            Andrew Carreiro
-@file               IronWood.java
-@description        The class setting the attributes of the ironwood wand.
+@file               ExampleClass.java
+@description        *insert class description here
 ********************************************************/
 package worlds.wand;
 
@@ -14,8 +14,8 @@ public class IronWood extends Wand{
     {
         super(); 
         setName("Ironbark Sentinel"); 
-        setDefense(2); 
-        setOffense(2); 
-        setPrice(9); 
+        setDefense(1.25); 
+        setOffense(1.5); 
+        setPrice(25); 
     }
 }

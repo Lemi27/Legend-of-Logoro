@@ -9,7 +9,9 @@
 
 package worlds.bosses;
 
+import worlds.MainCharacter;
 import worlds.wand.Ebony;
+import worlds.functionalities.Utilities;
 
 public class AirBoss extends Bosses {
 
@@ -17,15 +19,38 @@ public class AirBoss extends Bosses {
     public AirBoss() {
 
         setBossName("Aeritha the Summator");
-        setHp(8);
+        setHp(16);
+        setMaxHP(16);
         setOffense(1);
-        setDefense(2);
+        setDefense(1);
         bossWand = new Ebony();
         setLevel(1);
-        setMinAttack(9);
-        setMinDefense(9);
-        setMaxAttack(9);
-        setMaxDefense(9);
+        setMinAttack(1);
+        setMinDefense(1);
+        setMaxAttack(5);
+        setMaxDefense(4);
+        reward = 10;
+
+    }
+
+
+    // methods for storyline as user stumbles upon the Boss
+    // will be overriden in each method
+    @Override
+    public void beginningStoryline(MainCharacter character)
+    {
+        Utilities.slowPrint(character.getFirstName() + ": Aeritha, your reign of terror ends now. Hand over the fragment of the Prism, or face the consequences.", 50);
+        System.out.println("\n"); // 2 newlines
+        Utilities.slowPrint("Aeritha: Ha! Pathetic mortal, you think you can challenge me? I am the sovereign of Mathania, and you are but an ant beneath my heel. Prepare to grovel at my feet!", 50);
+        System.out.println("\n"); 
+        Utilities.slowPrint(character.getFirstName() + ": Your tyranny ends today. I'll make sure the people of Mathania are free from your grasp, no matter what it takes.", 50);
+        System.out.println("\n"); 
+        Utilities.freeze(100); // give character time to read dialogues
+    }
+
+    @Override
+    public void endStoryline(MainCharacter character)
+    {
 
     }
     

@@ -8,7 +8,9 @@
 ********************************************************/
 package worlds.bosses;
 
-import worlds.wand.Willow;
+import worlds.MainCharacter;
+import worlds.functionalities.Utilities;
+import worlds.wand.Magnolia;
 
 public class WaterBoss extends Bosses {
     
@@ -16,15 +18,38 @@ public class WaterBoss extends Bosses {
     public WaterBoss() {
 
         setBossName("Maritima the Wet Whirler");
-        setHp(8);
-        setOffense(8);
-        setDefense(3);
-        bossWand = new Willow();
+        setHp(20);
+        setMaxHP(20);
+        setOffense(1.1);
+        setDefense(1.25);
+        bossWand = new Magnolia();
         setLevel(3);
-        setMinAttack(9);
-        setMinDefense(9);
-        setMaxAttack(9);
-        setMaxDefense(9);
+        setMinAttack(1);
+        setMinDefense(1);
+        setMaxAttack(4);
+        setMaxDefense(4);
+        reward = 20;
+
+    }
+
+
+    // methods for storyline as user stumbles upon the Boss
+    // will be overriden in each method
+    @Override
+    public void beginningStoryline(MainCharacter character)
+    {
+        Utilities.slowPrint(character.getFirstName() + ": Maritima, your chaotic reign must come to an end. Hand over the Prism fragment, or face my wrath.", 50);
+        System.out.println("\n"); // 2 newlines
+        Utilities.slowPrint("Maritima: Hahaha! You think you can challenge me? I am the ruler of Multiplya, and I revel in the suffering of my subjects. Prepare to drown in a sea of despair!", 50);
+        System.out.println("\n"); 
+        Utilities.slowPrint(character.getFirstName() + ": Your heartlessness sickens me. I'll put an end to your reign of terror and bring peace to this planet once and for all.", 50);
+        System.out.println("\n"); 
+        Utilities.freeze(100); // give character time to read dialogues
+    }
+
+    @Override
+    public void endStoryline(MainCharacter character)
+    {
 
     }
 

@@ -8,7 +8,9 @@
 ********************************************************/
 package worlds.bosses;
 
-import worlds.wand.Magnolia;
+import worlds.MainCharacter;
+import worlds.functionalities.Utilities;
+import worlds.wand.Spruce;
 
 public class FireBoss extends Bosses {
 
@@ -16,15 +18,38 @@ public class FireBoss extends Bosses {
     public FireBoss() {
 
         setBossName("Ignitia the Flame Fractionator");
-        setHp(8);
-        setOffense(8);
-        setDefense(2.1);
-        bossWand = new Magnolia();
+        setHp(24);
+        setMaxHP(24);
+        setOffense(1.25);
+        setDefense(1.25);
+        bossWand = new Spruce();
         setLevel(4);
-        setMinAttack(9);
-        setMinDefense(9);
-        setMaxAttack(9);
-        setMaxDefense(9);
+        setMinAttack(1);
+        setMinDefense(1);
+        setMaxAttack(4);
+        setMaxDefense(3);
+        reward = 25;
+
+    }
+
+
+    // methods for storyline as user stumbles upon the Boss
+    // will be overriden in each method
+    @Override
+    public void beginningStoryline(MainCharacter character)
+    {
+        Utilities.slowPrint(character.getFirstName() + ": Ignitia, your deceitful schemes have no place in this galaxy. Give me the Prism fragment, or face the consequences.", 50);
+        System.out.println("\n"); // 2 newlines
+        Utilities.slowPrint("Ignitia: You have the audacity to stand before me? I am the master of Dividia, and I delight in the agony of my enemies. Prepare to be consumed by the flames of your own destruction!", 50);
+        System.out.println("\n"); 
+        Utilities.slowPrint(character.getFirstName() + ": Your wickedness disgusts me. I'll ensure that you never harm another soul on this planet again.", 50);
+        System.out.println("\n"); 
+        Utilities.freeze(100); // give character time to read dialogues
+    }
+
+    @Override
+    public void endStoryline(MainCharacter character)
+    {
 
     }
     

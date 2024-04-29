@@ -1,7 +1,7 @@
 # Legend of Logoro Storyline
 In the distant reaches of the universe lies a galaxy teeming with magical energy and mathematical mysteries. The inhabitants of this galaxy, known as the Mathematicians, have long safeguarded the secrets of mathematics, using its power to maintain balance and order across the cosmos.
 
-Among these mathematicians is Logoro, a brilliant prodigy known for his unparalleled mastery of equations. However, when an ancient artifact known as the Prism of Equations is shattered, Logoro is caught in the ensuing chaos and disappears without a trace, his whereabouts unknown.
+Among these mathematicians is Logoro, a brilliant, old wizard known for his unparalleled mastery of equations. However, when an ancient artifact known as the Prism of Equations is shattered, Logoro is caught in the ensuing chaos and disappears without a trace, his whereabouts unknown.
 
 Trouble brews as the shattered Prism's fragments scatter across five distant planets, unleashing chaos and threatening the very fabric of reality. As an apprentice mathematician under the guidance of Professor Puzzler, you receive a mysterious summons. It becomes clear that Logoro's disappearance is linked to the Prism's destruction, and your mission is not only to restore the Prism but also to rescue Logoro and save the galaxy from impending doom.
 
