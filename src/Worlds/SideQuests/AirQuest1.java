@@ -52,12 +52,12 @@ public class AirQuest1 extends SideQuests
                 if (answer != input && chances == 2) //First Guess
                 {
                     Utilities.slowPrint("As you ponder the next step, a sudden gust of wind catches you off guard,"+ 
-                    "stealing your balance momentarily.\nYou have 1 chance remaining.", 10);
+                    "stealing your balance momentarily.\nYou have 1 chance remaining.\n", 10);
                     chances--;
 
                 }else if (answer != input && chances == 1) //Second guess
                 {
-                    Utilities.slowPrint("You lose your footing and stumble, taking 1 point of damage. The spirit then exits your domain", 10);
+                    Utilities.slowPrint("You lose your footing and stumble, taking 1 point of damage. The spirit then exits your domain\n", 10);
                     chances--;
 
                     //Remove Character HP
@@ -69,7 +69,7 @@ public class AirQuest1 extends SideQuests
 
             if (chances > 0){ //Ensure the user gets their reward if they guess correctly
 
-                Utilities.slowPrint("The spirit's eyes sparkle. \"Correct! You have claimed the prize of 5 coins.\"\nWith a graceful swirl, the spirit vanishes. Encouraged, you continue, eager to uncover the world's secrets.", 10);
+                Utilities.slowPrint("The spirit's eyes sparkle. \"Correct! You have claimed the prize of 5 coins.\"\nWith a graceful swirl, the spirit vanishes. Encouraged, you continue, eager to uncover the world's secrets.\n", 10);
 
                 //Gives the user currency once they guess correctly.
                 character.setCurrency(character.getCurrency() + 5);
@@ -82,6 +82,7 @@ public class AirQuest1 extends SideQuests
         }else //Else in case the side quest has been completed
         {
             Utilities.slowPrint("This Side Quest has been completed", 10);
+            System.out.println(); // newline
         }
 
     } //End of Method

@@ -15,8 +15,8 @@ public class Ebony extends Wand{
     {
         super(); 
         setName("Shadowed Ebonyreach"); 
-        setDefense(1); 
+        setDefense(1.5); 
         setOffense(1); 
-        setPrice(1); 
+        setPrice(5); 
     }
 }

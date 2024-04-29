@@ -14,8 +14,8 @@ public class Cherry extends Wand
     {
         super();
         setName("Cherry Scepter");
-        setDefense(1);
-        setOffense(1);
-        setPrice(10);
+        setDefense(1.1);
+        setOffense(1.3);
+        setPrice(4);
     }
 }

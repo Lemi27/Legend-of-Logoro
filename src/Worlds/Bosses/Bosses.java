@@ -173,6 +173,18 @@ public class Bosses
         this.maxDefense = maxDefense;
     }
 
+    // methods for storyline as user stumbles upon the Boss
+    // will be overriden in each method
+    public void beginningStoryline()
+    {
+
+    }
+
+    public void endStoryline()
+    {
+
+    }
+
 
     /*******************
     fight()
@@ -252,11 +264,13 @@ public class Bosses
             }
 
             // display each user's HP after a round
-            System.out.printf("User HP: %d  ", userHP);
+            System.out.printf("User HP: %s  ", userHP);
             // visual health bar
             Utilities.visualHealthBar((int)userHP, (int)character.getMaxHP());
-            System.out.printf("Boss HP: %d  ", bossHP);
+            System.out.println(); // newline
+            System.out.printf("Boss HP: %s  ", bossHP);
             Utilities.visualHealthBar((int)bossHP, (int)this.getMaxHP());
+            System.out.println(); // newline
         }
 
         // if user has defeated the boss
@@ -270,7 +284,7 @@ public class Bosses
         }
         else // if user has lost to the boss
         {
-            Utilities.slowPrint("You have lost a life. " + this.getBossName() + "remains undefeated.", 20);
+            Utilities.slowPrint("You have lost a life. " + this.getBossName() + "remains undefeated.\n", 20);
             character.setLivesRemaining(character.getLivesRemaining()-1); // removing a life remaining
         }
     }

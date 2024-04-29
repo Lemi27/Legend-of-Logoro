@@ -16,6 +16,6 @@ public class Maple extends Wand{
         setName("Silverleaf Maplestar"); 
         setDefense(2); 
         setOffense(1); 
-        setPrice(1); 
+        setPrice(7); 
     }
 }

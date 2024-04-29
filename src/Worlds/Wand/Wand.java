@@ -72,7 +72,7 @@ public class Wand
 
     public void displayStatistics()
     {   
-        System.out.printf("%-20s %-10s %-10s %-10s%n", this.getName(), this.getDefense(), this.getOffense(), this.getPrice());
+        System.out.printf("%-30s %-10s %-10s %-10s%n", this.getName(), this.getDefense(), this.getOffense(), this.getPrice());
     }
 }
 

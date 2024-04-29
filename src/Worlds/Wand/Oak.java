@@ -15,8 +15,8 @@ public class Oak extends Wand{
     {
         super(); 
         setName("Guardian Oakhear"); 
-        setDefense(2); 
-        setOffense(1); 
-        setPrice(7); 
+        setDefense(1.5); 
+        setOffense(1.25); 
+        setPrice(5); 
     }
 }
