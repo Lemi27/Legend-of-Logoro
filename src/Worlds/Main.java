@@ -90,6 +90,8 @@ public class Main
         if (mainCharacter.getProgress()[4][2])
         {
             // storyline after game is won
+            Utilities.slowPrint("\n\nYou have rescued Logoro. Balance has been restored. Tyranny has been suppressed. Thank you, " + mainCharacter.getFirstName() + " " + mainCharacter.getLastName(), 150);
+            System.out.println(".\n");
         }
         else // if user has lost the game, or quit
         {
