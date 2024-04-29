@@ -124,7 +124,8 @@ public class Worlds
         {
             System.out.println("========================================================");
             System.out.printf("Level %s: %s%n", character.getCurrentWorld(), this.getName());
-            System.out.printf("Current HP: %s%n", character.getHP());
+            System.out.printf("Current HP: %s    ", character.getHP());
+            Utilities.visualHealthBar((int)character.getHP(), (int)character.getMaxHP());
             System.out.printf("Lives Remaining: %s.%n", character.getLivesRemaining());
             System.out.printf("Current Wand: \n%s. Offense %s, Defense %s%n", character.getCurrentWand().getName(), character.getCurrentWand().getOffense(), character.getCurrentWand().getDefense());
             System.out.printf("Base Attack: %s. Base Defense: %s.%n", character.getOffense(), character.getDefense());
@@ -229,8 +230,11 @@ public class Worlds
         System.out.println("Current Wand: ");
         character.getCurrentWand().displayStatistics();
 
-        menu = Utilities.inputInt("Enter wand that should be switched to: ", 1, wands.length);
-        character.setCurrentWand(wands[menu-1]);
+        menu = Utilities.inputInt("Enter wand that should be switched to, 0 to quit inventory: ", 0, wands.length);
+        if (menu != 0)
+        {
+            character.setCurrentWand(wands[menu-1]);
+        }
     }
 
     public void accessShop(MainCharacter character)
@@ -283,12 +287,12 @@ public class Worlds
 
         // input section
         int menu = 0;
-        menu = Utilities.inputInt("What do you want to buy(enter number): ", 1, availableWands.length+1);
+        menu = Utilities.inputInt("Enter number to buy wand, 0 to leave the shop: ", 0, availableWands.length+1);
 
         // if user wanted to boost HP
         if (menu == availableWands.length + 1)
         {
-            if (character.getCurrency() > 2)
+            if (character.getCurrency()>= 2)
             {
                 if ((int)character.getHP() < (int)character.getMaxHP())
                 {
@@ -324,7 +328,7 @@ public class Worlds
         
     }
 
-    public void beginningStoryline()
+    public void beginningStoryline(MainCharacter character)
     {
         // will be overriden in child classes
     }

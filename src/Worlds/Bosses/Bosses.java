@@ -219,10 +219,10 @@ public class Bosses
             {   
                 System.out.println("Defense Mode");
                 // input section for number guess
-                System.out.printf("Enter a number between %d and %d: ", minDefense, maxDefense);
-                userNum = scanner.nextInt();
                 bossNum = (int)(Math.random()*maxDefense + minDefense);
                 System.out.println("Boss guessed " + bossNum);
+                System.out.printf("Enter a number between %d and %d: ", minDefense, maxDefense);
+                userNum = scanner.nextInt();
 
                 // if user guesses number
                 if (userNum == bossNum)
@@ -243,11 +243,11 @@ public class Bosses
             else // attack mode for user
             {
                 System.out.println("Offense mode");
+                bossNum = (int)(Math.random()*maxAttack + minAttack);
+                System.out.println("Boss guessed " + bossNum);
                 // input section for number guess
                 System.out.printf("Enter a number between %d and %d: ", minAttack, maxAttack);
                 userNum = scanner.nextInt();
-                bossNum = (int)(Math.random()*maxAttack + minAttack);
-                System.out.println("Boss guessed " + bossNum);
 
                 // if boss guesses number
                 if (userNum == bossNum)

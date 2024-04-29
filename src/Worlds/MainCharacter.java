@@ -227,7 +227,7 @@ public class MainCharacter
 
         // storyline for world 1 displayed here
 
-        world.beginningStoryline();
+        world.beginningStoryline(character);
 
         while (!world.getBoss().isDefeated() && character.getLivesRemaining() > 0)
         {

@@ -10,6 +10,7 @@ package worlds;
 
 import worlds.sidequests.*;
 import worlds.bosses.*;
+import worlds.functionalities.Utilities;
 
 public class AirWorld extends Worlds
 {
@@ -27,6 +28,20 @@ public class AirWorld extends Worlds
         // set boss for this world
         setBoss(new AirBoss());
         setIsWorldComplete(getBoss().isDefeated());
+    }
+
+
+    // storyline for this world
+    @Override
+    public void beginningStoryline(MainCharacter character)
+    {
+        Utilities.slowPrint("Your journey begins on Mathania, a planet where equations flourish with enchanted arrays of addition.", 50);
+        System.out.println(); // newline
+        Utilities.slowPrint(character.getFirstName() + ", you will encounter evil air sprits and monsters who plague you with solving addition puzzles.", 50);
+        System.out.println(); 
+        Utilities.slowPrint("Finally, you must locate and destroy Aeritha the Summator, a tyrannical bully, to acquire the first piece of the prism.", 50);
+        System.out.println(); // newline
+        Utilities.freeze(1000); // give user reading time
     }
 
     
