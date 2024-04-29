@@ -6,7 +6,7 @@
 @description        Second side quest in the fire world.
 ********************************************************/
 
-package worlds.sidequests;
+package worlds.SideQuests;
 
 import worlds.MainCharacter;
 import worlds.functionalities.Utilities;
