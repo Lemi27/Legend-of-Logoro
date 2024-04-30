@@ -47,7 +47,7 @@ public class MasterWorld extends Worlds
         System.out.println(); // newline
         Utilities.slowPrint("He seeks to put an end to your fame and continue spreading chaos, so he invites you to a public duel. Your duel will be so catastrophic that it will seen in the skies of other planets.", 50);
         System.out.println();
-        Utilities.slowPrint("Defeat Onimus to acquire the final fragment of the prizm, and to save Logoro, restoring balance to the galaxy.", 50);
+        Utilities.slowPrint("Defeat Onimus to acquire the final fragment of the prism, and to save Logoro, restoring balance to the galaxy.", 50);
         System.out.println(); 
         Utilities.freeze(1000); // give user reading time
     }

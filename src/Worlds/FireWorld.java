@@ -46,7 +46,7 @@ public class FireWorld extends Worlds
         System.out.println(); 
         Utilities.slowPrint("Eventually, Ignitia the Flame Fractionator, an intelligent and scheming mage who is the de-facto lord of the planet, must be confronted. ", 50);
         System.out.println(); // newline
-        Utilities.slowPrint("He is known for deceiving and exploiting his subject.s He may give you a hard time. Try your best to acquire the fourth piece of the prism.", 50);
+        Utilities.slowPrint("He is known for deceiving and exploiting his subjects. He may give you a hard time. Try your best to acquire the fourth piece of the prism.", 50);
         System.out.println();
         Utilities.freeze(1000); // give user reading time
     }
