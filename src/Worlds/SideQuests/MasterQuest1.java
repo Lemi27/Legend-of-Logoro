@@ -37,6 +37,7 @@ public class MasterQuest1 extends SideQuests {
 
 
             //Initial output
+            System.out.println("========================================================");
             Utilities.slowPrint("In the realm of the Master Elementals, where magic intertwines with the very fabric of reality, you find yourself standing before the Gatekeeper of Equations.\n"+ 
             "This ancient being, a fusion of fire, water, earth, and air, guards the path to untold knowledge.\"You seek passage?\" The Gatekeeper's voice booms like thunder, each syllable vibrating with elemental power.\n"+
             "Before you lies a shimmering portal, its arcane symbols pulsing with energy. To unlock its secrets, you must solve the riddle posed by the Gatekeeper.\n"+
@@ -47,6 +48,7 @@ public class MasterQuest1 extends SideQuests {
             do
             {
                 input = Utilities.inputInt(" What is the result of the equation? "); //Assure input
+                System.out.println("========================================================");
 
                 //Check if the users guess is correct
                 if (answer != input && chances == 2)
@@ -80,6 +82,7 @@ public class MasterQuest1 extends SideQuests {
             
         }else //Else in case the side quest has been completed
         {
+            System.out.println("========================================================"); 
             Utilities.slowPrint("This Side Quest has been completed\n", 10);
         }
         

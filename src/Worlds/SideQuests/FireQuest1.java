@@ -37,6 +37,7 @@ public class FireQuest1 extends SideQuests {
 
 
             //Initial output
+            System.out.println("========================================================");
             Utilities.slowPrint("In a realm ablaze with fiery hues and molten landscapes, you found yourself standing before the Fire Seer—a formidable entity forged from flickering flames and glowing embers.\n"+
             "\"Adventurer of the scorching expanse,\" it intoned, its voice crackling like a roaring fire, \"to pass through this infernal domain, decipher my riddle's burning refrain.\"\n"+
             "It posed its cryptic challenge: \"I am a number. If you divide me by 4, I become 9.\"\n", 20);
@@ -46,6 +47,7 @@ public class FireQuest1 extends SideQuests {
             do
             {
                 input = Utilities.inputInt("What number am I? "); //Assure input
+                System.out.println("========================================================");
 
                 //Check for correct answer
                 if (answer != input && chances == 2)
@@ -79,6 +81,7 @@ public class FireQuest1 extends SideQuests {
             
         }else //Else in case the side quest has been completed
         {
+            System.out.println("========================================================"); 
             Utilities.slowPrint("This Side Quest has been completed\n", 10);
         }
         

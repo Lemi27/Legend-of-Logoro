@@ -39,6 +39,7 @@ public class AirQuest1 extends SideQuests
 
 
             //Initial output
+            System.out.println("========================================================");
             Utilities.slowPrint("Deep within the mystical air world, you encounter an ethereal air spirit, its form shimmering like a gentle breeze."+
             "\"Traveler,\" it whispers,\n\"answer my riddle in two guesses to proceed.\"It presents the riddle: \"Dancing among clouds, a dozen fowl fly high in the sky, add a centuries leap, and you shall find the the prize.\"\n", 20);
 
@@ -47,6 +48,7 @@ public class AirQuest1 extends SideQuests
             do
             {
                 input = Utilities.inputInt("What number am I? "); //Assure input
+                System.out.println("========================================================");
 
                 //Check if the user has guess correctly
                 if (answer != input && chances == 2) //First Guess
