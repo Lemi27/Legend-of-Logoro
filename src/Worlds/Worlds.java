@@ -146,7 +146,8 @@ public class Worlds
             System.out.printf("3. Boss Fight w/ %s (Base DEF %s, Base OFF %s, Wand DEF %s, Wand OFF %s)\n", this.getBoss().getBossName(),this.getBoss().getDefense(), this.getBoss().getOffense(), this.getBoss().getWand().getDefense(), this.getBoss().getWand().getOffense());
             System.out.println("4. Access Shop");
             System.out.println("5. Access Inventory (switch current wand)");
-            menu = Utilities.inputInt("> ", 1, 5);
+            System.out.println("6. Display Progress");
+            menu = Utilities.inputInt("> ", 1, 6);
 
             System.out.println("\n\n"); // 3 newlines
             switch(menu)
@@ -166,6 +167,9 @@ public class Worlds
                 case 5:
                     this.inventory(character);
                     break;
+                case 6:
+                    this.displayProgress(character);
+                    break;
                 default:
                     System.out.println("No such option found.");
             }
@@ -175,48 +179,7 @@ public class Worlds
 
     public void inventory(MainCharacter character) // for switching wands
     {
-        // System.out.println("What Wand do you want to switch to?")
-        // Scanner uI = new Scanner(System.in);
-
-        // String [] inventoryString = {"Whisperwind Willow","Sapphire Sprig", "Ember Pinecrest" ,"Guardian Oakhear" ,"Silverleaf Maplestar" ,"Tranquil Magnoliaspire","Ironbark Sentinel" , "Shadowed Ebonyreach", "Celestial Cypressglen", "Cherry Scepter", "Birch Scythe"};
-        // // boolean [] inventory = {false, false, false, false, false, false, false, false, false, false, false};
-        
-        // if (uI.next().equals("Whisperwind Willow"))
-        // {
-        //     MainCharacter.setCurrentWand(Willow);
-        // }
-        // if (uI.next().equals("Sapphire Sprig")) 
-        // {
-        
-        // }
-        // if (uI.next().equals("Ember Pinecrest")) 
-        // {
-        // inventory[3] = true;
-        // }
-        // if (uI.next().equals("Guardian Oakhear")) 
-        // {
-        // inventory[4] = true;
-        // }
-        // if (uI.next().equals("Silverleaf Maplestar")) 
-        // {
-        // inventory[5] = true;
-        // }
-        // if (uI.next().equals("Tranquil Magnoliaspire")) 
-        // {
-        // inventory[6] = true;
-        // }
-        // if (uI.next().equals("Ironbark Sentinel")) 
-        // {
-        // inventory[7] = true;
-        // }
-        // if (uI.next().equals("Shadowed Ebonyreach")) 
-        // {
-        // inventory[8] = true;
-        // }
-        // if (uI.next().equals( "Celestial Cypressglen")){
-
-        // }
-
+       
         System.out.printf("");
         Wand[] wands = character.getInventory();
         int menu = 0;
@@ -335,7 +298,45 @@ public class Worlds
             }
         }
 
-        
+    }
+
+    // display all quests and battle completions
+    public void displayProgress(MainCharacter character)
+    {
+        System.out.println("=================================================");
+        System.out.println("true indicates completion of task, false indicates otherwise");
+        System.out.println(); // newline
+        System.out.printf("%-20s%-15s%-15s%-15s%n", "Worlds", "Side Quest 1", "Side Quest 2", "Planet Boss");
+        for (int i = 0; i < character.getProgress().length; i++)
+        {
+            switch(i)
+            {
+                case 0:
+                    System.out.printf("%-20s", "Air World");
+                    break;
+                case 1:
+                System.out.printf("%-20s", "Land World");
+                    break;
+                case 2:
+                    System.out.printf("%-20s", "Water World");
+                    break;
+                case 3:
+                    System.out.printf("%-20s", "Fire World");
+                    break;
+                case 4:
+                    System.out.printf("%-20s", "Master World");
+                    break;
+                default:
+            }
+
+            for (int j = 0; j < character.getProgress()[i].length; j++)
+            {
+                System.out.printf("%-15s", character.getProgress()[i][j]);
+            }
+            System.out.println(); // newline
+        }
+
+        Utilities.freeze(2000); // give user reading time
     }
 
     public void beginningStoryline(MainCharacter character)
