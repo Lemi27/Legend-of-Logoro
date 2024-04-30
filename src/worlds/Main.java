@@ -2,10 +2,12 @@
 @author(s)          Fawaaz Kamali Siddiqui, Shreekavin Umasankar,
                     Lemi Miyu, Matthew Kostuch, Steven Wang, 
                     Muhammad Nomaan, Sinan Shana
-@date               *insert here
+@date               26-April-2024
 @teacher            Andrew Carreiro
 @file               Main.java
-@description        *insert class description here
+@description        Main class of the program, which is
+                    where the main method is located. Runs
+                    the program.
 ********************************************************/
 
 package worlds;

@@ -3,7 +3,9 @@
 @date               25 April 2024
 @teacher            Andrew Carreiro
 @file               LandWorld.java
-@description        *insert class description here
+@description        LandWorld is a child class of the class
+                    Worlds, setting up the attributes and behaviours
+                    of the land world.
 ********************************************************/
 
 package worlds;
