@@ -1,10 +1,11 @@
-
 /********************************************************
-@author(s)          *insert here
-@date               *insert here
+@author(s)          Muhammad Nomaan and Sinan Shana
+@date               24-April-2024
 @teacher            Andrew Carreiro
-@file               ExampleClass.java
-@description        *insert class description here
+@file               Cherry.java
+@description        Child class, Cherry, creates the cherry 
+                    wand by extending parent class, Wand to
+                    change necessary attributes
 ********************************************************/
 package worlds.wand;
 

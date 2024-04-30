@@ -1,10 +1,11 @@
-
 /********************************************************
-@author(s)          *insert here
-@date               *insert here
+@author(s)          Muhammad Nomaan and Sinan Shana
+@date               24-April-2024
 @teacher            Andrew Carreiro
-@file               ExampleClass.java
-@description        *insert class description here
+@file               Cypress.java
+@description        Child class, Cypress, creates the cypress 
+                    wand by extending parent class, Wand to
+                    change necessary attributes
 ********************************************************/
 package worlds.wand;
 

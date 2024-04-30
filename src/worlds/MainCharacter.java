@@ -3,7 +3,8 @@
 @date               22 April 2024
 @teacher            Andrew Carreiro
 @file               MainCharacter.java
-@description        *insert class description here
+@description        Sets up all necessary attributes and
+                    behaviours of the main character (user/gamer)
 ********************************************************/
 
 package worlds;

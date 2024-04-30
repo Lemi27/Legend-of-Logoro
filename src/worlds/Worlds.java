@@ -1,9 +1,10 @@
 /********************************************************
 @author(s)          Sinan Shana, Fawaaz Kamali Siddiqui
-@date               *insert here
+@date               25-April-2024
 @teacher            Andrew Carreiro
 @file               Worlds.java
-@description        *insert class description here
+@description        Parent class of all worlds, setting up
+                    base attrubutes and behaviours.
 ********************************************************/
 package worlds;
 import java.util.Scanner;

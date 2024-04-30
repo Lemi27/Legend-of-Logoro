@@ -3,7 +3,9 @@
 @date               25 April 2024
 @teacher            Andrew Carreiro
 @file               MasterWorld.java
-@description        *insert class description here
+@description        MasterWorld is a child class of the class
+                    Worlds, setting up the attributes and behaviours
+                    of the master world.
 ********************************************************/
 
 package worlds;
