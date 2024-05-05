@@ -18,6 +18,7 @@ public class MasterBoss extends Bosses {
 
         setBossName("Omnius the Operation Overlord");
         setHp(25);
+        setMaxHP(25);
         setOffense(1.5);
         setDefense(1.25);
         
